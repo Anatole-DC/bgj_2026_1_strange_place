@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dpp3531yqvmav"]
+
+[ext_resource type="Texture2D" uid="uid://cf8fc8tgbwl5" path="res://assets/images/lobby.jpg" id="1_rupa5"]
+[ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="2_2jggd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfumh"]
+size = Vector2(245, 315)
+
+[node name="Lobby" type="Node2D" unique_id=748305752]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1578624228]
+
+[node name="LobbyBackground" type="TextureRect" parent="CanvasLayer" unique_id=1416462297]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_rupa5")
+metadata/_edit_use_anchors_ = true
+
+[node name="OpenSpaceNavigation" parent="." unique_id=2014885648 instance=ExtResource("2_2jggd")]
+position = Vector2(1090, 247)
+navigation_scene = "uid://sjgupbjgm873"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpenSpaceNavigation" unique_id=1444650778]
+position = Vector2(6.5, -5.5)
+shape = SubResource("RectangleShape2D_rfumh")
+debug_color = Color(0, 0.4, 0.47058824, 0.8745098)

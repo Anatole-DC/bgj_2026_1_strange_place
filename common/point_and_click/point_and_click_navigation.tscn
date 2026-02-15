@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dbt0kswhb0kpc"]
+
+[ext_resource type="Script" uid="uid://4rv8fvmc5aty" path="res://common/point_and_click/point_and_click_navigation.gd" id="1_rcsro"]
+
+[node name="PointAndClickNavigation" type="Area2D" unique_id=2014885648]
+script = ExtResource("1_rcsro")
