@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bnmlaljff61cs"]
+
+[ext_resource type="Script" uid="uid://rxb0f2ncn312" path="res://game/entities/loop/game_loop_timer.gd" id="1_7xqbj"]
+
+[node name="GameLoopTimer" type="Timer" unique_id=1969477381]
+wait_time = 30.0
+one_shot = true
+script = ExtResource("1_7xqbj")
+restart_scene = "uid://b0if6rnjrjmjw"
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
