@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://cf8fc8tgbwl5" path="res://assets/images/lobby.jpg" id="1_rupa5"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="2_2jggd"]
+[ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="3_rfumh"]
+[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/clock/clock.tscn" id="4_mxjuy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfumh"]
 size = Vector2(245, 315)
@@ -9,6 +11,7 @@ size = Vector2(245, 315)
 [node name="Lobby" type="Node2D" unique_id=748305752]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1578624228]
+layer = -1
 
 [node name="LobbyBackground" type="TextureRect" parent="CanvasLayer" unique_id=1416462297]
 anchors_preset = 15
@@ -28,4 +31,9 @@ navigation_scene = "uid://sjgupbjgm873"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OpenSpaceNavigation" unique_id=1444650778]
 position = Vector2(6.5, -5.5)
 shape = SubResource("RectangleShape2D_rfumh")
-debug_color = Color(0, 0.4, 0.47058824, 0.8745098)
+
+[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("3_rfumh")]
+
+[node name="Clock" parent="." unique_id=823591413 instance=ExtResource("4_mxjuy")]
+position = Vector2(1038.0001, 44)
+scale = Vector2(0.8000049, 1)
