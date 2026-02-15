@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2hsppgnj4ovu"]
 
-[ext_resource type="Script" uid="uid://73svip8js2gy" path="res://game/entities/office_scene_manager.gd" id="1_l5ful"]
+[ext_resource type="Script" uid="uid://73svip8js2gy" path="res://game/entities/loop/office_scene_manager.gd" id="1_l5ful"]
 
 [node name="OfficeSceneManager" type="Node" unique_id=1502166600]
 script = ExtResource("1_l5ful")
