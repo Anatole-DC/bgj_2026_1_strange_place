@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ca6wu62uyrk1v" path="res://assets/images/open_space.jpg" id="1_yhvbn"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="2_bahh1"]
+[ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/OfficeSceneManager.tscn" id="3_5oane"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5oane"]
 size = Vector2(160, 134)
@@ -29,3 +30,5 @@ navigation_scene = "uid://dpp3531yqvmav"
 position = Vector2(-1, -10)
 shape = SubResource("RectangleShape2D_5oane")
 debug_color = Color(0, 0.4, 0.47058824, 0.8745098)
+
+[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("3_5oane")]

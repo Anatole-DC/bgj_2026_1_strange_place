@@ -5,7 +5,7 @@ extends Area2D
 func _ready():
 	assert(navigation_scene)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if Input.is_action_just_pressed("click"):
+func _on_input_event(_viewport, event, _shape_idx):
+	if event is not InputEventMouseButton: return
+	if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		get_tree().change_scene_to_file(navigation_scene)

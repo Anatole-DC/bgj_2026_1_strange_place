@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://umlyu0ogya8b"]
 
 [ext_resource type="Texture2D" uid="uid://c4ql575ho3xss" path="res://assets/images/karen_office.webp" id="1_xnaia"]
+[ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/OfficeSceneManager.tscn" id="2_bn0tk"]
 
 [node name="KarenOffice" type="Node2D" unique_id=1135277209]
 
@@ -16,3 +17,5 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_xnaia")
 metadata/_edit_use_anchors_ = true
+
+[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("2_bn0tk")]

@@ -7,7 +7,6 @@ wait_time = 5.0
 one_shot = true
 script = ExtResource("1_7xqbj")
 restart_scene = "uid://b0if6rnjrjmjw"
-game_over_scene = "uid://dsgu3yoi6ot3o"
 
 [connection signal="timeout" from="." to="." method="_on_timeout"]
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
