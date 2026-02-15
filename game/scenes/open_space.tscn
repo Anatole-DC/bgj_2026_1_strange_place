@@ -1,20 +1,17 @@
 [gd_scene format=3 uid="uid://sjgupbjgm873"]
 
+[ext_resource type="Texture2D" uid="uid://ca6wu62uyrk1v" path="res://assets/images/open_space.jpg" id="1_yhvbn"]
+
 [node name="OpenSpace" type="Node2D" unique_id=1865548266]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=231194915]
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=644717632]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -0.5
-offset_top = -11.5
-offset_right = 0.5
-offset_bottom = 11.5
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=1826622112]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
-text = "Work in progress..."
+size_flags_vertical = 4
+texture = ExtResource("1_yhvbn")

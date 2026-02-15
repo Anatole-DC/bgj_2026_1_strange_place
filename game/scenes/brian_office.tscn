@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bgvh672k8yadt"]
+
+[ext_resource type="Texture2D" uid="uid://ci411op13rvyk" path="res://assets/images/brian_office.jpg" id="1_0rnfw"]
+
+[node name="BrianOffice" type="Node2D" unique_id=1058688483]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972728654]
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=44420715]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_0rnfw")
