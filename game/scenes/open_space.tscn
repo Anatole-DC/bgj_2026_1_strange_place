@@ -36,7 +36,6 @@ navigation_scene = "uid://umlyu0ogya8b"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KarenOfficeNavigation" unique_id=1093598780]
 position = Vector2(-28, 8.5)
 shape = SubResource("RectangleShape2D_5qp1n")
-debug_color = Color(0, 0.4, 0.47058824, 0.8745098)
 
 [node name="LobbyNavigation" parent="." unique_id=281524853 instance=ExtResource("2_bahh1")]
 position = Vector2(576, 290)
@@ -45,7 +44,6 @@ navigation_scene = "uid://dpp3531yqvmav"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LobbyNavigation" unique_id=1450019472]
 position = Vector2(-1, -10)
 shape = SubResource("RectangleShape2D_5oane")
-debug_color = Color(0, 0.4, 0.47058824, 0.8745098)
 
 [node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("3_5oane")]
 
@@ -60,4 +58,3 @@ navigation_scene = "uid://bgvh672k8yadt"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BrianOfficeNavigation" unique_id=1701336103]
 position = Vector2(12, -1.5)
 shape = SubResource("RectangleShape2D_35ri3")
-debug_color = Color(0, 0.4, 0.47058824, 0.8745098)
