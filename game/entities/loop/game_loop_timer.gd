@@ -15,8 +15,8 @@ func start_loop():
 	is_started = true
 	print("Starting game loop")
 
-func get_progress():
-	return self.time_left
+func get_progress() -> float:
+	return 1 - (self.time_left / self.wait_time)
 
 func _on_timeout():
 	get_tree().change_scene_to_file(restart_scene)
