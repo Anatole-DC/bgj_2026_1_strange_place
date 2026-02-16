@@ -21,6 +21,6 @@ func get_progress() -> float:
 
 func _on_timeout():
 	get_tree().change_scene_to_file(restart_scene)
-	Dialogic.current_timeline.clean()
+	Dialogic.end_timeline()
 	is_started = false
 	print("Game loop is over")
