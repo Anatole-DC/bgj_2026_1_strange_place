@@ -41,7 +41,7 @@ jobs:
       
       - name: Preload files
         run: |
-          ./Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64 --headless --editor --quit --import .
+          ./Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64 --headless --editor --import .
       
       - name: Build
         run: |
