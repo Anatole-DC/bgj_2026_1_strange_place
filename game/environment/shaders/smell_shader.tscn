@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ceshtxk6t8lxn"]
+
+[ext_resource type="Shader" uid="uid://cor26mjcmk12" path="res://game/environment/shaders/smell.gdshader" id="1_vx8bh"]
+[ext_resource type="Script" uid="uid://du2fmx2rldqqq" path="res://game/environment/shaders/color_rect.gd" id="2_2k4c1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vx8bh"]
+shader = ExtResource("1_vx8bh")
+shader_parameter/fog_intensity = 0.0
+shader_parameter/fog_color = Color(0.2, 0.4, 0.1, 1)
+shader_parameter/fog_speed = 0.3
+shader_parameter/fog_scale = 3.0
+shader_parameter/distortion_strength = 0.15
+
+[node name="SmellShader" type="CanvasLayer" unique_id=711390240]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1568244995]
+material = SubResource("ShaderMaterial_vx8bh")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("2_2k4c1")

@@ -2,10 +2,16 @@
 
 [ext_resource type="Texture2D" uid="uid://c4ql575ho3xss" path="res://assets/images/karen_office.webp" id="1_xnaia"]
 [ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="2_bn0tk"]
+[ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_60smj"]
+[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/clock/clock.tscn" id="4_u6nve"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6nve"]
+size = Vector2(341, 660)
 
 [node name="KarenOffice" type="Node2D" unique_id=1135277209]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344814473]
+layer = -1
 
 [node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=813488658]
 anchors_preset = 15
@@ -19,3 +25,17 @@ texture = ExtResource("1_xnaia")
 metadata/_edit_use_anchors_ = true
 
 [node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("2_bn0tk")]
+
+[node name="OpenSpaceNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_60smj")]
+position = Vector2(1090, 247)
+navigation_scene = "uid://sjgupbjgm873"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpenSpaceNavigation" unique_id=1334108986]
+position = Vector2(-41.5, 74)
+shape = SubResource("RectangleShape2D_u6nve")
+
+[node name="Clock" parent="." unique_id=823591413 instance=ExtResource("4_u6nve")]
+modulate = Color(0.54901963, 0.45490196, 0.42352942, 0.627451)
+position = Vector2(226.00002, 57)
+rotation = 0.11519173
+scale = Vector2(0.8, 1)
