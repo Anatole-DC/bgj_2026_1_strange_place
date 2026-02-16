@@ -14,8 +14,10 @@ size = Vector2(698, 629)
 
 [node name="BrianOffice" type="Node2D" unique_id=1058688483]
 
+[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("2_sk6cd")]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972728654]
-layer = -1
+layer = -2
 
 [node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=44420715]
 anchors_preset = 15
@@ -26,8 +28,6 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_0rnfw")
-
-[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("2_sk6cd")]
 
 [node name="OpenSpaceNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_y3n26")]
 position = Vector2(212, 252)

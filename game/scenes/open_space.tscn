@@ -17,7 +17,7 @@ size = Vector2(452, 287)
 [node name="OpenSpace" type="Node2D" unique_id=1865548266]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=231194915]
-layer = -1
+layer = -2
 
 [node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=1826622112]
 anchors_preset = 15

@@ -14,8 +14,10 @@ size = Vector2(515, 538)
 
 [node name="KarenOffice" type="Node2D" unique_id=1135277209]
 
+[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("2_bn0tk")]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344814473]
-layer = -1
+layer = -2
 
 [node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=813488658]
 anchors_preset = 15
@@ -27,8 +29,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("1_xnaia")
 metadata/_edit_use_anchors_ = true
-
-[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("2_bn0tk")]
 
 [node name="OpenSpaceNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_60smj")]
 position = Vector2(1090, 247)
