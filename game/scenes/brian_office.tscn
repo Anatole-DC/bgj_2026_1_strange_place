@@ -4,9 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="2_sk6cd"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_y3n26"]
 [ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/clock/clock.tscn" id="4_56x7i"]
+[ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="5_s0d8x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56x7i"]
 size = Vector2(341, 660)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwes3"]
+size = Vector2(698, 629)
 
 [node name="BrianOffice" type="Node2D" unique_id=1058688483]
 
@@ -36,3 +40,11 @@ shape = SubResource("RectangleShape2D_56x7i")
 [node name="Clock" parent="." unique_id=823591413 instance=ExtResource("4_56x7i")]
 modulate = Color(0.34489122, 0.45111924, 0.5575945, 0.63529414)
 position = Vector2(959, 54)
+
+[node name="PointAndClickDialogue" parent="." unique_id=1602951859 instance=ExtResource("5_s0d8x")]
+position = Vector2(854, 477)
+dialogue = "uid://c2lqpijqt1h3b"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PointAndClickDialogue" unique_id=538778719]
+position = Vector2(-40, -137.5)
+shape = SubResource("RectangleShape2D_lwes3")
