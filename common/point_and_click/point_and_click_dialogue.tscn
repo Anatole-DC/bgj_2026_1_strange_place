@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dajdkmt57yiu0"]
+
+[ext_resource type="Script" uid="uid://d2cyj7c5n3jhm" path="res://common/point_and_click/point_and_click_dialogue.gd" id="1_gcci6"]
+
+[node name="PointAndClickDialogue" type="Area2D" unique_id=1602951859]
+script = ExtResource("1_gcci6")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

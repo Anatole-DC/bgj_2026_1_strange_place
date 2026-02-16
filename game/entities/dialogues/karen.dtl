@@ -1,0 +1,16 @@
+if {karen_1} == false:
+	jump karen/karen_1
+else:
+	jump karen/karen_2
+label karen_1
+karen: What do you want ?
+- I am looking for the document about the workers ?
+	karen: Don't know what you are talking about !
+	karen: Get out of my office !
+- I received an email from a journalist...
+	karen: Do we pay you to talk to journalist ? Go back to work !
+set {karen_1} = true
+[end_timeline]
+label karen_2
+karen: Go back to work !
+[end_timeline]
