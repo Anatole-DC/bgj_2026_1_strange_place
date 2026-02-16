@@ -17,9 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Dialogic="*uid://ds2q0uclmolvu"
 MainGameLoopTimer="*uid://bnmlaljff61cs"
 SmellShader="*uid://ceshtxk6t8lxn"
-Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 

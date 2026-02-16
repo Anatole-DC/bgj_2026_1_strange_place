@@ -17,7 +17,7 @@ size = Vector2(515, 538)
 [node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("2_bn0tk")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344814473]
-layer = -2
+layer = -1
 
 [node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=813488658]
 anchors_preset = 15
