@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dwtb30rs5b7yk" path="res://assets/images/elevator.jpg" id="1_n8ei2"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="2_fpifn"]
+[ext_resource type="AudioStream" uid="uid://d2soces437aqs" path="res://assets/sounds/freesound_community-bell-98033.mp3" id="3_fpifn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4fd8"]
 size = Vector2(374, 654)
@@ -42,3 +43,7 @@ navigation_scene = "uid://dsgu3yoi6ot3o"
 position = Vector2(12, -7.5)
 shape = SubResource("RectangleShape2D_n8ei2")
 debug_color = Color(0, 0.4, 0.47058824, 0.8745098)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1080326882]
+stream = ExtResource("3_fpifn")
+autoplay = true
