@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://p8o2ga5h1t8s" path="res://assets/sprites/office.jpg" id="2_5qp1n"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="2_bahh1"]
 [ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="3_5oane"]
-[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/clock/clock.tscn" id="4_5qp1n"]
+[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/furnitures/clock/clock.tscn" id="4_5qp1n"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="5_35ri3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp1n"]
-size = Vector2(66, 204.5)
+size = Vector2(62, 204.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35ri3"]
-size = Vector2(107, 429)
+size = Vector2(102, 429)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_non8d"]
 size = Vector2(65, 109)
@@ -48,15 +48,15 @@ position = Vector2(289, 267)
 navigation_scene = "uid://umlyu0ogya8b"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KarenOfficeNavigation" unique_id=1093598780]
-position = Vector2(-26, 11.75)
+position = Vector2(-24, 11.75)
 shape = SubResource("RectangleShape2D_5qp1n")
 
 [node name="BrianOfficeNavigation" parent="." unique_id=357966287 instance=ExtResource("2_bahh1")]
 position = Vector2(104, 341)
 navigation_scene = "uid://bgvh672k8yadt"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BrianOfficeNavigation" unique_id=1701336103]
-position = Vector2(-8.5, 19.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BrianOfficeNavigation" unique_id=904649359]
+position = Vector2(-6, 25.5)
 shape = SubResource("RectangleShape2D_35ri3")
 
 [node name="PlayerOffice" parent="." unique_id=826763247 instance=ExtResource("2_bahh1")]

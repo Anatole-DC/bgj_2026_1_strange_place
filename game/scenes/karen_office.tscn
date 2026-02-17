@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ql575ho3xss" path="res://assets/images/karen_office.webp" id="1_xnaia"]
 [ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="2_bn0tk"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_60smj"]
-[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/clock/clock.tscn" id="4_u6nve"]
+[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/furnitures/clock/clock.tscn" id="4_u6nve"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="5_c7xy6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6nve"]

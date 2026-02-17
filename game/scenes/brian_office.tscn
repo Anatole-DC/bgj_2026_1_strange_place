@@ -3,8 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://n61jfowd4w01" path="res://assets/sprites/brian.jpg" id="2_s0d8x"]
 [ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="2_sk6cd"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_y3n26"]
-[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/clock/clock.tscn" id="4_56x7i"]
+[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/furnitures/clock/clock.tscn" id="4_56x7i"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="5_s0d8x"]
+[ext_resource type="PackedScene" uid="uid://lgt81n28tdqc" path="res://game/entities/furnitures/post_it/post_it.tscn" id="6_lwes3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56x7i"]
 size = Vector2(109, 660)
@@ -28,6 +29,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_s0d8x")
+metadata/_edit_use_anchors_ = true
 
 [node name="OpenSpaceNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_y3n26")]
 position = Vector2(1273, 249)
@@ -48,3 +50,7 @@ dialogue = "uid://vuhaj6xnbdfb"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PointAndClickDialogue" unique_id=538778719]
 position = Vector2(9, 19)
 shape = SubResource("RectangleShape2D_lwes3")
+
+[node name="PostIt" parent="." unique_id=1699916699 instance=ExtResource("6_lwes3")]
+position = Vector2(275, 400)
+scale = Vector2(2.240001, 3.7199998)

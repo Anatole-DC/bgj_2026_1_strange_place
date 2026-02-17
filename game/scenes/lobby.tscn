@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cf8fc8tgbwl5" path="res://assets/images/lobby.jpg" id="1_rupa5"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="2_2jggd"]
 [ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="3_rfumh"]
-[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/clock/clock.tscn" id="4_mxjuy"]
+[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/furnitures/clock/clock.tscn" id="4_mxjuy"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="5_v5vx2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rfumh"]

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Dialogic="*uid://ds2q0uclmolvu"
 MainGameLoopTimer="*uid://bnmlaljff61cs"
 SmellShader="*uid://ceshtxk6t8lxn"
+GameState="*uid://5pbt1dtv5xa4"
 
 [dialogic]
 
@@ -28,7 +29,8 @@ directories/dch_directory={
 "chief_inspector": "res://game/entities/npcs/chief_inspector.dch",
 "karen": "res://game/entities/npcs/karen.dch",
 "kathy": "res://game/entities/npcs/kathy.dch",
-"maitainance_supervisor": "res://game/entities/npcs/maitainance_supervisor.dch"
+"maitainance_supervisor": "res://game/entities/npcs/maitainance_supervisor.dch",
+"player": "res://game/entities/npcs/player.dch"
 }
 directories/dtl_directory={
 "brian": "res://game/entities/dialogues/brian.dtl",

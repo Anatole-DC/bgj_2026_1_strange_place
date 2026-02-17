@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ceqjypd08ultd"]
 
-[ext_resource type="Script" uid="uid://bxba7vew4gavq" path="res://game/entities/clock/clock.gd" id="1_r6mop"]
+[ext_resource type="Script" uid="uid://bxba7vew4gavq" path="res://game/entities/furnitures/clock/clock.gd" id="1_r6mop"]
 
 [sub_resource type="Gradient" id="Gradient_dru46"]
 offsets = PackedFloat32Array(0.99791664, 1)

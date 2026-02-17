@@ -1,2 +1,4 @@
-Brian is not in is office.
+Brian is not in his office.
+if {GameState.current_day}  ==  {GameState.Day.SECOND}:
+	This is the first day.
 [end_timeline]

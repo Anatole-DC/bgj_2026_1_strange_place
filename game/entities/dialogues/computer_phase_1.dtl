@@ -1,12 +1,7 @@
-You have two emails
-- Maintainance supervisor
-	maitainance_supervisor: Good morning sir,\
-	\
-	I am writing to you about our previous request regarding the isolating slip-blind on the tank in the factory. We requested a maintainance check two weeks ago.\
-	\
-	We need your response ASAP !
-	- Approve there request
-	- Deny there request
+if {GameState.current_day} == {GameState.Day.FIRST}:
+	if {GameState.has_post_it} == true:
+		maitainance_supervisor: Hello ! Do you have any request on the tank maintainance request ?
+		player: Yes. I am sorry to inform you that your request has been denied.
+		[end_timeline]
+	chief_inspector: Are these tasks coming along ?!!
 	[end_timeline]
-- To chief inspector of factories
-	chief_inspector: Have you had news about the 20xx safety audit ?
