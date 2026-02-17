@@ -9,9 +9,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp1n"]
 size = Vector2(66, 204.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5oane"]
-size = Vector2(63, 121)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35ri3"]
 size = Vector2(107, 429)
 
@@ -20,6 +17,9 @@ size = Vector2(65, 109)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tluw6"]
 size = Vector2(86, 138)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5oane"]
+size = Vector2(63, 121)
 
 [node name="OpenSpace" type="Node2D" unique_id=1865548266]
 
@@ -51,14 +51,6 @@ navigation_scene = "uid://umlyu0ogya8b"
 position = Vector2(-26, 11.75)
 shape = SubResource("RectangleShape2D_5qp1n")
 
-[node name="LobbyNavigation" parent="." unique_id=281524853 instance=ExtResource("2_bahh1")]
-position = Vector2(955, 261)
-navigation_scene = "uid://dpp3531yqvmav"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LobbyNavigation" unique_id=1450019472]
-position = Vector2(-3.5, -8.5)
-shape = SubResource("RectangleShape2D_5oane")
-
 [node name="BrianOfficeNavigation" parent="." unique_id=357966287 instance=ExtResource("2_bahh1")]
 position = Vector2(104, 341)
 navigation_scene = "uid://bgvh672k8yadt"
@@ -67,12 +59,12 @@ navigation_scene = "uid://bgvh672k8yadt"
 position = Vector2(-8.5, 19.5)
 shape = SubResource("RectangleShape2D_35ri3")
 
-[node name="ClosedOfficeDialogue" parent="." unique_id=1602951859 instance=ExtResource("5_35ri3")]
-position = Vector2(764, 257)
-dialogue = "uid://bp75hxxqacvoi"
+[node name="PlayerOffice" parent="." unique_id=826763247 instance=ExtResource("2_bahh1")]
+position = Vector2(208, 682)
+navigation_scene = "uid://df2jlsraorxkk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ClosedOfficeDialogue" unique_id=455991026]
-position = Vector2(-0.5, -3.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerOffice" unique_id=455991026]
+position = Vector2(555.5, -428.5)
 shape = SubResource("RectangleShape2D_non8d")
 
 [node name="BrokenCoffeeMachineDialogue" parent="." unique_id=120258160 instance=ExtResource("5_35ri3")]
@@ -82,3 +74,11 @@ dialogue = "uid://cf10fn6jppcco"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BrokenCoffeeMachineDialogue" unique_id=1108128408]
 position = Vector2(1, -9)
 shape = SubResource("RectangleShape2D_tluw6")
+
+[node name="ClosedOfficeDialogue" parent="." unique_id=1602951859 instance=ExtResource("5_35ri3")]
+position = Vector2(949, 256)
+dialogue = "uid://bp75hxxqacvoi"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClosedOfficeDialogue" unique_id=1450019472]
+position = Vector2(2, -7)
+shape = SubResource("RectangleShape2D_5oane")

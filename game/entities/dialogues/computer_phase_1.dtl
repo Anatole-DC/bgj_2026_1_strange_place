@@ -1,0 +1,12 @@
+You have two emails
+- Maintainance supervisor
+	maitainance_supervisor: Good morning sir,\
+	\
+	I am writing to you about our previous request regarding the isolating slip-blind on the tank in the factory. We requested a maintainance check two weeks ago.\
+	\
+	We need your response ASAP !
+	- Approve there request
+	- Deny there request
+	[end_timeline]
+- To chief inspector of factories
+	chief_inspector: Have you had news about the 20xx safety audit ?

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://df2jlsraorxkk"]
+
+[ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="1_olj70"]
+[ext_resource type="Texture2D" uid="uid://bocp13rp0k157" path="res://assets/sprites/player_office.jpg" id="2_08hnw"]
+[ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_gdqe8"]
+[ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="4_08hnw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81vk8"]
+size = Vector2(257, 436)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gdqe8"]
+size = Vector2(451, 331)
+
+[node name="PlayerOffice" type="Node2D" unique_id=1005068916]
+
+[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("1_olj70")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1654898037]
+layer = -2
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=301906599]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_08hnw")
+metadata/_edit_use_anchors_ = true
+
+[node name="OpenSpaceNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_gdqe8")]
+position = Vector2(686, 148)
+navigation_scene = "uid://sjgupbjgm873"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OpenSpaceNavigation" unique_id=1676094462]
+position = Vector2(34, 61)
+shape = SubResource("RectangleShape2D_81vk8")
+
+[node name="Computer" parent="." unique_id=1602951859 instance=ExtResource("4_08hnw")]
+position = Vector2(352, 420)
+dialogue = "uid://bd75oar4kcj38"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer" unique_id=847446049]
+position = Vector2(-0.5, 2.5)
+shape = SubResource("RectangleShape2D_gdqe8")
