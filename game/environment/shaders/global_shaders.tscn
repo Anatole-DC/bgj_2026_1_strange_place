@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ceshtxk6t8lxn"]
+
+[ext_resource type="Shader" uid="uid://cor26mjcmk12" path="res://game/environment/shaders/smell.gdshader" id="1_5legr"]
+[ext_resource type="Script" uid="uid://du2fmx2rldqqq" path="res://game/environment/shaders/smell_control.gd" id="2_woinh"]
+[ext_resource type="Shader" uid="uid://cqdw2lyt26bbs" path="res://game/environment/shaders/sleep.gdshader" id="3_woinh"]
+[ext_resource type="Script" uid="uid://b3htnrtftnrtq" path="res://game/environment/shaders/sleep_shader.gd" id="4_abh5c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vx8bh"]
+shader = ExtResource("1_5legr")
+shader_parameter/fog_intensity = 0.0
+shader_parameter/fog_color = Color(0.2, 0.4, 0.1, 1)
+shader_parameter/fog_speed = 0.3
+shader_parameter/fog_scale = 3.0
+shader_parameter/distortion_strength = 0.15
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_abh5c"]
+shader = ExtResource("3_woinh")
+shader_parameter/sleep_intensity = 0.0
+shader_parameter/vignette_strength = 0.5
+shader_parameter/vignette_softness = 0.8
+shader_parameter/darkness_color = Color(0, 0, 0, 1)
+shader_parameter/pulse_speed = 1.0
+shader_parameter/pulse_amount = 0.1
+
+[sub_resource type="Curve" id="Curve_abh5c"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.9571429, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 2.1744874, 0.0, 0, 0]
+point_count = 3
+
+[node name="GlobalShaders" type="CanvasLayer" unique_id=711390240]
+layer = 10
+
+[node name="SmellShader" type="ColorRect" parent="." unique_id=1568244995]
+material = SubResource("ShaderMaterial_vx8bh")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("2_woinh")
+
+[node name="SleepShader" type="ColorRect" parent="." unique_id=593883999]
+material = SubResource("ShaderMaterial_abh5c")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("4_abh5c")
+sleep_progress = SubResource("Curve_abh5c")

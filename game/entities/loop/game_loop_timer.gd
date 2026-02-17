@@ -1,7 +1,8 @@
 extends Timer
 class_name GLTimer
 
-@export_file var restart_scene: String
+@export_file("*.tscn") var restart_scene: String
+@export_file("*.tscn") var game_over_scene: String
 
 var is_started: bool = false
 
@@ -9,6 +10,7 @@ func _ready():
 	assert(restart_scene)
 	
 func start_loop():
+	print(GameState.current_day)
 	if is_started:
 		return
 	self.start()
@@ -20,7 +22,16 @@ func get_progress() -> float:
 	return 1 - (self.time_left / self.wait_time)
 
 func _on_timeout():
-	get_tree().change_scene_to_file(restart_scene)
+	print("Game loop is over")
 	Dialogic.end_timeline()
 	is_started = false
-	print("Game loop is over")
+	GameState.go_next_day(GameState.current_day)
+	
+	if GameState.current_day == GameState.Day.END:
+		get_tree().change_scene_to_file(game_over_scene)
+		print("Game Over")
+		return
+
+	get_tree().change_scene_to_file(restart_scene)
+	return
+	

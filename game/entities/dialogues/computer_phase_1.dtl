@@ -1,7 +1,0 @@
-if {GameState.current_day} == {GameState.Day.FIRST}:
-	if {GameState.has_post_it} == true:
-		maitainance_supervisor: Hello ! Do you have any request on the tank maintainance request ?
-		player: Yes. I am sorry to inform you that your request has been denied.
-		[end_timeline]
-	chief_inspector: Are these tasks coming along ?!!
-	[end_timeline]

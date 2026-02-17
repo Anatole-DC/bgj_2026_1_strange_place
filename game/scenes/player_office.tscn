@@ -4,12 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://bocp13rp0k157" path="res://assets/sprites/player_office.jpg" id="2_08hnw"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_gdqe8"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="4_08hnw"]
+[ext_resource type="Texture2D" uid="uid://csbs1eo8yvrd4" path="res://assets/sprites/player_office/phone.png" id="5_gdqe8"]
+[ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/furnitures/clock/clock.tscn" id="6_81vk8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81vk8"]
-size = Vector2(257, 436)
+size = Vector2(257, 431)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdqe8"]
 size = Vector2(451, 331)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08hnw"]
+size = Vector2(178, 107)
 
 [node name="PlayerOffice" type="Node2D" unique_id=1005068916]
 
@@ -34,7 +39,7 @@ position = Vector2(686, 148)
 navigation_scene = "uid://sjgupbjgm873"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OpenSpaceNavigation" unique_id=1676094462]
-position = Vector2(34, 61)
+position = Vector2(35, 64)
 shape = SubResource("RectangleShape2D_81vk8")
 
 [node name="Computer" parent="." unique_id=1602951859 instance=ExtResource("4_08hnw")]
@@ -44,3 +49,18 @@ dialogue = "uid://bd75oar4kcj38"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Computer" unique_id=847446049]
 position = Vector2(-0.5, 2.5)
 shape = SubResource("RectangleShape2D_gdqe8")
+
+[node name="Phone" parent="." unique_id=95298682 instance=ExtResource("4_08hnw")]
+position = Vector2(833, 510)
+dialogue = "uid://bqxkdn6ohr3s2"
+
+[node name="Sprite2D" type="Sprite2D" parent="Phone" unique_id=403751328]
+texture = ExtResource("5_gdqe8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Phone" unique_id=1727406452]
+position = Vector2(13, -10.5)
+shape = SubResource("RectangleShape2D_08hnw")
+
+[node name="Clock" parent="." unique_id=823591413 instance=ExtResource("6_81vk8")]
+modulate = Color(0.34489122, 0.45111924, 0.5575945, 0.63529414)
+position = Vector2(376, 75)

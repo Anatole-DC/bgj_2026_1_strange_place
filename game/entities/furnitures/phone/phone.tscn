@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c0sdvh0q2o7mh"]
+
+[ext_resource type="Script" uid="uid://d2cyj7c5n3jhm" path="res://common/point_and_click/point_and_click_dialogue.gd" id="1_qkyrv"]
+[ext_resource type="Texture2D" uid="uid://csbs1eo8yvrd4" path="res://assets/sprites/player_office/phone.png" id="2_qkyrv"]
+
+[node name="Phone" type="Area2D" unique_id=959870659]
+script = ExtResource("1_qkyrv")
+metadata/_custom_type_script = "uid://d2cyj7c5n3jhm"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1373702333]
+texture = ExtResource("2_qkyrv")

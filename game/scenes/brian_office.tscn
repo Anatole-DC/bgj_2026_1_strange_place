@@ -41,7 +41,8 @@ shape = SubResource("RectangleShape2D_56x7i")
 
 [node name="Clock" parent="." unique_id=823591413 instance=ExtResource("4_56x7i")]
 modulate = Color(0.34489122, 0.45111924, 0.5575945, 0.63529414)
-position = Vector2(959, 54)
+position = Vector2(1018, 67)
+scale = Vector2(0.62, 1)
 
 [node name="PointAndClickDialogue" parent="." unique_id=1602951859 instance=ExtResource("5_s0d8x")]
 position = Vector2(634, 420)
@@ -52,5 +53,5 @@ position = Vector2(9, 19)
 shape = SubResource("RectangleShape2D_lwes3")
 
 [node name="PostIt" parent="." unique_id=1699916699 instance=ExtResource("6_lwes3")]
-position = Vector2(275, 400)
+position = Vector2(279, 405)
 scale = Vector2(2.240001, 3.7199998)

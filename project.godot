@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="BGJ2026-1_strange_places"
-run/main_scene="uid://sjgupbjgm873"
+run/main_scene="uid://df2jlsraorxkk"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*uid://ds2q0uclmolvu"
 MainGameLoopTimer="*uid://bnmlaljff61cs"
-SmellShader="*uid://ceshtxk6t8lxn"
+GlobalShaders="*uid://ceshtxk6t8lxn"
 GameState="*uid://5pbt1dtv5xa4"
 
 [dialogic]
@@ -30,14 +30,16 @@ directories/dch_directory={
 "karen": "res://game/entities/npcs/karen.dch",
 "kathy": "res://game/entities/npcs/kathy.dch",
 "maitainance_supervisor": "res://game/entities/npcs/maitainance_supervisor.dch",
-"player": "res://game/entities/npcs/player.dch"
+"player": "res://game/entities/npcs/player.dch",
+"technical_team_leader": "res://game/entities/npcs/technical_team_leader.dch"
 }
 directories/dtl_directory={
 "brian": "res://game/entities/dialogues/brian.dtl",
 "brian_not_there": "res://game/entities/dialogues/brian_not_there.dtl",
+"character_phone": "res://game/entities/dialogues/character_phone.dtl",
 "closed_office": "res://game/entities/dialogues/closed_office.dtl",
 "coffee_machine": "res://game/entities/dialogues/coffee_machine.dtl",
-"computer_phase_1": "res://game/entities/dialogues/computer_phase_1.dtl",
+"computer_phase_1": "res://game/entities/dialogues/computer_phase.dtl",
 "karen": "res://game/entities/dialogues/karen.dtl",
 "kathy": "res://game/entities/dialogues/kathy.dtl"
 }

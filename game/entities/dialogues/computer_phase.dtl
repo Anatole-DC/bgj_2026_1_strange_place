@@ -1,0 +1,48 @@
+if {GameState.current_day} == {GameState.Day.FIRST}:
+	if {GameState.d1_completed_email_tasks} == true:
+		technical_team_leader: Hurry up with the remaining tasks !
+		[end_timeline]
+	- Maitainance supervisor | [if {GameState.has_post_it} == true] [else="hide"]
+		maitainance_supervisor: Hello ! Do you have any request on the tank maintainance request ?
+		player: Yes. I am sorry to inform you that your request has been denied.
+		set {GameState.d1_completed_email_tasks} = true
+		[end_timeline]
+	- Inspector of factories
+		set {GameState.d1_completed_email_tasks} = true
+		Day 1 inspector
+		[end_timeline]
+	- Exit
+		[end_timeline]
+
+elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
+	if {GameState.d2_completed_email_tasks} == true:
+		technical_team_leader: Hurry up with the remaining tasks !
+		[end_timeline]
+	- Technical team leader
+		set {GameState.d2_completed_email_tasks} = true
+		player: Day 2 team leader email
+		[end_timeline]
+	- Disaster management
+		set {GameState.called_disaster_management} = true
+		set {GameState.d2_completed_email_tasks} = true
+		player: Day 2 disaster management email
+		player: Hello, shit is about to go down
+		[end_timeline]
+	- Exit
+		[end_timeline]
+
+elif {GameState.current_day}  ==  {GameState.Day.LAST}:
+	- Technical team leader
+		Day 3 technical team leader
+		technical_team_leader: You fucked up !
+		player: No you fucked up !
+		technical_team_leader: No... WE fucked up...
+		player: ...
+		player: No you fucked up !
+		[end_timeline]
+	- Disaster management| [if {GameState.called_disaster_management} == false]
+		player: Day 3 disaster management email
+		player: Hello, shit is about to go down
+		[end_timeline]
+	- Exit
+		[end_timeline]

@@ -1,0 +1,26 @@
+if {GameState.current_day} == {GameState.Day.FIRST}:
+	- Technical team leader
+		[end_timeline]
+	- Health office
+		set {GameState.called_health_office} = true
+		[end_timeline]
+	- Exit
+		[end_timeline]
+
+elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
+	- Maintenance supervisor
+		[end_timeline]
+	- Health office | [if {GameState.called_health_office} == false] [else="hide"]
+		[end_timeline]
+	- Environmental group | [if {GameState.called_health_office} == true] [else="hide"]
+		[end_timeline]
+	- Exit
+		[end_timeline]
+
+elif {GameState.current_day}  ==  {GameState.Day.LAST}:
+	- Crew manager
+		[end_timeline]
+	- Wife
+		[end_timeline]
+	- Exit
+		[end_timeline]
