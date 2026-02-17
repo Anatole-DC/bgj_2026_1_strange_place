@@ -30,6 +30,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "brian": "res://game/entities/dialogues/brian.dtl",
+"brian_not_there": "res://game/entities/dialogues/brian_not_there.dtl",
 "closed_office": "res://game/entities/dialogues/closed_office.dtl",
 "coffee_machine": "res://game/entities/dialogues/coffee_machine.dtl",
 "karen": "res://game/entities/dialogues/karen.dtl",

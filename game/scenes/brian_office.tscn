@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://bgvh672k8yadt"]
 
-[ext_resource type="Texture2D" uid="uid://ci411op13rvyk" path="res://assets/images/brian_office.jpg" id="1_0rnfw"]
+[ext_resource type="Texture2D" uid="uid://n61jfowd4w01" path="res://assets/sprites/brian.jpg" id="2_s0d8x"]
 [ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="2_sk6cd"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_y3n26"]
 [ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/clock/clock.tscn" id="4_56x7i"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="5_s0d8x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56x7i"]
-size = Vector2(341, 660)
+size = Vector2(109, 660)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwes3"]
-size = Vector2(698, 629)
+size = Vector2(308, 316)
 
 [node name="BrianOffice" type="Node2D" unique_id=1058688483]
 
@@ -27,14 +27,14 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_0rnfw")
+texture = ExtResource("2_s0d8x")
 
 [node name="OpenSpaceNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_y3n26")]
-position = Vector2(212, 252)
+position = Vector2(1273, 249)
 navigation_scene = "uid://sjgupbjgm873"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="OpenSpaceNavigation" unique_id=1733056370]
-position = Vector2(-41.5, 74)
+position = Vector2(-157.5, 74)
 shape = SubResource("RectangleShape2D_56x7i")
 
 [node name="Clock" parent="." unique_id=823591413 instance=ExtResource("4_56x7i")]
@@ -42,9 +42,9 @@ modulate = Color(0.34489122, 0.45111924, 0.5575945, 0.63529414)
 position = Vector2(959, 54)
 
 [node name="PointAndClickDialogue" parent="." unique_id=1602951859 instance=ExtResource("5_s0d8x")]
-position = Vector2(854, 477)
-dialogue = "uid://c2lqpijqt1h3b"
+position = Vector2(634, 420)
+dialogue = "uid://vuhaj6xnbdfb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PointAndClickDialogue" unique_id=538778719]
-position = Vector2(-40, -137.5)
+position = Vector2(9, 19)
 shape = SubResource("RectangleShape2D_lwes3")
