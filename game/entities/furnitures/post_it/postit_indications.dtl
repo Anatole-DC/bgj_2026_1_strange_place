@@ -4,6 +4,8 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 	technical_team_leader: Deny there request, we are under budget.
 	[end_timeline]
 elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
+	karen: Can someone call to fix the coffee machine ?
+	karen: I fill it's not in the companies right to deny us from coffee !
 	[end_timeline]
 elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 	A note by the technical team leader

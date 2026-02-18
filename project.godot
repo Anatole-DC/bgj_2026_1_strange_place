@@ -15,6 +15,10 @@ run/main_scene="uid://df2jlsraorxkk"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://dy45d6pf3suoe"
+
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
@@ -27,19 +31,25 @@ GameState="*uid://ckiksj714gwrv"
 directories/dch_directory={
 "brian": "res://game/entities/npcs/brian.dch",
 "chief_inspector": "res://game/entities/npcs/chief_inspector.dch",
+"district_magistrate": "res://game/entities/npcs/district_magistrate.dch",
 "karen": "res://game/entities/npcs/karen.dch",
 "kathy": "res://game/entities/npcs/kathy.dch",
 "maitainance_supervisor": "res://game/entities/npcs/maitainance_supervisor.dch",
+"management": "res://game/entities/npcs/management.dch",
 "player": "res://game/entities/npcs/player.dch",
 "technical_team_leader": "res://game/entities/npcs/technical_team_leader.dch"
 }
 directories/dtl_directory={
 "brian": "res://game/entities/dialogues/brian.dtl",
 "brian_not_there": "res://game/entities/dialogues/brian_not_there.dtl",
+"budget_dialogue": "res://game/entities/furnitures/budget/budget_dialogue.dtl",
 "character_phone": "res://game/entities/dialogues/character_phone.dtl",
 "closed_office": "res://game/entities/dialogues/closed_office.dtl",
 "coffee_machine": "res://game/entities/dialogues/coffee_machine.dtl",
 "computer_phase_1": "res://game/entities/dialogues/computer_phase.dtl",
+"day_1_indications": "res://game/entities/dialogues/day_1_indications.dtl",
+"day_2_indications": "res://game/entities/dialogues/day_2_indications.dtl",
+"day_3_indications": "res://game/entities/dialogues/day_3_indications.dtl",
 "document_indications": "res://game/entities/furnitures/document/document_indications.dtl",
 "karen": "res://game/entities/dialogues/karen.dtl",
 "kathy": "res://game/entities/dialogues/kathy.dtl",
@@ -75,18 +85,13 @@ save/encryption_on_exports_only=true
 text/autopauses={}
 audio/channel_defaults={
 "": {
-"audio_bus": "",
+"audio_bus": "Printer",
 "fade_length": 0.0,
 "loop": false,
 "volume": 0.0
-},
-"music": {
-"audio_bus": "",
-"fade_length": 0.0,
-"loop": true,
-"volume": 0.0
 }
 }
+audio/type_sound_bus="Master"
 
 [display]
 

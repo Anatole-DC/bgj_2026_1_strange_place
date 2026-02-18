@@ -15,6 +15,7 @@ func start_loop():
 		return
 	self.start()
 	is_started = true
+	Dialogic.start(GameState.daily_indications)
 	print("Starting game loop")
 
 func get_progress() -> float:

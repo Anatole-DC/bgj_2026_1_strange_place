@@ -1,8 +1,8 @@
 if {GameState.current_day} == {GameState.Day.FIRST}:
 	if {GameState.checked_budget} == false:
-		technical_team_leader: I asked you about the numbers ! Hurry up !
+		management: I asked you about the numbers ! Hurry up !
 	if {GameState.d1_completed_calling_tasks} == true:
-		technical_team_leader: Will you speed up with these tasks ?!
+		management: We don't pay you to be on the phone all day !
 		[end_timeline]
 	- Call technical team leader | [if {GameState.checked_budget} == true] [else="hide"]
 		set {GameState.d1_completed_calling_tasks} = true
@@ -15,6 +15,10 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 		[end_timeline]
 
 elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
+	if {GameState.d2_completed_calling_tasks} == true:
+		management: Are still on your computer ?!
+		management: Have you no mercy for our phone bill ?
+		[end_timeline]
 	- Call maintenance supervisor
 		set {GameState.d2_completed_calling_tasks} = true
 		[end_timeline]
@@ -28,6 +32,9 @@ elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
 		[end_timeline]
 
 elif {GameState.current_day}  ==  {GameState.Day.LAST}:
+	if {GameState.d3_completed_calling_tasks} == true:
+		There is no one to call.
+		[end_timeline]
 	- Call crew manager
 		set {GameState.d3_completed_calling_tasks} = true
 		[end_timeline]

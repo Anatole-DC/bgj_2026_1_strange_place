@@ -3,7 +3,7 @@ extends Area2D
 @export_file("*dtl") var post_id_indications: String
 
 func _ready():
-	if not GameState.has_post_it: return
+	if not GameState.has_post_it and not GameState.has_shredded_post_it: return
 	queue_free()
 
 func _on_input_event(viewport, event, shape_idx):

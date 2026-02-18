@@ -1,151 +1,65 @@
 extends Node
 
 enum Day {FIRST, SECOND, LAST, END}
-var current_day: Day:
-	set(day):
-		current_day = day
-		if current_day == Day.FIRST:
-			d1_mailing.show()
-			d1_calling.show()
-			d2_mailing.hide()
-			d2_calling.hide()
-			d3_mailing.hide()
-			d3_calling.hide()
-		if current_day == Day.SECOND:
-			d1_mailing.hide()
-			d1_calling.hide()
-			d2_mailing.show()
-			d2_calling.show()
-			d3_mailing.hide()
-			d3_calling.hide()
-		if current_day == Day.LAST:
-			d1_mailing.hide()
-			d1_calling.hide()
-			d2_mailing.hide()
-			d2_calling.hide()
-			d3_mailing.show()
-			d3_calling.show()
-		if current_day == Day.END:
-			d1_mailing.hide()
-			d1_calling.hide()
-			d2_mailing.hide()
-			d2_calling.hide()
-			d3_mailing.hide()
-			d3_calling.hide()
+var current_day: Day
 
 @export var ui: Control
-
 # First day
 @export_group("Day 1")
-@export_subgroup("D1 Mailing")
-@export var d1_mailing: Control
-@export var d1_mailing_task: CheckBox
-var d1_completed_email_tasks: bool = false:
-	set(value):
-		d1_completed_email_tasks = value
-		if (value):
-			mark_task_complete(d1_mailing_task)
-			d1_mailing.hide()
-			
-@export var document_task: CheckBox
+@export_file("*.dtl") var d1_indications: String
 
-@export var brian_post_it_task: CheckBox
-var has_post_it: bool = false:
-	set(value):
-		has_post_it = value
-		if (value): mark_task_complete(brian_post_it_task)
+var d1_completed_email_tasks: bool = false
+var has_post_it: bool = false
+var has_shredded_post_it: bool = false
+var d1_has_shredded_post_it: bool = false
+var d1_has_scanned_post_it: bool = false
+var d2_has_shredded_post_it: bool = false
+var d2_has_scanned_post_it: bool = false
+var d3_has_shredded_post_it: bool = false
+var d3_has_scanned_post_it: bool = false
 
-@export_subgroup("D1 Calling")
-@export var d1_calling: Control
-@export var d1_calling_task: CheckBox
-var d1_completed_calling_tasks: bool = false:
-	set(value):
-		d1_completed_calling_tasks = value
-		if (value):
-			mark_task_complete(d1_calling_task)
-			d1_calling.hide()
-
+var d1_completed_calling_tasks: bool = false
 var called_health_office: bool = false
-
-@export var checked_budget_task: CheckBox
-var checked_budget: bool = false:
-	set(value):
-		checked_budget = value
-		if (value): mark_task_complete(checked_budget_task)
-
-@export var find_file_task: CheckBox
-var find_file: bool = false:
-	set(value):
-		find_file = value
-		if (value):
-			mark_task_complete(find_file_task)
-			mark_task_complete(document_task)
+var checked_budget: bool = false
+var find_file: bool = false
+var has_shredded_file: bool = false
+var d1_has_shredded_file: bool = false
+var d1_has_scanned_file: bool = false
+var d2_has_shredded_file: bool = false
+var d2_has_scanned_file: bool = false
+var d3_has_shredded_file: bool = false
+var d3_has_scanned_file: bool = false
 
 # Second day
 @export_group("Day 2")
-@export_subgroup("D2 Mailing")
-@export var d2_mailing: Control
-@export var d2_mailing_task: CheckBox
+@export_file("*.dtl") var d2_indications: String
 var called_disaster_management: bool = false
-var d2_completed_email_tasks: bool = false:
-	set(value):
-		d2_completed_email_tasks = value
-		if value:
-			mark_task_complete(d2_mailing_task)
-			d2_mailing.hide()
+var d2_completed_email_tasks: bool = false
 
 @export_subgroup("D2 Calling")
-@export var d2_calling: Control
-@export var d2_calling_task: CheckBox
-@export var find_file_2: CheckBox
-@export var check_budget_2: CheckBox
-var d2_completed_calling_tasks: bool = false:
-	set(value):
-		d2_completed_calling_tasks = value
-		if value:
-			mark_task_complete(d2_calling_task)
-			d2_calling.hide()
+var d2_completed_calling_tasks: bool = false
 
 # Last Day
 @export_group("Day 3")
-@export_subgroup("D3 Mailing")
-@export var d3_mailing: Control
-@export var d3_mailing_task: CheckBox
-@export var d3_postit_task: CheckBox
-@export var d3_document_task: CheckBox
-var d3_completed_email_tasks: bool = false:
-	set(value):
-		d3_completed_email_tasks = value
-		if value:
-			mark_task_complete(d3_mailing_task)
-			d3_mailing.hide()
-
-@export_subgroup("D3 Calling")
-@export var d3_calling: Control
-@export var d3_calling_task: CheckBox
-var d3_completed_calling_tasks: bool = false:
-	set(value):
-		d3_completed_calling_tasks = value
-		if value:
-			mark_task_complete(d3_calling_task)
-			d3_calling.hide()
+@export_file("*.dtl") var d3_indications: String
+var d3_completed_email_tasks: bool = false
+var d3_completed_calling_tasks: bool = false
+var daily_indications: String
 
 func _ready():
-	ui.propagate_call("set_mouse_filter", [Control.MOUSE_FILTER_IGNORE])
 	current_day = Day.FIRST
+	daily_indications = d1_indications
 
 func go_next_day(previous_day: Day):
 	reset_furniture_state()
 	if previous_day == Day.FIRST:
-		find_file_task = find_file_2
-		checked_budget_task = check_budget_2
 		current_day = Day.SECOND
+		daily_indications = d2_indications
 		return
 	if previous_day == Day.SECOND:
 		has_post_it = false
-		brian_post_it_task = d3_postit_task
-		find_file_task = d3_document_task
 		current_day = Day.LAST
+		daily_indications = d3_indications
 		return
 	current_day = Day.END
 	return
@@ -153,6 +67,8 @@ func go_next_day(previous_day: Day):
 func reset_furniture_state():
 	find_file = false
 	checked_budget = false
+	has_shredded_file = false
+	has_shredded_post_it = false
 
 func mark_task_complete(checkbox: CheckBox):
 	checkbox.disabled = true

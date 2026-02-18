@@ -3,7 +3,7 @@ extends Area2D
 @export_file("*dtl") var document_indications: String
 
 func _ready():
-	if not GameState.find_file: return
+	if not GameState.find_file and not GameState.has_shredded_file: return
 	queue_free()
 
 func _on_input_event(viewport, event, shape_idx):
