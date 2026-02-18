@@ -23,5 +23,5 @@ elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 	- Exit
 		[end_timeline]
 label printer_audio
-audio One-ShotSFX "res://assets/sounds/freesound_community-receipt-printer-01-43872.mp3"
+#audio "res://assets/sounds/freesound_community-receipt-printer-01-43872.mp3"
 [end_timeline]
