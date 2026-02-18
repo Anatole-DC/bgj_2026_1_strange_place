@@ -3,7 +3,11 @@ extends Node
 enum Day {FIRST, SECOND, LAST, END}
 var current_day: Day
 
-@export var ui: Control
+@export_group("Office sounds")
+@export var printer_player: AudioStreamPlayer
+@export var shredder_player: AudioStreamPlayer
+@export var clock_sound: AudioStreamPlayer
+
 # First day
 @export_group("Day 1")
 @export_file("*.dtl") var d1_indications: String
@@ -73,3 +77,9 @@ func reset_furniture_state():
 func mark_task_complete(checkbox: CheckBox):
 	checkbox.disabled = true
 	checkbox.button_pressed = true
+
+func use_printer():
+	printer_player.play()
+
+func use_shredder():
+	shredder_player.play()

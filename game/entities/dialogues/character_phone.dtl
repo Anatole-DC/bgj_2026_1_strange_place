@@ -5,9 +5,26 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 		management: We don't pay you to be on the phone all day !
 		[end_timeline]
 	- Call technical team leader | [if {GameState.checked_budget} == true] [else="hide"]
+		technical_team_leader: Hello, this is Technical team leader.
+		player: Hello, this is PLAYER, from the WECARE office.
+		player: Just calling you to let you know that management wants to keep the refrigeration in the CHEMICALNAME tanks deactivated for another week.
+		technical_team_leader: Sure, sure, no problem.
+		technical_team_leader: Just to be sure, does management know that CHEMICALNAME needs to be kept at a constant temperature, or it can ...
+		player: Yes, I have already talked to management, and they are aware.
+		player: They say no refrigeration for another week, or we'll go over budget, and if we go over budget, we will have to make cuts.
+		player: Do you want us to make cuts ?
+		technical_team_leader: No, sir. Refrigeration will stay off, sir.
 		set {GameState.d1_completed_calling_tasks} = true
 		[end_timeline]
 	- Call health office | [if {GameState.find_file} == true] [else="hide"]
+		label call_health_office
+		health_office: : Hello, this is NAME from Health Office, how can I help you?
+		player: Hello NAME, I am PLAYER, calling from COMPANYNAME.
+		player: Since we operate so close to a residential area, and work with a "Class Ia – extremely hazardous" substance, I know we need to inform the local authorities for disaster management purposes.
+		health_office: We have not been notified about that. What kind of chemical is this, exactly?
+		player: We are working with CHEMICALNAME. It can cause death from respiratory failure within minutes to hours of brief exposure, as well as major delayed and long-term effects.
+		health_office: You did well to contact us. We've had a couple patients coming in from COMPANYNAME, but we did not know how to treat them, as we were not sure about what they had inhaled exactly.
+		health_office: This information will be crucial to cure them.
 		set {GameState.called_health_office} = true
 		set {GameState.d1_completed_calling_tasks} = true
 		[end_timeline]
@@ -16,16 +33,30 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 
 elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
 	if {GameState.d2_completed_calling_tasks} == true:
-		management: Are still on your computer ?!
-		management: Have you no mercy for our phone bill ?
+		management: Are still making calls ?!
+		management: Have you no mercy for our phone bill ?!
 		[end_timeline]
 	- Call maintenance supervisor
+		maintenance_supervisor: Hello, this is Maintenance Supervisor.
+		player: Hello, this is PLAYER, from the WECARE office. Management has tld me to communicate that the pressure gauges on the tanks have been repaired.
+		maintenance_supervisor: Really? Cause I got a call from Technical team leader today and it seems that they are still ...
+		player: Management assured me that they have been repaired, so don't you worry about that. 
+		maintenance_supervisor: Alright. I'll let Technical team leader know. 
 		set {GameState.d2_completed_calling_tasks} = true
 		[end_timeline]
 	- Call health office | [if {GameState.called_health_office} == false] [else="hide"]
 		set {GameState.d2_completed_calling_tasks} = true
+		jump call_health_office
 		[end_timeline]
 	- Call environmental group | [if {GameState.called_health_office} == true] [else="hide"]
+		environmental_group: hey, this is NAME from Environmental Group, what can I do for you ?
+		player: Hello NAME, I am PLAYER, calling from COMPANYNAME.
+		player: We are working with a "Class Ia – extremely hazardous" substance, one that can have some serious environmental effects in case of a leak.
+		player: I suspect my superiors have not disclosed this information with you, and I think our company is at risk of a leak.
+		environmental_group: This is the first we are hearing of this. Can you tell me more?
+		player: CHEMICALNAME evaporates quickly, and the gas cloud can be very poisonous, causing massive die-offs of people and animals.
+		player: It can also react with water and form other corrosive and toxic chemicals, and can have long-term impact on the environment.
+		environmental_group: Oh, dear. Thank you for contacting us, we'll get in touch with the Disaster Management Authorities right away.
 		set {GameState.d2_completed_calling_tasks} = true
 		[end_timeline]
 	- Exit
@@ -36,9 +67,17 @@ elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 		There is no one to call.
 		[end_timeline]
 	- Call crew manager
+		crew_manager: Hello, this is Crew Manager.
+		player: Hello, this is PLAYER, from the WECARE office. Calling you to let you know that management wants us to reduce the size of crew working the tanks this weekend.
+		crew_manager: Are you sure? That is a very sensitive area, sir. Reducing the size of the crew could have some security risks.
+		player: Management is aware of the risks, and this has been deemed an acceptable one. See to it, asap.
 		set {GameState.d3_completed_calling_tasks} = true
 		[end_timeline]
 	- Call wife
+		wife: Hi, this is Wife, I'm not available right now but you can leave a message ... now !
+		player: Hi Love, this is PLAYER.
+		player: I think we need some time away together this weekend, so I booked us a room at that SPA you like. Wait for me there, and bring Cat too! He can use a vacation.
+		player: I'll reach you after work. Love you.
 		set {GameState.d3_completed_calling_tasks} = true
 		[end_timeline]
 	- Exit

@@ -16,6 +16,7 @@ func start_loop():
 	self.start()
 	is_started = true
 	Dialogic.start(GameState.daily_indications)
+	GameState.clock_sound.play()
 	print("Starting game loop")
 
 func get_progress() -> float:
@@ -27,6 +28,7 @@ func _on_timeout():
 	Dialogic.end_timeline()
 	is_started = false
 	GameState.go_next_day(GameState.current_day)
+	GameState.clock_sound.stop()
 	
 	if GameState.current_day == GameState.Day.END:
 		get_tree().change_scene_to_file(game_over_scene)

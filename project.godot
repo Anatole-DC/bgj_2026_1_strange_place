@@ -31,13 +31,17 @@ GameState="*uid://ckiksj714gwrv"
 directories/dch_directory={
 "brian": "res://game/entities/npcs/brian.dch",
 "chief_inspector": "res://game/entities/npcs/chief_inspector.dch",
+"crew_manager": "res://game/entities/npcs/crew_manager.dch",
 "district_magistrate": "res://game/entities/npcs/district_magistrate.dch",
+"environmental_group": "res://game/entities/npcs/environmental_group.dch",
+"health_office": "res://game/entities/npcs/health_office.dch",
 "karen": "res://game/entities/npcs/karen.dch",
 "kathy": "res://game/entities/npcs/kathy.dch",
 "maitainance_supervisor": "res://game/entities/npcs/maitainance_supervisor.dch",
 "management": "res://game/entities/npcs/management.dch",
 "player": "res://game/entities/npcs/player.dch",
-"technical_team_leader": "res://game/entities/npcs/technical_team_leader.dch"
+"technical_team_leader": "res://game/entities/npcs/technical_team_leader.dch",
+"wife": "res://game/entities/npcs/wife.dch"
 }
 directories/dtl_directory={
 "brian": "res://game/entities/dialogues/brian.dtl",

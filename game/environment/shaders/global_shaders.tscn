@@ -16,8 +16,8 @@ shader_parameter/distortion_strength = 0.15
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_abh5c"]
 shader = ExtResource("3_woinh")
 shader_parameter/sleep_intensity = 0.0
-shader_parameter/vignette_strength = 0.5
-shader_parameter/vignette_softness = 0.8
+shader_parameter/vignette_strength = 0.350000016625
+shader_parameter/vignette_softness = 1.2020000538351199
 shader_parameter/darkness_color = Color(0, 0, 0, 1)
 shader_parameter/pulse_speed = 1.0
 shader_parameter/pulse_amount = 0.1

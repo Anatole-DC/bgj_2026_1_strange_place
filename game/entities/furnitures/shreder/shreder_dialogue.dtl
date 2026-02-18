@@ -33,5 +33,5 @@ elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 	- Exit
 		[end_timeline]
 label shreder_audio
-#audio One-ShotSFX "res://assets/sounds/freesound_community-paper-shredder-42411.mp3"
+do GameState.use_shredder()
 [end_timeline]

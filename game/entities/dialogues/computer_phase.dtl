@@ -57,9 +57,17 @@ elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
 
 elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 	- Email technical team leader
-		player: Hello Head of the Technical Team, on behalf of Management, and following yesteday's incident, we ask you to decouple the public siren from the company one. After checking the panel, I see that they are still connected. Please proceed with the changed. Best, PLAYER. 
-		technical_team_leader: Hello PLAYER, the siren is necessary to alert the people of TOWNNAME in case of a leak. It's mandatory for companies working with a "Class Ia – extremely hazardous" substance who operea so close to a residential area. I don't want to get in trouble. Best, Head of the Technical Team 
-		player: Hello Head of the Technical Team, we remind you that COMPANYNAME's priority is the safety of its workers, as well as the peace of mind of TOWNNAME's community. Please proceed with the requested changes, or we will be forced to review your position within the COMPANYNAME family. Best, PLAYER. 
+		player: Hello Head of the Technical Team.
+		player: On behalf of Management, and following yesteday's incident, we ask you to decouple the public siren from the company one.
+		player: After checking the panel, I see that they are still connected. Please proceed with the changed. Best, PLAYER. 
+		technical_team_leader: Hello PLAYER, the siren is necessary to alert the people of TOWNNAME in case of a leak.
+		technical_team_leader: It's mandatory for companies working with a "Class Ia – extremely hazardous" substance who operea so close to a residential area.
+		technical_team_leader: I don't want to get in trouble.
+		technical_team_leader: Best, Head of the Technical Team 
+		player: Hello Head of the Technical Team.
+		player: We remind you that COMPANYNAME's priority is the safety of its workers, as well as the peace of mind of TOWNNAME's community.
+		player: Please proceed with the requested changes, or we will be forced to review your position within the COMPANYNAME family.
+		player: Best, PLAYER. 
 		[end_timeline]
 		set {GameState.d3_completed_email_tasks} = true
 		[end_timeline]
@@ -73,7 +81,8 @@ elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 		player: Attached, you'll find a copy of our emergency systems, as well as relevant information about the substance we are working with, a "Class Ia – extremely hazardous" substance.
 		player: I remain at your disposal for any additional information. Best, PLAYER.
 		district_magistrate: Hello PLAYER, thank you for letting us know.
-		district_magistrate: I am  taking this very seriously, and have already mobilized the Disaster Management team. We will get in touch with you next week to schedule a call.
+		district_magistrate: I am  taking this very seriously, and have already mobilized the Disaster Management team.
+		district_magistrate: We will get in touch with you next week to schedule a call.
 		district_magistrate: Best regards, District Magistrate 
 		set {GameState.d3_completed_email_tasks} = true
 		[end_timeline]
