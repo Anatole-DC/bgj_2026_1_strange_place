@@ -7,7 +7,7 @@ extends ColorRect
 func _ready():
 	self.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-func _process(delta):
+func _process(_delta):
 	var loop_progress: float = MainGameLoopTimer.get_progress()
 	var sleep_intensity: float = sleep_progress.sample(loop_progress)
 	material.set_shader_parameter("sleep_intensity", sleep_intensity)
