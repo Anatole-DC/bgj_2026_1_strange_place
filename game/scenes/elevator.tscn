@@ -7,9 +7,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4fd8"]
 size = Vector2(374, 654)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8ei2"]
-size = Vector2(62, 123)
-
 [node name="Elevator" type="Node2D" unique_id=1353703965]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=343524542]
@@ -33,15 +30,6 @@ navigation_scene = "uid://sjgupbjgm873"
 [node name="ElevatorDoorShape" type="CollisionShape2D" parent="OpenSpaceNavigation" unique_id=391700310]
 position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_y4fd8")
-debug_color = Color(0, 0.4, 0.47058824, 0.8745098)
-
-[node name="DeathNavigation" parent="." unique_id=1684441887 instance=ExtResource("2_fpifn")]
-position = Vector2(823, 369)
-navigation_scene = "uid://dsgu3yoi6ot3o"
-
-[node name="ElevatorTouchPad" type="CollisionShape2D" parent="DeathNavigation" unique_id=1717711637]
-position = Vector2(12, -7.5)
-shape = SubResource("RectangleShape2D_n8ei2")
 debug_color = Color(0, 0.4, 0.47058824, 0.8745098)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1080326882]

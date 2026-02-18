@@ -6,12 +6,16 @@
 [ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/furnitures/clock/clock.tscn" id="4_56x7i"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="5_s0d8x"]
 [ext_resource type="PackedScene" uid="uid://lgt81n28tdqc" path="res://game/entities/furnitures/post_it/post_it.tscn" id="6_lwes3"]
+[ext_resource type="PackedScene" uid="uid://r3a6rkymr16o" path="res://game/entities/furnitures/budget/budget.tscn" id="7_hc52o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56x7i"]
 size = Vector2(109, 660)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwes3"]
 size = Vector2(308, 316)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rw1o7"]
+size = Vector2(85.7142, 37.903233)
 
 [node name="BrianOffice" type="Node2D" unique_id=1058688483]
 
@@ -55,3 +59,12 @@ shape = SubResource("RectangleShape2D_lwes3")
 [node name="PostIt" parent="." unique_id=1699916699 instance=ExtResource("6_lwes3")]
 position = Vector2(279, 405)
 scale = Vector2(2.240001, 3.7199998)
+
+[node name="Budget" parent="." unique_id=1308672710 instance=ExtResource("7_hc52o")]
+position = Vector2(791.00006, 133.99997)
+scale = Vector2(2.240001, 3.7199998)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Budget" unique_id=1354844851]
+position = Vector2(-0.8928528, -0.67203903)
+scale = Vector2(1, 1.0000002)
+shape = SubResource("RectangleShape2D_rw1o7")

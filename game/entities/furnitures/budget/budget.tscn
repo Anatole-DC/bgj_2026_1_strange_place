@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://r3a6rkymr16o"]
+
+[ext_resource type="Script" uid="uid://cpji4to24ircr" path="res://game/entities/furnitures/budget/budget.gd" id="1_l81y1"]
+
+[node name="Budget" type="Area2D" unique_id=1308672710]
+script = ExtResource("1_l81y1")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

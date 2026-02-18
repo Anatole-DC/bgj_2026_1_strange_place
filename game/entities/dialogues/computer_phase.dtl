@@ -1,4 +1,6 @@
 if {GameState.current_day} == {GameState.Day.FIRST}:
+	if {GameState.has_post_it} == false:
+		technical_team_leader: Why is the post it still on Brian's office ?!!
 	if {GameState.d1_completed_email_tasks} == true:
 		technical_team_leader: Hurry up with the remaining tasks !
 		[end_timeline]
@@ -7,7 +9,7 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 		player: Yes. I am sorry to inform you that your request has been denied.
 		set {GameState.d1_completed_email_tasks} = true
 		[end_timeline]
-	- Inspector of factories
+	- Inspector of factories |  [if {GameState.find_file} == true] [else="hide"]
 		set {GameState.d1_completed_email_tasks} = true
 		Day 1 inspector
 		[end_timeline]
