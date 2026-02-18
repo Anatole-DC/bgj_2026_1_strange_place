@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blnyktp16d8re"
-path="res://.godot/imported/document.JPEG-40a0362c4317b120cd11848153623dbb.ctex"
+uid="uid://cchig06dvcfwn"
+path="res://.godot/imported/shreder.PNG-9687d43dea5413fd77bdc4ed81aaa9ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/brian/document.JPEG"
-dest_files=["res://.godot/imported/document.JPEG-40a0362c4317b120cd11848153623dbb.ctex"]
+source_file="res://assets/sprites/office/shreder.PNG"
+dest_files=["res://.godot/imported/shreder.PNG-9687d43dea5413fd77bdc4ed81aaa9ab.ctex"]
 
 [params]
 

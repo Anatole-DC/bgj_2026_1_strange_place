@@ -10,8 +10,8 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 		set {GameState.d1_completed_email_tasks} = true
 		[end_timeline]
 	- Inspector of factories |  [if {GameState.find_file} == true] [else="hide"]
-		set {GameState.d1_completed_email_tasks} = true
 		Day 1 inspector
+		set {GameState.d1_completed_email_tasks} = true
 		[end_timeline]
 	- Exit
 		[end_timeline]
@@ -21,14 +21,14 @@ elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
 		technical_team_leader: Hurry up with the remaining tasks !
 		[end_timeline]
 	- Technical team leader
-		set {GameState.d2_completed_email_tasks} = true
 		player: Day 2 team leader email
+		set {GameState.d2_completed_email_tasks} = true
 		[end_timeline]
 	- Disaster management
-		set {GameState.called_disaster_management} = true
-		set {GameState.d2_completed_email_tasks} = true
 		player: Day 2 disaster management email
 		player: Hello, shit is about to go down
+		set {GameState.called_disaster_management} = true
+		set {GameState.d2_completed_email_tasks} = true
 		[end_timeline]
 	- Exit
 		[end_timeline]
@@ -41,10 +41,12 @@ elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 		technical_team_leader: No... WE fucked up...
 		player: ...
 		player: No you fucked up !
+		set {GameState.d3_completed_email_tasks} = true
 		[end_timeline]
 	- Disaster management| [if {GameState.called_disaster_management} == false]
 		player: Day 3 disaster management email
 		player: Hello, shit is about to go down
+		set {GameState.d3_completed_email_tasks} = true
 		[end_timeline]
 	- Exit
 		[end_timeline]

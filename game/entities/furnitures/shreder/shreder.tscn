@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cq6a5qvmd1ntc"]
+
+[ext_resource type="Script" uid="uid://h2t15h1chr21" path="res://game/entities/furnitures/shreder/shreder.gd" id="1_lgqrf"]
+[ext_resource type="Texture2D" uid="uid://cchig06dvcfwn" path="res://assets/sprites/office/shreder.PNG" id="2_lgqrf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgqrf"]
+size = Vector2(45, 53)
+
+[node name="Shreder" type="Area2D" unique_id=124562143]
+script = ExtResource("1_lgqrf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1329018970]
+texture = ExtResource("2_lgqrf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1031186725]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_lgqrf")

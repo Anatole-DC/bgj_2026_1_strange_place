@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="3_5oane"]
 [ext_resource type="PackedScene" uid="uid://ceqjypd08ultd" path="res://game/entities/furnitures/clock/clock.tscn" id="4_5qp1n"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="5_35ri3"]
+[ext_resource type="PackedScene" uid="uid://duu7h01g0tok4" path="res://game/entities/furnitures/printer/printer.tscn" id="6_non8d"]
+[ext_resource type="PackedScene" uid="uid://cq6a5qvmd1ntc" path="res://game/entities/furnitures/shreder/shreder.tscn" id="7_tluw6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp1n"]
 size = Vector2(62, 204.5)
@@ -82,3 +84,9 @@ dialogue = "uid://bp75hxxqacvoi"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClosedOfficeDialogue" unique_id=1450019472]
 position = Vector2(2, -7)
 shape = SubResource("RectangleShape2D_5oane")
+
+[node name="Printer" parent="." unique_id=759450818 instance=ExtResource("6_non8d")]
+position = Vector2(1089, 326)
+
+[node name="Shreder" parent="." unique_id=124562143 instance=ExtResource("7_tluw6")]
+position = Vector2(859, 290)

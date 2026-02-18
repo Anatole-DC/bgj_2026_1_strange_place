@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5pbt1dtv5xa4" path="res://game/game_state.gd" id="1_m0gg2"]
 
-[node name="GameState" type="CanvasLayer" unique_id=889985523 node_paths=PackedStringArray("ui", "d1_mailing", "d1_mailing_task", "document_task", "brian_post_it_task", "d1_calling", "d1_calling_task", "checked_budget_task", "find_file_task")]
+[node name="GameState" type="CanvasLayer" unique_id=889985523 node_paths=PackedStringArray("ui", "d1_mailing", "d1_mailing_task", "document_task", "brian_post_it_task", "d1_calling", "d1_calling_task", "checked_budget_task", "find_file_task", "d2_mailing", "d2_mailing_task", "d2_calling", "d2_calling_task", "d3_mailing", "d3_mailing_task", "d3_calling", "d3_calling_task")]
 script = ExtResource("1_m0gg2")
 ui = NodePath("DailyTasks")
 d1_mailing = NodePath("DailyTasks/d1_mailing")
@@ -13,6 +13,14 @@ d1_calling = NodePath("DailyTasks/d1_calling")
 d1_calling_task = NodePath("DailyTasks/d1_calling/d1_calling_task")
 checked_budget_task = NodePath("DailyTasks/d1_calling/MarginContainer/VBoxContainer/budget_check")
 find_file_task = NodePath("DailyTasks/d1_calling/MarginContainer/VBoxContainer/find_file")
+d2_mailing = NodePath("DailyTasks/d2_mailing")
+d2_mailing_task = NodePath("DailyTasks/d2_mailing/d2_mailing_task")
+d2_calling = NodePath("DailyTasks/d2_calling")
+d2_calling_task = NodePath("DailyTasks/d2_calling/d2_calling_task")
+d3_mailing = NodePath("DailyTasks/d3_mailing")
+d3_mailing_task = NodePath("DailyTasks/d3_mailing/d3_mailing_task")
+d3_calling = NodePath("DailyTasks/d3_calling/d3_calling_task")
+d3_calling_task = NodePath("DailyTasks/d3_calling/d3_calling_task")
 
 [node name="DailyTasks" type="VBoxContainer" parent="." unique_id=107032263]
 offset_right = 340.0
@@ -73,3 +81,79 @@ text = "or"
 [node name="find_file" type="CheckBox" parent="DailyTasks/d1_calling/MarginContainer/VBoxContainer" unique_id=1055290094]
 layout_mode = 2
 text = "Find the document in Brian's drawer"
+
+[node name="d2_mailing" type="VBoxContainer" parent="DailyTasks" unique_id=538560639]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="d2_mailing_task" type="CheckBox" parent="DailyTasks/d2_mailing" unique_id=40524700]
+layout_mode = 2
+text = "Send an email"
+
+[node name="MarginContainer" type="MarginContainer" parent="DailyTasks/d2_mailing" unique_id=826649010]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DailyTasks/d2_mailing/MarginContainer" unique_id=375871064]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="updated_budget" type="CheckBox" parent="DailyTasks/d2_mailing/MarginContainer/VBoxContainer" unique_id=267089983]
+layout_mode = 2
+text = "Look at updated budget."
+
+[node name="d2_calling" type="VBoxContainer" parent="DailyTasks" unique_id=1009801434]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="d2_calling_task" type="CheckBox" parent="DailyTasks/d2_calling" unique_id=216224054]
+layout_mode = 2
+text = "Send an call"
+
+[node name="MarginContainer" type="MarginContainer" parent="DailyTasks/d2_calling" unique_id=618724633]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DailyTasks/d2_calling/MarginContainer" unique_id=1700852233]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="find_file" type="CheckBox" parent="DailyTasks/d2_calling/MarginContainer/VBoxContainer" unique_id=1509693012]
+layout_mode = 2
+text = "Find the document in Brian's drawer"
+
+[node name="d3_mailing" type="VBoxContainer" parent="DailyTasks" unique_id=1876412293]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="d3_mailing_task" type="CheckBox" parent="DailyTasks/d3_mailing" unique_id=1570525609]
+layout_mode = 2
+text = "Send an email"
+
+[node name="MarginContainer" type="MarginContainer" parent="DailyTasks/d3_mailing" unique_id=488036806]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DailyTasks/d3_mailing/MarginContainer" unique_id=209740234]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="brian_post_it_task" type="CheckBox" parent="DailyTasks/d3_mailing/MarginContainer/VBoxContainer" unique_id=566358956]
+layout_mode = 2
+text = "Retrieve the post it in Brian's office"
+
+[node name="Label" type="Label" parent="DailyTasks/d3_mailing/MarginContainer/VBoxContainer" unique_id=2122232577]
+layout_mode = 2
+text = "or"
+
+[node name="brian_document_task" type="CheckBox" parent="DailyTasks/d3_mailing/MarginContainer/VBoxContainer" unique_id=833846430]
+layout_mode = 2
+text = "Find the document in Brian's drawer"
+
+[node name="d3_calling" type="VBoxContainer" parent="DailyTasks" unique_id=355047166]
+layout_mode = 2
+theme_override_constants/separation = -8
+
+[node name="d3_calling_task" type="CheckBox" parent="DailyTasks/d3_calling" unique_id=214879735]
+layout_mode = 2
+text = "Make one last call."

@@ -16,18 +16,23 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 
 elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
 	- Maintenance supervisor
+		set {GameState.d2_completed_calling_tasks} = true
 		[end_timeline]
 	- Health office | [if {GameState.called_health_office} == false] [else="hide"]
+		set {GameState.d2_completed_calling_tasks} = true
 		[end_timeline]
 	- Environmental group | [if {GameState.called_health_office} == true] [else="hide"]
+		set {GameState.d2_completed_calling_tasks} = true
 		[end_timeline]
 	- Exit
 		[end_timeline]
 
 elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 	- Crew manager
+		set {GameState.d3_completed_calling_tasks} = true
 		[end_timeline]
 	- Wife
+		set {GameState.d3_completed_calling_tasks} = true
 		[end_timeline]
 	- Exit
 		[end_timeline]
