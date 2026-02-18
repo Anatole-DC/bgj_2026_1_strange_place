@@ -40,8 +40,12 @@ directories/dtl_directory={
 "closed_office": "res://game/entities/dialogues/closed_office.dtl",
 "coffee_machine": "res://game/entities/dialogues/coffee_machine.dtl",
 "computer_phase_1": "res://game/entities/dialogues/computer_phase.dtl",
+"document_indications": "res://game/entities/furnitures/document/document_indications.dtl",
 "karen": "res://game/entities/dialogues/karen.dtl",
-"kathy": "res://game/entities/dialogues/kathy.dtl"
+"kathy": "res://game/entities/dialogues/kathy.dtl",
+"postit_indications": "res://game/entities/furnitures/post_it/postit_indications.dtl",
+"printer_dialogue": "res://game/entities/furnitures/printer/printer_dialogue.dtl",
+"shreder_dialogue": "res://game/entities/furnitures/shreder/shreder_dialogue.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true

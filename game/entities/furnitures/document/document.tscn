@@ -8,6 +8,7 @@ size = Vector2(20, 120)
 
 [node name="Document" type="Area2D" unique_id=1390469050]
 script = ExtResource("1_nvv50")
+document_indications = "uid://macvl8dma2io"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=606302500]
 texture = ExtResource("2_3l86n")

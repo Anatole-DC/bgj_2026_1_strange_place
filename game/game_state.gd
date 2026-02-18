@@ -97,6 +97,8 @@ var d2_completed_email_tasks: bool = false:
 @export_subgroup("D2 Calling")
 @export var d2_calling: Control
 @export var d2_calling_task: CheckBox
+@export var find_file_2: CheckBox
+@export var check_budget_2: CheckBox
 var d2_completed_calling_tasks: bool = false:
 	set(value):
 		d2_completed_calling_tasks = value
@@ -109,6 +111,8 @@ var d2_completed_calling_tasks: bool = false:
 @export_subgroup("D3 Mailing")
 @export var d3_mailing: Control
 @export var d3_mailing_task: CheckBox
+@export var d3_postit_task: CheckBox
+@export var d3_document_task: CheckBox
 var d3_completed_email_tasks: bool = false:
 	set(value):
 		d3_completed_email_tasks = value
@@ -133,9 +137,14 @@ func _ready():
 func go_next_day(previous_day: Day):
 	reset_furniture_state()
 	if previous_day == Day.FIRST:
+		find_file_task = find_file_2
+		checked_budget_task = check_budget_2
 		current_day = Day.SECOND
 		return
 	if previous_day == Day.SECOND:
+		has_post_it = false
+		brian_post_it_task = d3_postit_task
+		find_file_task = d3_document_task
 		current_day = Day.LAST
 		return
 	current_day = Day.END

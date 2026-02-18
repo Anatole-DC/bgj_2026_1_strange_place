@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5pbt1dtv5xa4" path="res://game/game_state.gd" id="1_m0gg2"]
 
-[node name="GameState" type="CanvasLayer" unique_id=889985523 node_paths=PackedStringArray("ui", "d1_mailing", "d1_mailing_task", "document_task", "brian_post_it_task", "d1_calling", "d1_calling_task", "checked_budget_task", "find_file_task", "d2_mailing", "d2_mailing_task", "d2_calling", "d2_calling_task", "d3_mailing", "d3_mailing_task", "d3_calling", "d3_calling_task")]
+[node name="GameState" type="CanvasLayer" unique_id=889985523 node_paths=PackedStringArray("ui", "d1_mailing", "d1_mailing_task", "document_task", "brian_post_it_task", "d1_calling", "d1_calling_task", "checked_budget_task", "find_file_task", "d2_mailing", "d2_mailing_task", "d2_calling", "d2_calling_task", "find_file_2", "check_budget_2", "d3_mailing", "d3_mailing_task", "d3_postit_task", "d3_document_task", "d3_calling", "d3_calling_task")]
 script = ExtResource("1_m0gg2")
 ui = NodePath("DailyTasks")
 d1_mailing = NodePath("DailyTasks/d1_mailing")
@@ -17,8 +17,12 @@ d2_mailing = NodePath("DailyTasks/d2_mailing")
 d2_mailing_task = NodePath("DailyTasks/d2_mailing/d2_mailing_task")
 d2_calling = NodePath("DailyTasks/d2_calling")
 d2_calling_task = NodePath("DailyTasks/d2_calling/d2_calling_task")
+find_file_2 = NodePath("DailyTasks/d2_calling/MarginContainer/VBoxContainer/find_file_2")
+check_budget_2 = NodePath("DailyTasks/d2_mailing/MarginContainer/VBoxContainer/updated_budget_2")
 d3_mailing = NodePath("DailyTasks/d3_mailing")
 d3_mailing_task = NodePath("DailyTasks/d3_mailing/d3_mailing_task")
+d3_postit_task = NodePath("DailyTasks/d3_mailing/MarginContainer/VBoxContainer/brian_post_it_task_3")
+d3_document_task = NodePath("DailyTasks/d3_mailing/MarginContainer/VBoxContainer/brian_document_task_3")
 d3_calling = NodePath("DailyTasks/d3_calling/d3_calling_task")
 d3_calling_task = NodePath("DailyTasks/d3_calling/d3_calling_task")
 
@@ -98,7 +102,7 @@ theme_override_constants/margin_left = 30
 layout_mode = 2
 theme_override_constants/separation = -8
 
-[node name="updated_budget" type="CheckBox" parent="DailyTasks/d2_mailing/MarginContainer/VBoxContainer" unique_id=267089983]
+[node name="updated_budget_2" type="CheckBox" parent="DailyTasks/d2_mailing/MarginContainer/VBoxContainer" unique_id=267089983]
 layout_mode = 2
 text = "Look at updated budget."
 
@@ -118,7 +122,7 @@ theme_override_constants/margin_left = 30
 layout_mode = 2
 theme_override_constants/separation = -8
 
-[node name="find_file" type="CheckBox" parent="DailyTasks/d2_calling/MarginContainer/VBoxContainer" unique_id=1509693012]
+[node name="find_file_2" type="CheckBox" parent="DailyTasks/d2_calling/MarginContainer/VBoxContainer" unique_id=135216774]
 layout_mode = 2
 text = "Find the document in Brian's drawer"
 
@@ -138,7 +142,7 @@ theme_override_constants/margin_left = 30
 layout_mode = 2
 theme_override_constants/separation = -8
 
-[node name="brian_post_it_task" type="CheckBox" parent="DailyTasks/d3_mailing/MarginContainer/VBoxContainer" unique_id=566358956]
+[node name="brian_post_it_task_3" type="CheckBox" parent="DailyTasks/d3_mailing/MarginContainer/VBoxContainer" unique_id=566358956]
 layout_mode = 2
 text = "Retrieve the post it in Brian's office"
 
@@ -146,7 +150,7 @@ text = "Retrieve the post it in Brian's office"
 layout_mode = 2
 text = "or"
 
-[node name="brian_document_task" type="CheckBox" parent="DailyTasks/d3_mailing/MarginContainer/VBoxContainer" unique_id=833846430]
+[node name="brian_document_task_3" type="CheckBox" parent="DailyTasks/d3_mailing/MarginContainer/VBoxContainer" unique_id=833846430]
 layout_mode = 2
 text = "Find the document in Brian's drawer"
 

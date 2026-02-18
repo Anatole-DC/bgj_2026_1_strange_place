@@ -4,12 +4,12 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 	if {GameState.d1_completed_email_tasks} == true:
 		technical_team_leader: Hurry up with the remaining tasks !
 		[end_timeline]
-	- Maitainance supervisor | [if {GameState.has_post_it} == true] [else="hide"]
+	- Email the maitainance supervisor | [if {GameState.has_post_it} == true] [else="hide"]
 		maitainance_supervisor: Hello ! Do you have any request on the tank maintainance request ?
 		player: Yes. I am sorry to inform you that your request has been denied.
 		set {GameState.d1_completed_email_tasks} = true
 		[end_timeline]
-	- Inspector of factories |  [if {GameState.find_file} == true] [else="hide"]
+	- Email the factory inspector |  [if {GameState.find_file} == true] [else="hide"]
 		Day 1 inspector
 		set {GameState.d1_completed_email_tasks} = true
 		[end_timeline]
@@ -20,11 +20,11 @@ elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
 	if {GameState.d2_completed_email_tasks} == true:
 		technical_team_leader: Hurry up with the remaining tasks !
 		[end_timeline]
-	- Technical team leader
+	- Email technical team leader
 		player: Day 2 team leader email
 		set {GameState.d2_completed_email_tasks} = true
 		[end_timeline]
-	- Disaster management
+	- Email disaster management
 		player: Day 2 disaster management email
 		player: Hello, shit is about to go down
 		set {GameState.called_disaster_management} = true
@@ -34,7 +34,7 @@ elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
 		[end_timeline]
 
 elif {GameState.current_day}  ==  {GameState.Day.LAST}:
-	- Technical team leader
+	- Email technical team leader
 		Day 3 technical team leader
 		technical_team_leader: You fucked up !
 		player: No you fucked up !
@@ -43,7 +43,7 @@ elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 		player: No you fucked up !
 		set {GameState.d3_completed_email_tasks} = true
 		[end_timeline]
-	- Disaster management| [if {GameState.called_disaster_management} == false]
+	- Email disaster management | [if {GameState.called_disaster_management} == false]
 		player: Day 3 disaster management email
 		player: Hello, shit is about to go down
 		set {GameState.d3_completed_email_tasks} = true

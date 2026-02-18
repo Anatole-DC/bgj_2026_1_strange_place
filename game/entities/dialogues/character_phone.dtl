@@ -4,10 +4,10 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 	if {GameState.d1_completed_calling_tasks} == true:
 		technical_team_leader: Will you speed up with these tasks ?!
 		[end_timeline]
-	- Technical team leader | [if {GameState.checked_budget} == true] [else="hide"]
+	- Call technical team leader | [if {GameState.checked_budget} == true] [else="hide"]
 		set {GameState.d1_completed_calling_tasks} = true
 		[end_timeline]
-	- Health office | [if {GameState.find_file} == true] [else="hide"]
+	- Call health office | [if {GameState.find_file} == true] [else="hide"]
 		set {GameState.called_health_office} = true
 		set {GameState.d1_completed_calling_tasks} = true
 		[end_timeline]
@@ -15,23 +15,23 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 		[end_timeline]
 
 elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
-	- Maintenance supervisor
+	- Call maintenance supervisor
 		set {GameState.d2_completed_calling_tasks} = true
 		[end_timeline]
-	- Health office | [if {GameState.called_health_office} == false] [else="hide"]
+	- Call health office | [if {GameState.called_health_office} == false] [else="hide"]
 		set {GameState.d2_completed_calling_tasks} = true
 		[end_timeline]
-	- Environmental group | [if {GameState.called_health_office} == true] [else="hide"]
+	- Call environmental group | [if {GameState.called_health_office} == true] [else="hide"]
 		set {GameState.d2_completed_calling_tasks} = true
 		[end_timeline]
 	- Exit
 		[end_timeline]
 
 elif {GameState.current_day}  ==  {GameState.Day.LAST}:
-	- Crew manager
+	- Call crew manager
 		set {GameState.d3_completed_calling_tasks} = true
 		[end_timeline]
-	- Wife
+	- Call wife
 		set {GameState.d3_completed_calling_tasks} = true
 		[end_timeline]
 	- Exit

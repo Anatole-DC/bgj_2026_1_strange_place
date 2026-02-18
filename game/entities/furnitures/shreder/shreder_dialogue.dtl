@@ -1,0 +1,24 @@
+if {GameState.current_day} == {GameState.Day.FIRST}:
+	- Destroy post-it | [if {GameState.has_post_it} == true] [else="hide"]
+		set {GameState.has_post_it} = false
+		[end_timeline]
+	- Destroy the incident report | [if {GameState.find_file} == true] [else="hide"]
+		set {GameState.find_file} = false
+		[end_timeline]
+	- Exit
+		[end_timeline]
+elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
+	- Destroy interverntion instructions | [if {GameState.find_file} == true] [else="hide"]
+		set {GameState.find_file} = false
+		[end_timeline]
+	- Exit
+		[end_timeline]
+elif {GameState.current_day}  ==  {GameState.Day.LAST}:
+	- Destroy the destruction instruction | [if {GameState.has_post_it} == true] [else="hide"]
+		set {GameState.has_post_it} = false
+		[end_timeline]
+	- Destroy the inspection report | [if {GameState.find_file} == true] [else="hide"]
+		set {GameState.find_file} = false
+		[end_timeline]
+	- Exit
+		[end_timeline]

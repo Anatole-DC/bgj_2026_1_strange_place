@@ -8,6 +8,7 @@ size = Vector2(89, 100)
 
 [node name="Printer" type="Area2D" unique_id=759450818]
 script = ExtResource("1_1vf75")
+printer_dialogue = "uid://bqdif2jhxg16g"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2120846672]
 texture = ExtResource("1_3mhyp")

@@ -9,6 +9,7 @@ size = Vector2(22, 27)
 [node name="PostIt" type="Area2D" unique_id=1699916699]
 scale = Vector2(3.760001, 3.7199998)
 script = ExtResource("1_bqftw")
+post_id_indications = "uid://cy5ldggdj8xo8"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=449894494]
 texture = ExtResource("2_ios7i")

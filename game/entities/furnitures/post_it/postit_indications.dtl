@@ -1,0 +1,12 @@
+if {GameState.current_day} == {GameState.Day.FIRST}:
+	A note by the technical team leader
+	technical_team_leader: Maintainance is asking for an intervention.
+	technical_team_leader: Deny there request, we are under budget.
+	[end_timeline]
+elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
+	[end_timeline]
+elif {GameState.current_day}  ==  {GameState.Day.LAST}:
+	A note by the technical team leader
+	technical_team_leader: Everything is about to go down !
+	technical_team_leader: Destroy every document,
+	technical_team_leader: Keep your mouth shut !
