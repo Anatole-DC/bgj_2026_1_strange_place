@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://5pbt1dtv5xa4" path="res://game/game_state.gd" id="1_m0gg2"]
 
-[node name="GameState" type="CanvasLayer" unique_id=889985523 node_paths=PackedStringArray("d1_mailing", "d1_mailing_task", "brian_post_it_task", "d1_calling", "d1_calling_task", "checked_budget_task", "find_file_task")]
+[node name="GameState" type="CanvasLayer" unique_id=889985523 node_paths=PackedStringArray("ui", "d1_mailing", "d1_mailing_task", "document_task", "brian_post_it_task", "d1_calling", "d1_calling_task", "checked_budget_task", "find_file_task")]
 script = ExtResource("1_m0gg2")
+ui = NodePath("DailyTasks")
 d1_mailing = NodePath("DailyTasks/d1_mailing")
 d1_mailing_task = NodePath("DailyTasks/d1_mailing/d1_mailing_task")
+document_task = NodePath("DailyTasks/d1_mailing/MarginContainer/VBoxContainer/brian_document_task")
 brian_post_it_task = NodePath("DailyTasks/d1_mailing/MarginContainer/VBoxContainer/brian_post_it_task")
 d1_calling = NodePath("DailyTasks/d1_calling")
 d1_calling_task = NodePath("DailyTasks/d1_calling/d1_calling_task")

@@ -15,5 +15,3 @@ func _on_input_event(_viewport, event, _shape_idx):
 	if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		Dialogic.start(dialogue)
 		get_viewport().set_input_as_handled()
-		
-		print(GameState.current_day)

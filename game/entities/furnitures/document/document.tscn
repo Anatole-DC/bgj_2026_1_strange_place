@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bqrhxprqy21ut"]
+
+[ext_resource type="Script" uid="uid://c0ct5trkdxcfo" path="res://game/entities/furnitures/document/document.gd" id="1_nvv50"]
+[ext_resource type="Texture2D" uid="uid://ce3o543xdiutm" path="res://assets/sprites/brian/document.PNG" id="2_3l86n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3l86n"]
+size = Vector2(20, 120)
+
+[node name="Document" type="Area2D" unique_id=1390469050]
+script = ExtResource("1_nvv50")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=606302500]
+texture = ExtResource("2_3l86n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2092868222]
+shape = SubResource("RectangleShape2D_3l86n")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
