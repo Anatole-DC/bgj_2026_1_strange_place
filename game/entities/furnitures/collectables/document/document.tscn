@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bqrhxprqy21ut"]
+
+[ext_resource type="Script" uid="uid://cknmfu11rqprk" path="res://game/entities/furnitures/interactable.gd" id="1_21gx8"]
+[ext_resource type="Texture2D" uid="uid://ce3o543xdiutm" path="res://assets/sprites/brian/document.PNG" id="2_3l86n"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_g6ggk"]
+[ext_resource type="PackedScene" uid="uid://bifr55cma08al" path="res://game/entities/furnitures/collectables/collectable_item.tscn" id="4_21gx8"]
+[ext_resource type="Texture2D" uid="uid://bbk7pdp6dnfy3" path="res://assets/sprites/furnitures/investigation_report.PNG" id="5_rordr"]
+[ext_resource type="Script" uid="uid://cv4n1sk8n5hmf" path="res://game/entities/furnitures/collectables/collectable.gd" id="6_q7xm3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3l86n"]
+size = Vector2(20, 120)
+
+[sub_resource type="Resource" id="Resource_vcntn"]
+script = ExtResource("6_q7xm3")
+inventory_sprite = ExtResource("5_rordr")
+document_id = "investigation_report"
+day = 0
+metadata/_custom_type_script = "uid://cv4n1sk8n5hmf"
+
+[node name="Document" type="Area2D" unique_id=18514801]
+script = ExtResource("1_21gx8")
+metadata/_custom_type_script = "uid://cknmfu11rqprk"
+
+[node name="InGameSprite" type="Sprite2D" parent="." unique_id=606302500]
+texture = ExtResource("2_3l86n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2092868222]
+shape = SubResource("RectangleShape2D_3l86n")
+
+[node name="MouseHover" parent="." unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("3_g6ggk")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../InGameSprite")
+
+[node name="CollectableItem" parent="." unique_id=1629575178 node_paths=PackedStringArray("area") instance=ExtResource("4_21gx8")]
+area = NodePath("..")
+collectable = SubResource("Resource_vcntn")
+dialogue = "uid://macvl8dma2io"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

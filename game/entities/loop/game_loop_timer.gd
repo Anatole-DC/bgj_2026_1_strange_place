@@ -27,7 +27,7 @@ func _on_timeout():
 	print("Game loop is over")
 	Dialogic.end_timeline()
 	is_started = false
-	GameState.go_next_day(GameState.current_day)
+	GameState.go_next_day()
 	GameState.clock_sound.stop()
 	
 	if GameState.current_day == GameState.Day.END:

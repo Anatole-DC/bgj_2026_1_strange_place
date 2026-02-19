@@ -1,11 +1,10 @@
-extends Area2D
+extends OfficeFurniture
+class_name Printer
 
-@export_file("*.dtl") var printer_dialogue: String
-
-
-func _on_input_event(viewport, event, shape_idx):
-	if event is not InputEventMouseButton: return
-	if Dialogic.current_timeline != null: return
-	
-	if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		Dialogic.start(printer_dialogue)
+func _on_used() -> void:
+	var doc_id := Inventory.current_document_id()
+	if doc_id == "":
+		Dialogic.start(furniture_dialogue, "no_file")
+		return
+	GameState.use_printer()
+	GameState.complete_task(doc_id + "_scanned")

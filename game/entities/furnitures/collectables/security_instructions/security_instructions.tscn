@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://m5fnt2jplr50"]
+
+[ext_resource type="Script" uid="uid://cknmfu11rqprk" path="res://game/entities/furnitures/interactable.gd" id="1_n61d0"]
+[ext_resource type="Texture2D" uid="uid://ce3o543xdiutm" path="res://assets/sprites/brian/document.PNG" id="2_n61d0"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_gsitv"]
+[ext_resource type="PackedScene" uid="uid://bifr55cma08al" path="res://game/entities/furnitures/collectables/collectable_item.tscn" id="4_ef15o"]
+[ext_resource type="Texture2D" uid="uid://bbk7pdp6dnfy3" path="res://assets/sprites/furnitures/investigation_report.PNG" id="5_2jjj2"]
+[ext_resource type="Script" uid="uid://cv4n1sk8n5hmf" path="res://game/entities/furnitures/collectables/collectable.gd" id="6_b4nov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5au4c"]
+size = Vector2(20, 120)
+
+[sub_resource type="Resource" id="Resource_1cufq"]
+script = ExtResource("6_b4nov")
+inventory_sprite = ExtResource("5_2jjj2")
+document_id = "security_instructions"
+day = 1
+metadata/_custom_type_script = "uid://cv4n1sk8n5hmf"
+
+[node name="SecurityInstructions" type="Area2D" unique_id=2016230574]
+script = ExtResource("1_n61d0")
+metadata/_custom_type_script = "uid://cknmfu11rqprk"
+
+[node name="InGameSprite" type="Sprite2D" parent="." unique_id=751850266]
+texture = ExtResource("2_n61d0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=286327439]
+shape = SubResource("RectangleShape2D_5au4c")
+
+[node name="MouseHover" parent="." unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("3_gsitv")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../InGameSprite")
+
+[node name="CollectableItem" parent="." unique_id=1629575178 node_paths=PackedStringArray("area") instance=ExtResource("4_ef15o")]
+area = NodePath("..")
+collectable = SubResource("Resource_1cufq")
+dialogue = "uid://cr12siy4h3cgm"

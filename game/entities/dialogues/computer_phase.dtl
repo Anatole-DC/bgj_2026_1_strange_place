@@ -1,10 +1,10 @@
 if {GameState.current_day} == {GameState.Day.FIRST}:
-	if {GameState.has_post_it} == false:
+	if {GameState.is_task_complete("check_budget")} == false:
 		management: Why hasn't the maitainance crew heard from my instructions yet  ?!!
-	if {GameState.d1_completed_email_tasks} == true:
+	if {GameState.is_task_complete("d1_mailing")} == true:
 		management: Don't you have better stuff to do than play on your office computer ?
 		[end_timeline]
-	- Email the maitainance supervisor | [if {GameState.has_post_it} == true] [else="hide"]
+	- Email the maitainance supervisor | [if {GameState.is_task_complete("management_note_collected")} == true] [else="hide"]
 		maintenance_supervisor: Hello X, the Head of the Technical Team let me know that they still have no slip-bind on the tanks.
 		maintenance_supervisor: We really need to fix that asap, so would it be possible to schedule maintenance for this week?
 		maintenance_supervisor: Best, Maintenance Supervisor
@@ -12,27 +12,26 @@ if {GameState.current_day} == {GameState.Day.FIRST}:
 		player: I am sorry to inform you that the request has been denied, as we are already over budget for this quarter.
 		player: Rest assured that this is a priority for us, and we will take care of it as soon as possible.
 		player: Have a great day, PLAYER
-		set {GameState.d1_completed_email_tasks} = true
+		do GameState.complete_task("d1_mailing")
 		[end_timeline]
-	- Email the factory inspector |  [if {GameState.find_file} == true] [else="hide"]
+	- Email the factory inspector |  [if {GameState.is_task_complete("investigation_report_scanned")} == true] [else="hide"]
 		player: Good morning Mr Chief Inspector or Factories,
 		player: I'm emailing you because you were in charge of the 2010 safety audit at COMPANYNAME.
 		player: Though it's been two years, the changes recommended after the audit have not been implemented, especially those regarding the safe storing of CHEMICALNAME, and the upkeep of emergency infrastructure.
 		player: Please get in touch in me at this email, or schedule another inspection to COMPANYNAME as soon as possible.
 		player: Best, PLAYER.
-		if {GameState.d1_has_scanned_file}:
-			Attaching the maitainance report to the mail.
+		Attaching the maitainance report to the mail.
 		chief_inspector: Hello, this is an automated email. I am currently OoO, and will reply to your email as soon as possible. Best regards, Mr.Chief Inspector or Factories 
-		set {GameState.d1_completed_email_tasks} = true
+		do GameState.complete_task("d1_mailing")
 		[end_timeline]
-	- Exit
+	- Leave computer
 		[end_timeline]
 
 elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
-	if {GameState.d2_completed_email_tasks} == true:
+	if {GameState.is_task_complete("d2_mailing")} == true:
 		management: Don't you have anything better to do ?!
 		[end_timeline]
-	- Email technical team leader | [if {GameState.checked_budget} == true]
+	- Email technical team leader | [if {GameState.is_task_complete("check_budget")} == true]
 		technical_team_leader: Hello PLAYER ! 
 		technical_team_leader: We have a scheduled routine cleaning operation on Friday near the tanks, but my technicians told me the valves in some of the pipes are malfunctioning.
 		technical_team_leader: Can you send an operator to check on that before Friday? Best, Maintenance Supervisor
@@ -40,22 +39,24 @@ elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
 		player: Unfortunately, it will not be posible to ask an operator to check on the valves, as we are already over budget for this quarter.
 		player: Please inform your technicians that the quality of our equipment is managment's top priority. Have a great day, PLAYER 
 		
-		set {GameState.d2_completed_email_tasks} = true
+		do GameState.complete_task("d2_mailing")
 		[end_timeline]
-	- Email disaster management | [if {GameState.d2_has_scanned_file} == true]
+	- Email disaster management | [if {GameState.is_task_complete("security_instructions_scanned")} == true]
 		label disaster_management_email
 		player: Hello Disaster Management, I'm following up on yesterday's email.
 		player: We are working with CHEMICALNAME, a "Class Ia – extremely hazardous" substance.
 		player: Attached, you'll find a copy of our emergency systems. I want to inform you that our flare tower, as well as our vent scrubbers, have been under maintenance for a while.
 		player: The refrigeration in CHEMICALNAME tanks is still deactivated, as of today. I remain at your disposal for any additional information. Best, PLAYER. 
 		
-		set {GameState.called_disaster_management} = true
-		set {GameState.d2_completed_email_tasks} = true
+		do GameState.complete_task("call_disaster_management")
+		do GameState.complete_task("d2_mailing")
 		[end_timeline]
-	- Exit
+	- Leave computer
 		[end_timeline]
 
 elif {GameState.current_day}  ==  {GameState.Day.LAST}:
+	if {GameState.is_task_complete("d3_mailing")} == true:
+		There is nothing more to do.
 	- Email technical team leader
 		player: Hello Head of the Technical Team.
 		player: On behalf of Management, and following yesteday's incident, we ask you to decouple the public siren from the company one.
@@ -67,15 +68,14 @@ elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 		player: Hello Head of the Technical Team.
 		player: We remind you that COMPANYNAME's priority is the safety of its workers, as well as the peace of mind of TOWNNAME's community.
 		player: Please proceed with the requested changes, or we will be forced to review your position within the COMPANYNAME family.
-		player: Best, PLAYER. 
+		player: Best, PLAYER.
+		do GameState.complete_task("d3_mailing")
 		[end_timeline]
-		set {GameState.d3_completed_email_tasks} = true
-		[end_timeline]
-	- Email disaster management | [if {GameState.called_disaster_management} == false]
-		set {GameState.d3_completed_email_tasks} = true
+	- Email disaster management | [if {GameState.is_task_complete("call_disaster_management")} == false]
+		do GameState.complete_task("d3_mailing")
 		jump disaster_management_email
 		[end_timeline]
-	- Email district magistrate | [if {GameState.called_disaster_management} == true and {GameState.d2_has_scanned_file} == true]
+	- Email district magistrate | [if {GameState.is_task_complete("call_disaster_management")} == true and {GameState.is_task_complete("security_instructions_scanned")} == true]
 		player: Hello District Magistrate !
 		player: I have reason to believe we are at high risk of a chemical leak, and I want action to be taken as swiftly as possible to ensure the safety of TOWNNAME's citizens.
 		player: Attached, you'll find a copy of our emergency systems, as well as relevant information about the substance we are working with, a "Class Ia – extremely hazardous" substance.
@@ -83,8 +83,9 @@ elif {GameState.current_day}  ==  {GameState.Day.LAST}:
 		district_magistrate: Hello PLAYER, thank you for letting us know.
 		district_magistrate: I am  taking this very seriously, and have already mobilized the Disaster Management team.
 		district_magistrate: We will get in touch with you next week to schedule a call.
-		district_magistrate: Best regards, District Magistrate 
-		set {GameState.d3_completed_email_tasks} = true
+		district_magistrate: Best regards, District Magistrate
+		
+		do GameState.complete_task("d3_mailing")
 		[end_timeline]
-	- Exit
+	- Leave computer
 		[end_timeline]

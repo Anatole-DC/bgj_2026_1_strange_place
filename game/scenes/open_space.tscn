@@ -10,9 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://duu7h01g0tok4" path="res://game/entities/furnitures/printer/printer.tscn" id="6_non8d"]
 [ext_resource type="PackedScene" uid="uid://cq6a5qvmd1ntc" path="res://game/entities/furnitures/shreder/shreder.tscn" id="7_tluw6"]
 [ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="8_1lgli"]
+[ext_resource type="PackedScene" uid="uid://jggf4fg82doc" path="res://game/entities/furnitures/collectables/karen_note/karen_note.tscn" id="11_qm3q5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35ri3"]
 size = Vector2(102, 429)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp1n"]
+size = Vector2(54, 196.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_non8d"]
 size = Vector2(65, 109)
@@ -22,9 +26,6 @@ size = Vector2(90, 139)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5oane"]
 size = Vector2(63, 121)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qp1n"]
-size = Vector2(54, 196.25)
 
 [node name="OpenSpace" type="Node2D" unique_id=1865548266]
 
@@ -60,6 +61,13 @@ navigation_scene = "uid://bgvh672k8yadt"
 position = Vector2(-6, 25.5)
 shape = SubResource("RectangleShape2D_35ri3")
 
+[node name="KarenOffice" parent="." unique_id=2014885648 instance=ExtResource("2_bahh1")]
+navigation_scene = "uid://umlyu0ogya8b"
+
+[node name="KarenOffice" type="CollisionShape2D" parent="KarenOffice" unique_id=1387342809]
+position = Vector2(265, 279.875)
+shape = SubResource("RectangleShape2D_5qp1n")
+
 [node name="PlayerOffice" parent="." unique_id=826763247 instance=ExtResource("2_bahh1")]
 position = Vector2(208, 682)
 navigation_scene = "uid://df2jlsraorxkk"
@@ -92,12 +100,12 @@ dialogue = "uid://bp75hxxqacvoi"
 position = Vector2(2, -7)
 shape = SubResource("RectangleShape2D_5oane")
 
-[node name="KarenOffice" type="CollisionShape2D" parent="ClosedOfficeDialogue" unique_id=1387342809]
-position = Vector2(-684, 23.875)
-shape = SubResource("RectangleShape2D_5qp1n")
-
 [node name="Printer" parent="." unique_id=759450818 instance=ExtResource("6_non8d")]
 position = Vector2(1089, 326)
 
 [node name="Shreder" parent="." unique_id=124562143 instance=ExtResource("7_tluw6")]
 position = Vector2(859, 290)
+
+[node name="KarenNote" parent="." unique_id=1131558972 instance=ExtResource("11_qm3q5")]
+position = Vector2(644, 216.00002)
+scale = Vector2(-0.35988212, 0.6000024)

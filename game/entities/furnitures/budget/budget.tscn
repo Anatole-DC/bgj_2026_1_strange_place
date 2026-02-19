@@ -24,3 +24,4 @@ mouse_area = NodePath("..")
 source_sprite = NodePath("../Sprite2D")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="interracted" from="." to="." method="_on_interracted"]

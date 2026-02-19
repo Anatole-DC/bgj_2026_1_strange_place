@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dbbvlb6uw8oa1"]
+
+[ext_resource type="Script" uid="uid://cknmfu11rqprk" path="res://game/entities/furnitures/interactable.gd" id="1_x82rq"]
+[ext_resource type="Texture2D" uid="uid://d28hyu7y1g2vy" path="res://assets/sprites/itchio-pxl-retro-computer-icons-set-110/separated-items/itchio-pxl-retro-computer-icons-set-110-item38.png" id="2_1n13y"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_jmohl"]
+[ext_resource type="PackedScene" uid="uid://bifr55cma08al" path="res://game/entities/furnitures/collectables/collectable_item.tscn" id="4_35gq3"]
+[ext_resource type="Texture2D" uid="uid://jwqqdstu7rnb" path="res://assets/sprites/furnitures/management_note.PNG" id="5_eg1c2"]
+[ext_resource type="Script" uid="uid://cv4n1sk8n5hmf" path="res://game/entities/furnitures/collectables/collectable.gd" id="6_0vs23"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vl4pl"]
+size = Vector2(22, 27)
+
+[sub_resource type="Resource" id="Resource_ybtpl"]
+script = ExtResource("6_0vs23")
+inventory_sprite = ExtResource("5_eg1c2")
+document_id = "management_disaster_note"
+day = 2
+metadata/_custom_type_script = "uid://cv4n1sk8n5hmf"
+
+[node name="ManagementDisasterNote" type="Area2D" unique_id=741349730]
+script = ExtResource("1_x82rq")
+metadata/_custom_type_script = "uid://cknmfu11rqprk"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=529056951]
+texture = ExtResource("2_1n13y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2030984463]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_vl4pl")
+
+[node name="MouseHover" parent="." unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("3_jmohl")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../Sprite2D")
+
+[node name="CollectableItem" parent="." unique_id=1629575178 node_paths=PackedStringArray("area") instance=ExtResource("4_35gq3")]
+area = NodePath("..")
+collectable = SubResource("Resource_ybtpl")
+dialogue = "uid://8u0bgb3rh0tj"
