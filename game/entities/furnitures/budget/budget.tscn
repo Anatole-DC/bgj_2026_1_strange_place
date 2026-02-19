@@ -1,9 +1,26 @@
 [gd_scene format=3 uid="uid://r3a6rkymr16o"]
 
 [ext_resource type="Script" uid="uid://cpji4to24ircr" path="res://game/entities/furnitures/budget/budget.gd" id="1_l81y1"]
+[ext_resource type="Texture2D" uid="uid://cvk6yejpgksmu" path="res://assets/sprites/brian/Numbers.PNG" id="2_rckcu"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_yu3rc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rckcu"]
+size = Vector2(192, 143)
 
 [node name="Budget" type="Area2D" unique_id=1308672710]
 script = ExtResource("1_l81y1")
 budget_dialogue = "uid://dse634mfnf1u1"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=550969887]
+texture = ExtResource("2_rckcu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2031760242]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rckcu")
+
+[node name="MouseHover" parent="." unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("3_yu3rc")]
+position = Vector2(1, 0)
+mouse_area = NodePath("..")
+source_sprite = NodePath("../Sprite2D")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

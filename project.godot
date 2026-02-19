@@ -61,10 +61,13 @@ directories/dtl_directory={
 "printer_dialogue": "res://game/entities/furnitures/printer/printer_dialogue.dtl",
 "shreder_dialogue": "res://game/entities/furnitures/shreder/shreder_dialogue.dtl"
 }
-layout/style_directory={}
+layout/style_directory={
+"": "res://game/ui/game_theme.tres",
+"game_theme": "res://game/ui/game_theme.tres"
+}
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://game/ui/game_theme.tres"]
+layout/default_style="res://game/ui/game_theme.tres"
 variables={
 "karen_1": false
 }

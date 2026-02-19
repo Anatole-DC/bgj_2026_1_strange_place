@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://chfafn0orcka6" path="res://game/entities/furnitures/post_it/post_it.gd" id="1_bqftw"]
 [ext_resource type="Texture2D" uid="uid://d28hyu7y1g2vy" path="res://assets/sprites/itchio-pxl-retro-computer-icons-set-110/separated-items/itchio-pxl-retro-computer-icons-set-110-item38.png" id="2_ios7i"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_cyuoj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqftw"]
 size = Vector2(22, 27)
@@ -17,5 +18,9 @@ texture = ExtResource("2_ios7i")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1849846864]
 position = Vector2(-1, 0.5)
 shape = SubResource("RectangleShape2D_bqftw")
+
+[node name="MouseHover" parent="." unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("3_cyuoj")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../Sprite2D")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

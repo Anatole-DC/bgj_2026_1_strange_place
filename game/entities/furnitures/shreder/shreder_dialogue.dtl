@@ -1,3 +1,6 @@
+if {GameState.has_post_it} == false and {GameState.find_file} == false:
+	You don't have any document to shred.
+	[end_timeline]	
 if {GameState.current_day} == {GameState.Day.FIRST}:
 	- Destroy post-it | [if {GameState.has_post_it} == true] [else="hide"]
 		set {GameState.has_post_it} = false

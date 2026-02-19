@@ -1,3 +1,6 @@
+if {GameState.has_post_it} == false and {GameState.find_file} == false:
+	You don't have any file to scan.
+	[end_timeline]	
 if {GameState.current_day} == {GameState.Day.FIRST}:
 	- Scan post-it | [if {GameState.has_post_it} == true and {GameState.d1_has_scanned_post_it} == false] [else="hide"]
 		set {GameState.d1_has_scanned_post_it} = true

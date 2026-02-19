@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c4tva4y7e6spt"]
+
+[ext_resource type="Shader" uid="uid://vibl5yp747q" path="res://game/ui/outline.gdshader" id="1_28lj1"]
+[ext_resource type="Script" uid="uid://dowc78ry2xluy" path="res://game/ui/mouse_hover.gd" id="2_ww176"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2y4fy"]
+shader = ExtResource("1_28lj1")
+shader_parameter/outline_enabled = false
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_28lj1"]
+shader = ExtResource("1_28lj1")
+shader_parameter/outline_enabled = false
+shader_parameter/outline_width = 2.0
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+
+[node name="MouseHover" type="Node2D" unique_id=1606368339]
+material = SubResource("ShaderMaterial_2y4fy")
+script = ExtResource("2_ww176")
+outline_material = SubResource("ShaderMaterial_28lj1")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0ct5trkdxcfo" path="res://game/entities/furnitures/document/document.gd" id="1_nvv50"]
 [ext_resource type="Texture2D" uid="uid://ce3o543xdiutm" path="res://assets/sprites/brian/document.PNG" id="2_3l86n"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_g6ggk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3l86n"]
 size = Vector2(20, 120)
@@ -15,5 +16,9 @@ texture = ExtResource("2_3l86n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2092868222]
 shape = SubResource("RectangleShape2D_3l86n")
+
+[node name="MouseHover" parent="." unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("3_g6ggk")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../Sprite2D")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
