@@ -9,7 +9,7 @@ size = Vector2(45, 53)
 
 [node name="Shreder" type="Area2D" unique_id=124562143]
 script = ExtResource("1_lgqrf")
-shreder_dialogue = "uid://ck2tt6y34nds7"
+furniture_dialogue = "uid://ck2tt6y34nds7"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1329018970]
 texture = ExtResource("2_lgqrf")

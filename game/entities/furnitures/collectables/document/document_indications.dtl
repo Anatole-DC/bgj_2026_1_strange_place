@@ -1,10 +1,9 @@
-if {GameState.current_day} == {GameState.Day.FIRST}:
-	Damage report on silo 20xx
-	maitainance_supervisor: Inspection report on silo 20xx
-	maitainance_supervisor: Concerns were correct. Workers are exposed to chemical leak.
-	maitainance_supervisor: Send intervention ASAP, or damages could be greater !
-	[end_timeline]
-elif {GameState.current_day}  ==  {GameState.Day.SECOND}:
+Damage report on silo 20xx
+maitainance_supervisor: Inspection report on silo 20xx
+maitainance_supervisor: Concerns were correct. Workers are exposed to chemical leak.
+maitainance_supervisor: Send intervention ASAP, or damages could be greater !
+[end_timeline]
+if {GameState.current_day}  ==  {GameState.Day.SECOND}:
 	Intervention guidelines
 	maitainance_supervisor: Exit the factory.
 	maitainance_supervisor: Build a perimeter around the area.

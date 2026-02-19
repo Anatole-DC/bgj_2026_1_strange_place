@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://chnnhnodey5si"]
+
+[ext_resource type="Script" uid="uid://c3etetbfuuh26" path="res://game/ui/inventory/inventory.gd" id="1_1ghxt"]
+
+[node name="Inventory" type="CanvasLayer" unique_id=827176996 node_paths=PackedStringArray("inventory_ui")]
+script = ExtResource("1_1ghxt")
+inventory_ui = NodePath("Control")
+
+[node name="Control" type="MarginContainer" parent="." unique_id=814279736]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100

@@ -25,6 +25,7 @@ Dialogic="*uid://ds2q0uclmolvu"
 MainGameLoopTimer="*uid://bnmlaljff61cs"
 GlobalShaders="*uid://ceshtxk6t8lxn"
 GameState="*uid://ckiksj714gwrv"
+Inventory="*uid://chnnhnodey5si"
 
 [dialogic]
 
@@ -54,11 +55,14 @@ directories/dtl_directory={
 "day_1_indications": "res://game/entities/dialogues/day_1_indications.dtl",
 "day_2_indications": "res://game/entities/dialogues/day_2_indications.dtl",
 "day_3_indications": "res://game/entities/dialogues/day_3_indications.dtl",
-"document_indications": "res://game/entities/furnitures/document/document_indications.dtl",
+"document_indications": "res://game/entities/furnitures/collectables/document/document_indications.dtl",
 "karen": "res://game/entities/dialogues/karen.dtl",
+"karen_coffee_note": "res://game/entities/furnitures/collectables/karen_note/karen_coffee_note.dtl",
 "kathy": "res://game/entities/dialogues/kathy.dtl",
-"postit_indications": "res://game/entities/furnitures/post_it/postit_indications.dtl",
+"management_diaster_note": "res://game/entities/furnitures/collectables/management_disaster_note/management_diaster_note.dtl",
+"postit_indications": "res://game/entities/furnitures/collectables/post_it/postit_indications.dtl",
 "printer_dialogue": "res://game/entities/furnitures/printer/printer_dialogue.dtl",
+"security_instructions": "res://game/entities/furnitures/collectables/security_instructions/security_instructions.dtl",
 "shreder_dialogue": "res://game/entities/furnitures/shreder/shreder_dialogue.dtl"
 }
 layout/style_directory={

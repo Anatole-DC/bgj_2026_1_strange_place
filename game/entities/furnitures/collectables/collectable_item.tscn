@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bifr55cma08al"]
+
+[ext_resource type="Script" uid="uid://bmoaa1eaqj2i6" path="res://game/entities/furnitures/collectables/collectable_item.gd" id="1_ej4ad"]
+
+[node name="CollectableItem" type="Node" unique_id=1629575178]
+script = ExtResource("1_ej4ad")
