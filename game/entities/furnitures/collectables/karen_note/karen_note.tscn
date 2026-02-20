@@ -4,15 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://d28hyu7y1g2vy" path="res://assets/sprites/itchio-pxl-retro-computer-icons-set-110/separated-items/itchio-pxl-retro-computer-icons-set-110-item38.png" id="2_b6apb"]
 [ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_hpsq2"]
 [ext_resource type="PackedScene" uid="uid://bifr55cma08al" path="res://game/entities/furnitures/collectables/collectable_item.tscn" id="4_nf43j"]
-[ext_resource type="Texture2D" uid="uid://jwqqdstu7rnb" path="res://assets/sprites/furnitures/management_note.PNG" id="5_i7dgl"]
+[ext_resource type="Texture2D" uid="uid://dbcsaws5tcwk" path="res://assets/sprites/karen_coffee_machine.PNG" id="5_b6apb"]
 [ext_resource type="Script" uid="uid://cv4n1sk8n5hmf" path="res://game/entities/furnitures/collectables/collectable.gd" id="6_rn18q"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nayty"]
-size = Vector2(22, 27)
 
 [sub_resource type="Resource" id="Resource_rw3xn"]
 script = ExtResource("6_rn18q")
-inventory_sprite = ExtResource("5_i7dgl")
+inventory_sprite = ExtResource("5_b6apb")
 document_id = "karen_note"
 day = 1
 metadata/_custom_type_script = "uid://cv4n1sk8n5hmf"
@@ -23,10 +20,6 @@ metadata/_custom_type_script = "uid://cknmfu11rqprk"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1573623944]
 texture = ExtResource("2_b6apb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1296244550]
-position = Vector2(-1, 0.5)
-shape = SubResource("RectangleShape2D_nayty")
 
 [node name="MouseHover" parent="." unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("3_hpsq2")]
 mouse_area = NodePath("..")

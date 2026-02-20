@@ -1,26 +1,10 @@
 [gd_scene format=3 uid="uid://duu7h01g0tok4"]
 
 [ext_resource type="Script" uid="uid://b2cw7f2up7uku" path="res://game/entities/furnitures/printer/printer.gd" id="1_1vf75"]
-[ext_resource type="Texture2D" uid="uid://d05xnomin34pa" path="res://assets/sprites/office/printer.PNG" id="1_3mhyp"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_o6aay"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mhyp"]
-size = Vector2(89, 100)
 
 [node name="Printer" type="Area2D" unique_id=759450818]
 script = ExtResource("1_1vf75")
 furniture_dialogue = "uid://bqdif2jhxg16g"
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2120846672]
-texture = ExtResource("1_3mhyp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=344980534]
-position = Vector2(0.5, -1)
-shape = SubResource("RectangleShape2D_3mhyp")
-
-[node name="MouseHover" parent="." unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("3_o6aay")]
-mouse_area = NodePath("..")
-source_sprite = NodePath("../Sprite2D")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="interracted" from="." to="." method="_on_interracted"]

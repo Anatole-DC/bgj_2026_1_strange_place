@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d28hyu7y1g2vy" path="res://assets/sprites/itchio-pxl-retro-computer-icons-set-110/separated-items/itchio-pxl-retro-computer-icons-set-110-item38.png" id="2_1n13y"]
 [ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_jmohl"]
 [ext_resource type="PackedScene" uid="uid://bifr55cma08al" path="res://game/entities/furnitures/collectables/collectable_item.tscn" id="4_35gq3"]
-[ext_resource type="Texture2D" uid="uid://jwqqdstu7rnb" path="res://assets/sprites/furnitures/management_note.PNG" id="5_eg1c2"]
+[ext_resource type="Texture2D" uid="uid://c2pcdghirv8ch" path="res://assets/sprites/management_disaster_note.PNG" id="5_1n13y"]
 [ext_resource type="Script" uid="uid://cv4n1sk8n5hmf" path="res://game/entities/furnitures/collectables/collectable.gd" id="6_0vs23"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vl4pl"]
@@ -12,7 +12,7 @@ size = Vector2(22, 27)
 
 [sub_resource type="Resource" id="Resource_ybtpl"]
 script = ExtResource("6_0vs23")
-inventory_sprite = ExtResource("5_eg1c2")
+inventory_sprite = ExtResource("5_1n13y")
 document_id = "management_disaster_note"
 day = 2
 metadata/_custom_type_script = "uid://cv4n1sk8n5hmf"

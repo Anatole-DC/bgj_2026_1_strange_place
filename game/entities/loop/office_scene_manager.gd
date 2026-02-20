@@ -1,4 +1,5 @@
 extends Node
 
 func _ready():
-	MainGameLoopTimer.start_loop()
+	#MainGameLoopTimer.start_loop()
+	pass
