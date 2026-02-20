@@ -27,6 +27,9 @@ size = Vector2(90, 139)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5oane"]
 size = Vector2(63, 121)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qm3q5"]
+size = Vector2(55.57367, 41.66652)
+
 [node name="OpenSpace" type="Node2D" unique_id=1865548266]
 
 [node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("3_5oane")]
@@ -109,3 +112,8 @@ position = Vector2(859, 290)
 [node name="KarenNote" parent="." unique_id=1131558972 instance=ExtResource("11_qm3q5")]
 position = Vector2(644, 216.00002)
 scale = Vector2(-0.35988212, 0.6000024)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KarenNote" unique_id=2124128435]
+position = Vector2(-2.7786865, -0.8333435)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_qm3q5")
