@@ -107,6 +107,7 @@ audio/channel_defaults={
 }
 }
 audio/type_sound_bus="Master"
+glossary/glossary_files=[]
 
 [display]
 

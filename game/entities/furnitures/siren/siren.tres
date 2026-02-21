@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DialogicGlossary" format=3 uid="uid://d26nqxgdvu1ra"]
+
+[ext_resource type="Script" uid="uid://80elcodyqohb" path="res://addons/dialogic/Modules/Glossary/glossary_resource.gd" id="1_oixew"]
+
+[resource]
+script = ExtResource("1_oixew")
+entries = {
+"activated": {
+"case_sensitive": true,
+"color": Color(0.94140625, 0.2644832, 0.21328735, 1),
+"name": "activated",
+"title": "Activated"
+}
+}
