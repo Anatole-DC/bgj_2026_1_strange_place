@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dbuvs5xwmkn7s" path="res://assets/sprites/office/door.PNG" id="4_qyhy8"]
 [ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="5_w6ol5"]
 [ext_resource type="Texture2D" uid="uid://dg3blm0uay3r0" path="res://assets/sprites/office/office_layer.PNG" id="6_v77s5"]
+[ext_resource type="PackedScene" uid="uid://bpp63eqj5r0fl" path="res://game/entities/npcs/c/character_c.tscn" id="7_36dsh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6nve"]
 size = Vector2(166.25, 448)
@@ -54,6 +55,10 @@ source_sprite = NodePath("../DoorSprite")
 [node name="Clock" parent="." unique_id=823591413 instance=ExtResource("4_c8hl1")]
 position = Vector2(639, 202)
 scale = Vector2(0.52, 0.52)
+
+[node name="CharacterC" parent="." unique_id=1536696448 instance=ExtResource("7_36dsh")]
+position = Vector2(712, 456)
+scale = Vector2(0.435, 0.435)
 
 [node name="OfficeLayerSprite" type="Sprite2D" parent="." unique_id=1145014942]
 position = Vector2(953.99994, 541.99994)
