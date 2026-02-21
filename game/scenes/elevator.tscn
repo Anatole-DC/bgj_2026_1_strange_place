@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b0if6rnjrjmjw"]
 
-[ext_resource type="Texture2D" uid="uid://dwtb30rs5b7yk" path="res://assets/images/elevator.jpg" id="1_n8ei2"]
+[ext_resource type="Texture2D" uid="uid://i8ddmg37ajv3" path="res://assets/sprites/office/intro.jpeg" id="1_fpifn"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="2_fpifn"]
 [ext_resource type="AudioStream" uid="uid://d2soces437aqs" path="res://assets/sounds/freesound_community-bell-98033.mp3" id="3_fpifn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4fd8"]
-size = Vector2(374, 654)
+size = Vector2(73, 151)
 
 [node name="Elevator" type="Node2D" unique_id=1353703965]
 
@@ -16,11 +16,16 @@ layer = -2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -83.0
+offset_right = 415.0
+offset_bottom = 461.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.765, 0.765)
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_n8ei2")
+texture = ExtResource("1_fpifn")
 metadata/_edit_use_anchors_ = true
 
 [node name="OpenSpaceNavigation" parent="." unique_id=2014885648 instance=ExtResource("2_fpifn")]
@@ -28,7 +33,7 @@ position = Vector2(574, 343)
 navigation_scene = "uid://sjgupbjgm873"
 
 [node name="ElevatorDoorShape" type="CollisionShape2D" parent="OpenSpaceNavigation" unique_id=391700310]
-position = Vector2(3, 0)
+position = Vector2(40.5, -111.5)
 shape = SubResource("RectangleShape2D_y4fd8")
 debug_color = Color(0, 0.4, 0.47058824, 0.8745098)
 
