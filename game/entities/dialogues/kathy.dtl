@@ -1,2 +1,13 @@
-kathy: I can't wait for the day to be over...
+if {GameState.is_task_complete("finish_talking_with_kathy")} == true:
+	jump dialogue_complete
+# Write quest dialogues
+
+kathy: basic dialogue shit.
+
+do GameState.complete_task("finish_talking_with_x")
+
+# Don't write anything after this
+[end_timeline]
+label dialogue_complete
+kathy: I like fruits
 [end_timeline]
