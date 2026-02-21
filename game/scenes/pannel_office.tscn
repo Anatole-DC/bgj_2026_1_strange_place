@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://bgvh672k8yadt"]
+
+[ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="1_dwm72"]
+[ext_resource type="Texture2D" uid="uid://cbxfc07243ncy" path="res://assets/sprites/pannel_office/office.PNG" id="2_dwm72"]
+[ext_resource type="PackedScene" uid="uid://dms6otdbfmya0" path="res://game/entities/furnitures/clock/clock.tscn" id="3_uow2c"]
+[ext_resource type="Texture2D" uid="uid://d3vtpvprx0uq7" path="res://assets/sprites/pannel_office/door.PNG" id="5_ppf15"]
+[ext_resource type="PackedScene" uid="uid://c5ipa4rrc87n1" path="res://game/entities/npcs/character1/character_1.tscn" id="5_w4dk1"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="6_dwm72"]
+[ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="6_qjs8y"]
+[ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="7_g5wtb"]
+[ext_resource type="Texture2D" uid="uid://d02mh88nt2gsu" path="res://assets/sprites/pannel_office/pannels.PNG" id="8_nfl3m"]
+[ext_resource type="Texture2D" uid="uid://chh6qrvftpj5f" path="res://assets/sprites/pannel_office/office_pannel_layer.PNG" id="8_uow2c"]
+[ext_resource type="Texture2D" uid="uid://ct6paadbh2wtr" path="res://assets/sprites/pannel_office/office_layer.PNG" id="10_dwm72"]
+[ext_resource type="Texture2D" uid="uid://dfj34iyj0ecc2" path="res://assets/sprites/pannel_office/siren.PNG" id="11_nfl3m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_56x7i"]
+size = Vector2(49, 122)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfl3m"]
+size = Vector2(147, 133)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uow2c"]
+size = Vector2(61, 251)
+
+[node name="BrianOffice" type="Node2D" unique_id=1058688483]
+
+[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("1_dwm72")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1972728654]
+layer = -2
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=44420715]
+anchors_preset = -1
+anchor_left = -0.1640625
+anchor_top = -0.5231481
+anchor_right = 1.164
+anchor_bottom = 1.5230001
+offset_left = 183.0
+offset_top = 179.99997
+offset_right = 183.07202
+offset_bottom = 180.09595
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.765, 0.765)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_dwm72")
+metadata/_edit_use_anchors_ = true
+
+[node name="LobbyNavigation" parent="." unique_id=2014885648 instance=ExtResource("6_qjs8y")]
+position = Vector2(565, 329)
+navigation_scene = "uid://sjgupbjgm873"
+
+[node name="Sprite2D" type="Sprite2D" parent="LobbyNavigation" unique_id=332898016]
+position = Vector2(0, 1)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("5_ppf15")
+
+[node name="LobbyMouseArea" type="CollisionShape2D" parent="LobbyNavigation" unique_id=1733056370]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_56x7i")
+
+[node name="MouseHover" parent="LobbyNavigation" unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("6_dwm72")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../Sprite2D")
+
+[node name="Pannel" parent="." unique_id=1602951859 instance=ExtResource("7_g5wtb")]
+position = Vector2(756, 251)
+dialogue = "uid://bsk0j7abc66pg"
+
+[node name="PannelSprites" type="Sprite2D" parent="Pannel" unique_id=1959404159]
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("8_nfl3m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pannel" unique_id=949803772]
+position = Vector2(0.5, -2.5)
+shape = SubResource("RectangleShape2D_nfl3m")
+
+[node name="MouseHover" parent="Pannel" unique_id=2130269502 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("6_dwm72")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../PannelSprites")
+
+[node name="PannelOfficeLayer" type="Sprite2D" parent="." unique_id=1586264727]
+position = Vector2(682, 340)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("8_uow2c")
+
+[node name="Character1" parent="." unique_id=1632801547 instance=ExtResource("5_w4dk1")]
+position = Vector2(693, 408)
+scale = Vector2(0.39, 0.39)
+
+[node name="FrontOfficeLayer" type="Sprite2D" parent="." unique_id=1292306998]
+position = Vector2(824, 581)
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("10_dwm72")
+
+[node name="Siren" parent="." unique_id=1487315818 instance=ExtResource("7_g5wtb")]
+position = Vector2(1057, 7)
+dialogue = "uid://2hqkw7qtb7qf"
+
+[node name="SirenSprite" type="Sprite2D" parent="Siren" unique_id=890380202]
+scale = Vector2(0.765, 0.765)
+texture = ExtResource("11_nfl3m")
+
+[node name="SirenMouseArea" type="CollisionShape2D" parent="Siren" unique_id=1862259070]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_uow2c")
+
+[node name="MouseHover" parent="Siren" unique_id=442866364 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("6_dwm72")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../SirenSprite")
+
+[node name="Clock" parent="." unique_id=823591413 instance=ExtResource("3_uow2c")]
+position = Vector2(605, 216.99998)
+scale = Vector2(0.765, 0.765)

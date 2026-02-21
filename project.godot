@@ -49,6 +49,7 @@ directories/dtl_directory={
 "brian_not_there": "res://game/entities/dialogues/brian_not_there.dtl",
 "budget_dialogue": "res://game/entities/furnitures/budget/budget_dialogue.dtl",
 "character_phone": "res://game/entities/dialogues/character_phone.dtl",
+"clock_dialogue": "res://game/entities/furnitures/clock/clock_dialogue.dtl",
 "closed_office": "res://game/entities/dialogues/closed_office.dtl",
 "coffee_machine": "res://game/entities/dialogues/coffee_machine.dtl",
 "computer_phase_1": "res://game/entities/dialogues/computer_phase.dtl",
@@ -60,10 +61,13 @@ directories/dtl_directory={
 "karen_coffee_note": "res://game/entities/furnitures/collectables/karen_note/karen_coffee_note.dtl",
 "kathy": "res://game/entities/dialogues/kathy.dtl",
 "management_diaster_note": "res://game/entities/furnitures/collectables/management_disaster_note/management_diaster_note.dtl",
+"pannel_dialogue": "res://game/entities/furnitures/pannel/pannel_dialogue.dtl",
+"picture_dialogue": "res://game/entities/furnitures/picture/picture_dialogue.dtl",
 "postit_indications": "res://game/entities/furnitures/collectables/post_it/postit_indications.dtl",
 "printer_dialogue": "res://game/entities/furnitures/printer/printer_dialogue.dtl",
 "security_instructions": "res://game/entities/furnitures/collectables/security_instructions/security_instructions.dtl",
-"shreder_dialogue": "res://game/entities/furnitures/shreder/shreder_dialogue.dtl"
+"shreder_dialogue": "res://game/entities/furnitures/shreder/shreder_dialogue.dtl",
+"siren_dialogue": "res://game/entities/furnitures/siren/siren_dialogue.dtl"
 }
 layout/style_directory={
 "": "res://game/ui/game_theme.tres",

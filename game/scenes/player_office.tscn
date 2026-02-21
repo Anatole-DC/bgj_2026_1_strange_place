@@ -4,8 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cif28kfckvjp6" path="res://assets/sprites/player_office/player_office.jpeg" id="2_81vk8"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_gdqe8"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="4_08hnw"]
+[ext_resource type="Texture2D" uid="uid://dfs1tnfftusq2" path="res://assets/sprites/player_office_final/door.PNG" id="4_d3vcx"]
+[ext_resource type="Texture2D" uid="uid://cwow3st0i2340" path="res://assets/sprites/player_office_final/phone.PNG" id="5_1u2gc"]
 [ext_resource type="PackedScene" uid="uid://duu7h01g0tok4" path="res://game/entities/furnitures/printer/printer.tscn" id="5_gdqe8"]
+[ext_resource type="Texture2D" uid="uid://dr6npi23hoowf" path="res://assets/sprites/player_office_final/computer.PNG" id="5_kjlkj"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="6_48xkd"]
 [ext_resource type="PackedScene" uid="uid://cq6a5qvmd1ntc" path="res://game/entities/furnitures/shreder/shreder.tscn" id="6_81vk8"]
+[ext_resource type="Texture2D" uid="uid://dg7uxyvi8sgn0" path="res://assets/sprites/player_office_final/picture.PNG" id="11_5e6lw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81vk8"]
 size = Vector2(93.5, 193.5)
@@ -14,13 +19,10 @@ size = Vector2(93.5, 193.5)
 size = Vector2(101, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08hnw"]
-size = Vector2(58, 34.5)
+size = Vector2(63, 37.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1u2gc"]
-size = Vector2(104, 146)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_48xkd"]
-size = Vector2(93, 124)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e6lw"]
+size = Vector2(46.19571, 54.347824)
 
 [node name="PlayerOffice" type="Node2D" unique_id=1005068916]
 
@@ -45,40 +47,77 @@ size_flags_vertical = 4
 texture = ExtResource("2_81vk8")
 metadata/_edit_use_anchors_ = true
 
-[node name="OpenSpaceNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_gdqe8")]
+[node name="LobbyNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_gdqe8")]
 position = Vector2(965, 429)
 navigation_scene = "uid://sjgupbjgm873"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="OpenSpaceNavigation" unique_id=1676094462]
+[node name="DoorSprite" type="Sprite2D" parent="LobbyNavigation" unique_id=534662962]
+position = Vector2(-47, -56)
+scale = Vector2(0.736, 0.736)
+texture = ExtResource("4_d3vcx")
+
+[node name="LobbyMouseArea" type="CollisionShape2D" parent="LobbyNavigation" unique_id=1676094462]
 position = Vector2(-46.75, -54.75)
 shape = SubResource("RectangleShape2D_81vk8")
+
+[node name="MouseHover" parent="LobbyNavigation" unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("6_48xkd")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../DoorSprite")
 
 [node name="Computer" parent="." unique_id=1602951859 instance=ExtResource("4_08hnw")]
 position = Vector2(352, 420)
 dialogue = "uid://bd75oar4kcj38"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Computer" unique_id=847446049]
+[node name="ComputerSprite" type="Sprite2D" parent="Computer" unique_id=970242510]
+position = Vector2(-60, -17)
+scale = Vector2(0.736, 0.736)
+texture = ExtResource("5_kjlkj")
+
+[node name="ComputerMouseArea" type="CollisionShape2D" parent="Computer" unique_id=847446049]
 position = Vector2(-63.5, -17)
 shape = SubResource("RectangleShape2D_gdqe8")
+
+[node name="MouseHover" parent="Computer" unique_id=1983947895 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("6_48xkd")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../ComputerSprite")
 
 [node name="Phone" parent="." unique_id=95298682 instance=ExtResource("4_08hnw")]
 position = Vector2(833, 510)
 dialogue = "uid://bqxkdn6ohr3s2"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Phone" unique_id=1727406452]
-position = Vector2(-446, -89.25)
+[node name="PhoneSprite" type="Sprite2D" parent="Phone" unique_id=1505670589]
+position = Vector2(-447, -87)
+scale = Vector2(0.736, 0.736)
+texture = ExtResource("5_1u2gc")
+
+[node name="PhoneMouseArea" type="CollisionShape2D" parent="Phone" unique_id=1727406452]
+position = Vector2(-446.5, -87.75)
 shape = SubResource("RectangleShape2D_08hnw")
 
-[node name="Printer" parent="." unique_id=759450818 instance=ExtResource("5_gdqe8")]
-position = Vector2(620, 418)
+[node name="MouseHover" parent="Phone" unique_id=1577185887 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("6_48xkd")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../PhoneSprite")
 
-[node name="Area2D" type="CollisionShape2D" parent="Printer" unique_id=2094386698]
-position = Vector2(4, -10)
-shape = SubResource("RectangleShape2D_1u2gc")
+[node name="Printer" parent="." unique_id=759450818 instance=ExtResource("5_gdqe8")]
+position = Vector2(626, 407.99997)
+scale = Vector2(0.736, 0.736)
 
 [node name="Shreder" parent="." unique_id=124562143 instance=ExtResource("6_81vk8")]
-position = Vector2(770, 421)
+position = Vector2(772, 419)
+scale = Vector2(0.736, 0.736)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Shreder" unique_id=1464783709]
-position = Vector2(2.5, -2)
-shape = SubResource("RectangleShape2D_48xkd")
+[node name="PointAndClickDialogue" parent="." unique_id=1493178066 instance=ExtResource("4_08hnw")]
+position = Vector2(398, 360)
+scale = Vector2(0.736, 0.736)
+dialogue = "uid://b187hoklcmkos"
+
+[node name="PictureSprite" type="Sprite2D" parent="PointAndClickDialogue" unique_id=1213507054]
+texture = ExtResource("11_5e6lw")
+
+[node name="PictureMouseArea" type="CollisionShape2D" parent="PointAndClickDialogue" unique_id=1977879656]
+position = Vector2(-6.1035156e-05, 0)
+shape = SubResource("RectangleShape2D_5e6lw")
+
+[node name="MouseHover" parent="PointAndClickDialogue" unique_id=866162814 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("6_48xkd")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../PictureSprite")

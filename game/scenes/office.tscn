@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://umlyu0ogya8b"]
+
+[ext_resource type="PackedScene" uid="uid://b2hsppgnj4ovu" path="res://game/entities/loop/office_scene_manager.tscn" id="1_8kvuq"]
+[ext_resource type="Texture2D" uid="uid://cdgr40pjp213w" path="res://assets/sprites/office/office.PNG" id="2_w6ol5"]
+[ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_qyhy8"]
+[ext_resource type="PackedScene" uid="uid://dms6otdbfmya0" path="res://game/entities/furnitures/clock/clock.tscn" id="4_c8hl1"]
+[ext_resource type="Texture2D" uid="uid://dbuvs5xwmkn7s" path="res://assets/sprites/office/door.PNG" id="4_qyhy8"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="5_w6ol5"]
+[ext_resource type="Texture2D" uid="uid://dg3blm0uay3r0" path="res://assets/sprites/office/office_layer.PNG" id="6_v77s5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6nve"]
+size = Vector2(166.25, 448)
+
+[node name="Office" type="Node2D" unique_id=1135277209]
+
+[node name="OfficeSceneManager" parent="." unique_id=1502166600 instance=ExtResource("1_8kvuq")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=344814473]
+layer = -1
+
+[node name="Sprite2D" type="TextureRect" parent="CanvasLayer" unique_id=813488658]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -113.0
+offset_top = -125.000015
+offset_right = 335.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.827, 0.827)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_w6ol5")
+metadata/_edit_use_anchors_ = true
+
+[node name="LobbyNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_qyhy8")]
+position = Vector2(1040, 373)
+navigation_scene = "uid://sjgupbjgm873"
+
+[node name="DoorSprite" type="Sprite2D" parent="LobbyNavigation" unique_id=884499339]
+position = Vector2(-923, 31.000004)
+scale = Vector2(0.827, 0.827)
+texture = ExtResource("4_qyhy8")
+
+[node name="LobbyMouseArea" type="CollisionShape2D" parent="LobbyNavigation" unique_id=1334108986]
+position = Vector2(-918.125, 32)
+shape = SubResource("RectangleShape2D_u6nve")
+
+[node name="MouseHover" parent="LobbyNavigation" unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("5_w6ol5")]
+mouse_area = NodePath("..")
+source_sprite = NodePath("../DoorSprite")
+
+[node name="Clock" parent="." unique_id=823591413 instance=ExtResource("4_c8hl1")]
+position = Vector2(639, 202)
+scale = Vector2(0.52, 0.52)
+
+[node name="OfficeLayerSprite" type="Sprite2D" parent="." unique_id=1145014942]
+position = Vector2(953.99994, 541.99994)
+scale = Vector2(0.827, 0.827)
+texture = ExtResource("6_v77s5")

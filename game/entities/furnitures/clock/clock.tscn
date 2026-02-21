@@ -1,24 +1,24 @@
-[gd_scene format=3 uid="uid://ceqjypd08ultd"]
+[gd_scene format=3 uid="uid://dms6otdbfmya0"]
 
-[ext_resource type="Script" uid="uid://bxba7vew4gavq" path="res://game/entities/furnitures/clock/clock.gd" id="1_r6mop"]
+[ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="1_6kj4n"]
+[ext_resource type="Texture2D" uid="uid://j70bge707idw" path="res://assets/sprites/pannel_office/clock.PNG" id="2_58i51"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_58i51"]
 
-[sub_resource type="Gradient" id="Gradient_dru46"]
-offsets = PackedFloat32Array(0.99791664, 1)
-colors = PackedColorArray(0.99607843, 0.9607843, 0.8235294, 1, 1, 1, 1, 0)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kj4n"]
+size = Vector2(57, 59)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_r6mop"]
-gradient = SubResource("Gradient_dru46")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 0.5)
+[node name="Clock" type="Node2D" unique_id=823591413]
 
-[node name="Clock" type="Node2D" unique_id=823591413 node_paths=PackedStringArray("clock_needle")]
-script = ExtResource("1_r6mop")
-clock_needle = NodePath("Sprite2D/Polygon2D")
+[node name="ClockSprite" type="Sprite2D" parent="." unique_id=166751583]
+texture = ExtResource("2_58i51")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=166751583]
-texture = SubResource("GradientTexture2D_r6mop")
+[node name="PointAndClickDialogue" parent="." unique_id=1602951859 instance=ExtResource("1_6kj4n")]
+dialogue = "uid://by4jtae2soky7"
 
-[node name="Polygon2D" type="Polygon2D" parent="Sprite2D" unique_id=1200503624]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-5, 0, 0, -24, 5, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PointAndClickDialogue" unique_id=2050273650]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_6kj4n")
+
+[node name="MouseHover" parent="." unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("3_58i51")]
+mouse_area = NodePath("../PointAndClickDialogue")
+source_sprite = NodePath("../ClockSprite")

@@ -31,11 +31,6 @@ scene = ExtResource("5_tybd5")
 [sub_resource type="Resource" id="Resource_eeh7u"]
 script = ExtResource("2_00hl3")
 scene = ExtResource("6_dmgs2")
-overrides = {
-"box_color_custom": "Color(0.71484375, 0.71484375, 0.71484375, 1)",
-"box_color_use_global": "false",
-"box_panel": "\"res://game/ui/new_style_box_texture.tres\""
-}
 
 [sub_resource type="Resource" id="Resource_d736q"]
 script = ExtResource("2_00hl3")
