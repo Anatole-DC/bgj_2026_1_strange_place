@@ -39,7 +39,7 @@ if {GameState.is_task_complete("complete_d3_mailing")} == true:
 	do GameState.complete_task("everybody_warned")
 	do Progress.add_progress(1)
 	do GameState.complete_task("complete_d3_mailing")
-- Send the proofs to the journalist | [if {GameState.is_task_complete("talk_with_s_about_j")} == true and if {GameState.is_task_complete("storage_notice_scanned")} == true]
+- Send the proofs to the journalist | [if {GameState.is_task_complete("talk_with_s_about_j")} == true and {GameState.is_task_complete("storage_notice_scanned")} == true]
 	do Progress.add_progress(1)
 	do GameState.complete_task("complete_d3_mailing")
 [end_timeline]

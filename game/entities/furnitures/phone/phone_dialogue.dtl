@@ -29,6 +29,10 @@ label LAST
 if {GameState.is_task_complete("complete_d3_calling")} == true:
 	jump no_phone_call
 - Call your wife | [if {GameState.is_task_complete("talk_with_c_about_sirens")} == true]
+	wife: Hi, this is Wife, I'm not available right now but you can leave a message ... now !
+	player: Hi Love, this is PLAYER.
+	player: I think we need some time away together this weekend, so I booked us a room at that SPA you like. Wait for me there, and bring Cat too! He can use a vacation.
+	player: I'll reach you after work. Love you.
 	do Progress.add_progress(1)
 	do GameState.complete_task("complete_d3_calling")
 [end_timeline]
