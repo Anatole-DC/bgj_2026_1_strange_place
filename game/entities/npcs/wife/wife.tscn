@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://nb0wpvsae1ab"]
+
+[ext_resource type="Texture2D" uid="uid://cxxgwluks8jsd" path="res://game/entities/npcs/wife/wife_sprite.PNG" id="1_cu0i1"]
+[ext_resource type="Script" uid="uid://c2klud2k7djlu" path="res://game/entities/npcs/wife/wife.gd" id="2_44p0e"]
+
+[node name="Wife" type="Node2D" unique_id=20621734 node_paths=PackedStringArray("sprite")]
+script = ExtResource("2_44p0e")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1567639066]
+texture = ExtResource("1_cu0i1")

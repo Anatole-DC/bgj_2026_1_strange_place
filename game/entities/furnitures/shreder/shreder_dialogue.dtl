@@ -1,3 +1,7 @@
 label no_document
 You don't have anything to shred
 [end_timeline]
+
+label file_scanned
+You can't shred a file that was scanned
+[end_timeline]

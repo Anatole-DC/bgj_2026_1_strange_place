@@ -1,0 +1,38 @@
+jump {GameState.get_current_day()}
+
+# All dialogues for the first day
+label FIRST
+if {GameState.is_task_complete("complete_d1_calling")} == true:
+	jump no_phone_call
+if {GameState.is_task_complete("talk_with_s_about_sa")} == true:
+	- Regional Health Office
+		do Progress.add_progress(1)
+		do GameState.complete_task("complete_d1_calling")
+else:
+	jump no_phone_call
+[end_timeline]
+
+# All dialogues for second day
+label SECOND
+if {GameState.is_task_complete("complete_d2_calling")} == true:
+	jump no_phone_call
+if {GameState.is_task_complete("talk_with_a_about_repairs")} == true:
+	- Warn Regional Health Office
+		do Progress.add_progress(1)
+		do GameState.complete_task("complete_d2_calling")
+else:
+	jump no_phone_call
+[end_timeline]
+
+# All dialogues for the last day
+label LAST
+if {GameState.is_task_complete("complete_d3_calling")} == true:
+	jump no_phone_call
+- Call your wife | [if {GameState.is_task_complete("talk_with_c_about_sirens")} == true]
+	do Progress.add_progress(1)
+	do GameState.complete_task("complete_d3_calling")
+[end_timeline]
+
+label no_phone_call
+You don't have any phone call to make
+[end_timeline]

@@ -7,12 +7,10 @@
 
 [node name="GameState" type="CanvasLayer" unique_id=889985523 node_paths=PackedStringArray("printer_player", "shredder_player", "clock_sound")]
 script = ExtResource("1_m0gg2")
+daily_indications = "uid://cd1scd4il3nie"
 printer_player = NodePath("PrinterPlayer")
 shredder_player = NodePath("ShredderPlayer")
 clock_sound = NodePath("MetronomePlayer")
-d1_indications = "uid://8uqro1phtd8p"
-d2_indications = "uid://x2pyobuj7lix"
-d3_indications = "uid://c10q7veqgegjo"
 
 [node name="MetronomePlayer" type="AudioStreamPlayer" parent="." unique_id=1508641077]
 stream = ExtResource("2_3ilb1")

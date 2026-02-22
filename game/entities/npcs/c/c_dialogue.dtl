@@ -2,34 +2,36 @@ jump {GameState.get_current_day()}
 
 # All dialogues for the first day
 label FIRST
-if {GameState.is_task_complete("talk_with_c_about_contractor")} == false:
-	player: A wants to call a contractor for …
+if {GameState.is_task_complete("talk_with_c_about_contractor")} == false and {GameState.is_task_complete("intro_dialogue")} == true:
+	player: Maintenance supervisor wants to call a contractor for …
 	c: No, no, no. Whatever it is, no. We are already over budget for Q3.
-	player: But the Factory inspector said that was a …
-	c: Orders from management! Also, call the ground floor operators, and tell them to keep the refrigeration on the tanks off.
+	player: But the [color=red]Chief Factory inspector[/color] said that was a …
+	c: Orders from management! Also, call the [color=red]Ground floor Operators[/color], and tell them to keep the refrigeration on the tanks off.
 	c: That stuff costs, and we need to cut, cut, cut!
 	do GameState.complete_task("talk_with_c_about_contractor")
 else:
-	<Management says we need to make more cuts. Cuts cuts cuts cuts cuts cuts CUTS CUTS CUTS…/I wish I had brought my dog on more walks. I hope he’s okay now./Safety training for tank operators is not a priority. I say we cut that./I thought we were done with this. Why are we still here?>
+	c: <Management says we need to make more cuts. Cuts cuts cuts cuts cuts cuts CUTS CUTS CUTS…/I wish I had brought my dog on more walks. I hope he’s okay now./Safety training for tank operators is not a priority. I say we cut that./I thought we were done with this. Why are we still here?>
 [end_timeline]
 
 # All dialogues for second day
 label SECOND
 if {GameState.is_task_complete("talk_with_c_about_mr")} == false:
-	c: “Hello P, make sure to email A and deny his maintenance request.”
-	player: “We denied the request yesterday.”
-	c: “No, the other one. He asked for maintenance on the valves near the tanks. It has
-	been denied.”
-	player: “Okay. And about the District Disaster Management office, they keep emailing me. Do
-	you know why?”
-	c: “That’s S’s department. Go talk to him. See you later, I need my coffee.”
+	c: Hello P, make sure to email [color=red]Maitainance Supervisor[/color] and deny his maintenance request.
+	player: We denied the request yesterday.
+	c: No, I'm talking about the other request.
+	c: He asked for maintenance on the valves near the tanks. It has been denied.
+	player: Okay. And about the [color=red]District Disaster Management office[/color], they keep emailing me.
+	player: Do you know why?
+	c: That’s S’s department. Go talk to him. See you later, I need my coffee.
 	do GameState.complete_task("talk_with_c_about_mr")
 else:
-	<Need to reach those Q4 goals. Cuts cuts cuts cuts cuts cuts CUTS CUTS CUTS…/I wish I had brought my dog on more walks. I hope he’s okay now./There are too many people working near the tanks. I say we cut some of them./I thought we were done with this. Why are we still here?>
+	c: <Need to reach those Q4 goals. Cuts cuts cuts cuts cuts cuts CUTS CUTS CUTS…/I wish I had brought my dog on more walks. I hope he’s okay now./There are too many people working near the tanks. I say we cut some of them./I thought we were done with this. Why are we still here?>
 [end_timeline]
 
 # All dialogues for the last day
 label LAST
-<Cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts CUTS CUTS CUTS CUTS CUTS CUTS…/I wish I had brought my dog on more walks. I hope he’s okay now./I should get another coffee. The last one./Why are we still here? Why are we still here? Why are we still here? Why are we still here?>
-do GameState.complete_task("talk_with_c_one_last_time")
+if {GameState.is_task_complete("talk_with_a_about_sirens")} == true and {GameState.is_task_complete("talk_with_c_about_sirens")} == false:
+	do GameState.complete_task("talk_with_c_about_sirens")
+else:
+	c: <Cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts CUTS CUTS CUTS CUTS CUTS CUTS…/I wish I had brought my dog on more walks. I hope he’s okay now./I should get another coffee. The last one./Why are we still here? Why are we still here? Why are we still here? Why are we still here?>
 [end_timeline]

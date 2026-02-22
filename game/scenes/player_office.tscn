@@ -66,7 +66,7 @@ source_sprite = NodePath("../DoorSprite")
 
 [node name="Computer" parent="." unique_id=1602951859 instance=ExtResource("4_08hnw")]
 position = Vector2(352, 420)
-dialogue = "uid://bd75oar4kcj38"
+dialogue = "uid://bknv6umxel5n"
 
 [node name="ComputerSprite" type="Sprite2D" parent="Computer" unique_id=970242510]
 position = Vector2(-60, -17)
@@ -83,7 +83,7 @@ source_sprite = NodePath("../ComputerSprite")
 
 [node name="Phone" parent="." unique_id=95298682 instance=ExtResource("4_08hnw")]
 position = Vector2(833, 510)
-dialogue = "uid://bqxkdn6ohr3s2"
+dialogue = "uid://r0wcbuk7en8c"
 
 [node name="PhoneSprite" type="Sprite2D" parent="Phone" unique_id=1505670589]
 position = Vector2(-447, -87)

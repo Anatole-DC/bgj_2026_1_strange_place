@@ -3,13 +3,13 @@ jump {GameState.get_current_day()}
 # All dialogues for the first day
 label FIRST
 if {GameState.is_task_complete("talk_with_k_about_pg")} == false:
-	k: “Hello!!! Is this about the pressure gauges on the tanks? Are you worried?
-	k: Don’t be worried!!!”
-	player: “What about them?”
-	k: “The ground floor operators told us they show that pressure levels in
-	CHEMICALNAME tanks are too high, but it’s a mistake! Everything is under control!”
-	player:“Are you sure that …”
-	k: “Here at COMPANYNAME, we make your safety our priority! Have a blessed day!”
+	k: Hello!!! Is this about the pressure gauges on the tanks? Are you worried?
+	k: Don’t be worried!!!
+	player: What about them?
+	k: The ground floor operators told us they show that pressure levels in CHEMICALNAME tanks are too high, but it’s a mistake! Everything is under control!
+	player:Are you sure that …
+	k: Here at COMPANYNAME, we make your safety our priority!
+	k: Have a blessed day!
 	do GameState.complete_task("talk_with_k_about_pg")
 else:
 	k: <How can I create a safe space for you today?/What am I doing here? Bring me back. Bring me back. BRING ME BACK, BRING ME BACK, BRING ME BACK, BRING ME BACK!/One smile a day keeps the doctor away!/Did the Regional Health Office call you, too? They need to calm down! They really need to calm down! EVERYTHING IS FINE!>
@@ -20,7 +20,7 @@ else:
 label SECOND
 if {GameState.is_task_complete("talk_with_k_about_or")} == false:
 	k: I heard C wants to talk to you! She’s in her office. How are you feeling today?
-	player: : A little odd. I feel like I have lived this day before …
+	player: A little odd. I feel like I have lived this day before …
 	k: That’s office routine for you! Drink a coffee, and you’ll feel good as new!!
 	do GameState.complete_task("talk_with_k_about_or")
 else:

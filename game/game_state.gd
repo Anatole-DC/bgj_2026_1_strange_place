@@ -7,48 +7,36 @@ var current_day: Day = Day.FIRST
 var completed_tasks: Dictionary = {}  # task_id -> true
 
 @export var starting_day: Day = Day.FIRST
+@export_file("*.dtl") var daily_indications: String
 
 @export_group("Office sounds")
 @export var printer_player: AudioStreamPlayer
 @export var shredder_player: AudioStreamPlayer
 @export var clock_sound: AudioStreamPlayer
 
-@export_group("Day 1")
-@export_file("*.dtl") var d1_indications: String
-
-@export_group("Day 2")
-@export_file("*.dtl") var d2_indications: String
-
-@export_group("Day 3")
-@export_file("*.dtl") var d3_indications: String
-
-var daily_indications: String
 
 func _ready() -> void:
 	current_day = starting_day
-	daily_indications = d1_indications
+	Dialogic.start(GameState.daily_indications, get_current_day())
 
 func get_current_day() -> String:
 	return Day.keys()[current_day]
 
 func complete_task(task_id: String) -> void:
 	completed_tasks[task_id] = true
-	Progress.add_progress(1)
 
 func is_task_complete(task_id: String) -> bool:
 	return completed_tasks.get(task_id, false)
 
 func go_next_day() -> void:
-	Inventory.clear()
 	match current_day:
 		Day.FIRST:
 			current_day = Day.SECOND
-			daily_indications = d2_indications
 		Day.SECOND:
 			current_day = Day.LAST
-			daily_indications = d3_indications
 		Day.LAST:
 			current_day = Day.END
+	Dialogic.start(GameState.daily_indications, get_current_day())
 	
 
 func use_printer() -> void:

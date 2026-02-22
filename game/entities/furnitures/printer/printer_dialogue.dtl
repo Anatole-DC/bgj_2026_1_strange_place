@@ -1,3 +1,7 @@
 label no_file
 You don't have anything to scan
 [end_timeline]
+
+label file_scanned
+This file has already been scanned
+[end_timeline]

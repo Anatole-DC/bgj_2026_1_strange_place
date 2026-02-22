@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dyumowbftqg7h"]
+
+[ext_resource type="Script" uid="uid://bu7v5oucq2ejp" path="res://game/ui/inventory/inventory_controller.gd" id="1_cljpv"]
+[ext_resource type="Texture2D" uid="uid://bbk7pdp6dnfy3" path="res://assets/sprites/furnitures/investigation_report.PNG" id="2_cljpv"]
+[ext_resource type="Script" uid="uid://cv4n1sk8n5hmf" path="res://game/entities/furnitures/collectables/collectable.gd" id="3_7n86j"]
+[ext_resource type="Texture2D" uid="uid://b1xwl38litlfi" path="res://assets/sprites/player_office/SecurityInstructions.PNG" id="4_27f1b"]
+[ext_resource type="Texture2D" uid="uid://cliiyol5wnqmb" path="res://assets/sprites/chemical_note.PNG" id="5_cljpv"]
+[ext_resource type="Texture2D" uid="uid://456s7jxg08j1" path="res://assets/sprites/furnitures/file/Background.PNG" id="6_7n86j"]
+
+[sub_resource type="Resource" id="Resource_o8xtv"]
+script = ExtResource("3_7n86j")
+inventory_sprite = ExtResource("2_cljpv")
+document_id = "investigation_report"
+metadata/_custom_type_script = "uid://cv4n1sk8n5hmf"
+
+[sub_resource type="Resource" id="Resource_q25pm"]
+script = ExtResource("3_7n86j")
+inventory_sprite = ExtResource("4_27f1b")
+document_id = "security_instructions"
+day = 1
+metadata/_custom_type_script = "uid://cv4n1sk8n5hmf"
+
+[sub_resource type="Resource" id="Resource_7n86j"]
+script = ExtResource("3_7n86j")
+inventory_sprite = ExtResource("5_cljpv")
+document_id = "chemical_note"
+day = 1
+metadata/_custom_type_script = "uid://cv4n1sk8n5hmf"
+
+[sub_resource type="Resource" id="Resource_27f1b"]
+script = ExtResource("3_7n86j")
+inventory_sprite = ExtResource("6_7n86j")
+document_id = "storage_notice"
+day = 2
+metadata/_custom_type_script = "uid://cv4n1sk8n5hmf"
+
+[node name="InventoryController" type="Node" unique_id=917243662]
+script = ExtResource("1_cljpv")
+investigation_report = SubResource("Resource_o8xtv")
+security_instructions = SubResource("Resource_q25pm")
+chemical_name_composition = SubResource("Resource_7n86j")
+storage_notice = SubResource("Resource_27f1b")

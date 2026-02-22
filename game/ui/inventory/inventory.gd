@@ -10,6 +10,7 @@ const CARD_OFFSET_Y := -4.0
 const CARD_ROTATION := 0.5
 
 func add_item(item: Collectable) -> void:
+	print(item)
 	items.append(item)
 	current_item = items.size() - 1
 	update_ui()

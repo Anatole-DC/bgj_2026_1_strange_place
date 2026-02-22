@@ -1,0 +1,23 @@
+# All dialogues for the first day
+label FIRST
+Welcome to COMPANYNAME, P!
+Just another regular day at your regular, normal person job! You are a model employee.
+If in the next THREE DAYS you do things right, you’ll get a promotion!
+[end_timeline]
+
+# All dialogues for second day
+label SECOND
+Just two days left, P!
+Complete the tasks, please management, and hurry up! We are burning daylight!
+[end_timeline]
+
+# All dialogues for the last day
+label LAST
+Last day, P!
+Did you figure it out, yet?
+Hurry up, or you won’t be able to make it right!
+[end_timeline]
+
+label END
+TOWN was destroyed
+[end_timeline]

@@ -1,3 +1,5 @@
+join wife/wife center
+
 jump {GameState.get_current_day()}
 
 # All dialogues for the first day
