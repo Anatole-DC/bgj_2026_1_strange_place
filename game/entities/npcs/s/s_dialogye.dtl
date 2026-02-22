@@ -34,14 +34,14 @@ else:
 
 # All dialogues for the last day
 label LAST
-if {GameState.is_task_complete("talk_with_s_about_ddm")} == false:
+if {GameState.is_task_complete("talk_with_s_about_j")} == false:
 	s: “Heard about that journalist? I swear, every day we have another problem … Meddlers, all of them …”
 	player: “What did they want?”
 	s: “Wanted to know about the leak last night, something about CHEMICALNAME and
 	health hazard and a bunch of environmental stuff. Anyway. Here’s the document you have to
 	destroy. Don’t let me down today, okay?”
 	You receive the document [color=green]Approval to temporarily store contaminated CHEMICALNAME in tank 409[/color].
-	do GameState.complete_task("talk_with_s_about_ddm")
+	do GameState.complete_task("talk_with_s_about_j")
 else:
 	<When in doubt, deny, deny, deny everything./I thought I was done with this. Why am I still here?/The good thing is, I won’t have to deal with the legal repercussions of this …/What time is it? Still 5:17? Forever 5:17.>
 [end_timeline]

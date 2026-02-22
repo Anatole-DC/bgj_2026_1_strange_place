@@ -2,9 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cer8ken4pr3uy" path="res://game/ui/progress/progress.gd" id="1_rteqc"]
 
-[node name="Progress" type="CanvasLayer" unique_id=2109025597 node_paths=PackedStringArray("progress")]
+[node name="Progress" type="CanvasLayer" unique_id=2109025597 node_paths=PackedStringArray("progress", "day_indication")]
 script = ExtResource("1_rteqc")
 progress = NodePath("MarginContainer/HBoxContainer/ProgressBar")
+day_indication = NodePath("MarginContainer/HBoxContainer/Label")
+restart_scene = "uid://b0if6rnjrjmjw"
+game_over_scene = "uid://b0if6rnjrjmjw"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=983377474]
 anchors_preset = 10
@@ -26,4 +29,5 @@ text = "Daily progress"
 [node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=1924834401]
 layout_mode = 2
 size_flags_horizontal = 3
-value = 50.0
+max_value = 4.0
+step = 1.0

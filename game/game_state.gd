@@ -33,13 +33,13 @@ func get_current_day() -> String:
 
 func complete_task(task_id: String) -> void:
 	completed_tasks[task_id] = true
+	Progress.add_progress(1)
 
 func is_task_complete(task_id: String) -> bool:
 	return completed_tasks.get(task_id, false)
 
 func go_next_day() -> void:
 	Inventory.clear()
-	#completed_tasks.clear()  # reset per-day tasks; add exceptions here if needed
 	match current_day:
 		Day.FIRST:
 			current_day = Day.SECOND
@@ -49,6 +49,7 @@ func go_next_day() -> void:
 			daily_indications = d3_indications
 		Day.LAST:
 			current_day = Day.END
+	
 
 func use_printer() -> void:
 	printer_player.play()
