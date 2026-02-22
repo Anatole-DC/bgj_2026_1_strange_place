@@ -7,7 +7,7 @@ script = ExtResource("1_rteqc")
 progress = NodePath("MarginContainer/HBoxContainer/ProgressBar")
 day_indication = NodePath("MarginContainer/HBoxContainer/Label")
 restart_scene = "uid://b0if6rnjrjmjw"
-game_over_scene = "uid://b0if6rnjrjmjw"
+game_over_scene = "uid://df0v814d7oevf"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=983377474]
 anchors_preset = 10

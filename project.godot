@@ -10,7 +10,9 @@ config_version=5
 
 [application]
 
-config/name="BGJ2026-1_strange_places"
+config/name="Three days left"
+config/description="Your three day journey through getting promotted in the chemical factory you are working in."
+config/version="1.0.0"
 run/main_scene="uid://b0if6rnjrjmjw"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"

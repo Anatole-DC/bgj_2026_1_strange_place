@@ -23,8 +23,8 @@ func add_progress(progress_amount: int):
 	reset_progress()
 	
 	if GameState.current_day == GameState.Day.END:
+		hide()
 		get_tree().change_scene_to_file(game_over_scene)
-		print("Game Over")
 		return
 
 	get_tree().change_scene_to_file(restart_scene)

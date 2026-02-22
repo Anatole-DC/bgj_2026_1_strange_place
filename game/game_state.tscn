@@ -7,7 +7,6 @@
 
 [node name="GameState" type="CanvasLayer" unique_id=889985523 node_paths=PackedStringArray("printer_player", "shredder_player", "clock_sound")]
 script = ExtResource("1_m0gg2")
-starting_day = 2
 printer_player = NodePath("PrinterPlayer")
 shredder_player = NodePath("ShredderPlayer")
 clock_sound = NodePath("MetronomePlayer")
