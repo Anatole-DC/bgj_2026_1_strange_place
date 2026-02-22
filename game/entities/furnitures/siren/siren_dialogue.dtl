@@ -1,2 +1,16 @@
-brian: The siren is [color=red]deactivated[/color].
+jump {GameState.get_current_day()}
+
+# All dialogues for the first day
+label FIRST
+<The siren is working./The company siren is connected to the outside siren. It helps warn TOWNNAME in case of a leak./The two sirens are currently connected.>
+[end_timeline]
+
+# All dialogues for second day
+label SECOND
+<The siren is working./The company siren is connected to the outside siren. It helps warn TOWNNAME in case of a leak./The two sirens are currently connected.>
+[end_timeline]
+
+# All dialogues for the last day
+label LAST
+last day
 [end_timeline]

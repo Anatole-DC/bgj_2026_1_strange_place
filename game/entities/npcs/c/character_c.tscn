@@ -25,7 +25,7 @@ size = Vector2(274, 705)
 [node name="CharacterParts" type="Node2D" parent="." unique_id=808654767]
 
 [node name="PointAndClickDialogue" parent="CharacterParts" unique_id=1602951859 instance=ExtResource("1_php6u")]
-dialogue = "uid://opg33drdeq5j"
+dialogue = "uid://crwpq627sl642"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterParts/PointAndClickDialogue" unique_id=169754027]
 position = Vector2(-9, -73.5)
@@ -147,7 +147,7 @@ rotation = -0.88658446
 rest = Transform2D(1, 0, 0, 1, 8, 170)
 auto_calculate_length_and_angle = false
 length = 82.469
-bone_angle = 89.34297
+bone_angle = 89.342964
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/LegR/TibiaR/FootR" unique_id=2067853894]
 remote_path = NodePath("../../../../../../Sprites/rleg/RightFoot")
@@ -172,7 +172,7 @@ rotation = 1.0724182
 rest = Transform2D(1, 0, 0, 1, 0, 161)
 auto_calculate_length_and_angle = false
 length = 83.205
-bone_angle = 89.34299
+bone_angle = 89.34298
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/LegL/TibiaL/FootL" unique_id=1361740098]
 remote_path = NodePath("../../../../../../Sprites/lleg/LeftFoot")
@@ -189,7 +189,7 @@ rotation = -0.2415722
 rest = Transform2D(1, 0, 0, 1, 53, -189)
 auto_calculate_length_and_angle = false
 length = 129.468
-bone_angle = 95.63697
+bone_angle = 95.63696
 
 [node name="ForarmR" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmR" unique_id=284513505]
 position = Vector2(13.825226, 138.16245)
@@ -229,7 +229,7 @@ position = Vector2(-42.553036, 94.96441)
 rest = Transform2D(1, 0, 0, 1, -64, 105)
 auto_calculate_length_and_angle = false
 length = 51.558
-bone_angle = 117.976974
+bone_angle = 117.97697
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/ArmL/ForarmL/HandL" unique_id=192252331]
 remote_path = NodePath("../../../../../../Sprites/larm/LeftHand")
@@ -247,7 +247,7 @@ scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(0.9994771, -0.032330833, 0.032330833, 0.9994771, -8, -277)
 auto_calculate_length_and_angle = false
 length = 104.20173
-bone_angle = -89.34297
+bone_angle = -89.342964
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/Head" unique_id=1003526064]
 remote_path = NodePath("../../../../Sprites/Head")

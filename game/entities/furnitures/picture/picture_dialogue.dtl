@@ -1,2 +1,16 @@
-I love her so much...
+jump {GameState.get_current_day()}
+
+# All dialogues for the first day
+label FIRST
+<I remember when we took this picture. It was so sunny, so beautiful./My girls. I miss them./I hope Sana didn’t cry too much. I hope Pyaari doesn’t think I abandoned her.>
+[end_timeline]
+
+# All dialogues for second day
+label SECOND
+<I should have brought them on more trips. Sana loved the beach./I hope they made it out./I’m sorry, I’m sorry, I’m sorry, I’m sorry …>
+[end_timeline]
+
+# All dialogues for the last day
+label LAST
+last day
 [end_timeline]

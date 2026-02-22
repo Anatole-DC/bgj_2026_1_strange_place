@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be1cly80hl4cx"
-path="res://.godot/imported/lhand.PNG-7a97058f6a97f4d425043a6301a45bd2.ctex"
+uid="uid://bksbwme4touof"
+path="res://.godot/imported/ltibia.PNG-e032d64f6e213d71df8ad0e1a62ce843.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/entities/npcs/management/lhand.PNG"
-dest_files=["res://.godot/imported/lhand.PNG-7a97058f6a97f4d425043a6301a45bd2.ctex"]
+source_file="res://game/entities/npcs/k/ltibia.PNG"
+dest_files=["res://.godot/imported/ltibia.PNG-e032d64f6e213d71df8ad0e1a62ce843.ctex"]
 
 [params]
 

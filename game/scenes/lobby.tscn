@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://7ed25rh23w31" path="res://assets/sprites/lobby/coffee_machine.PNG" id="9_qvd7v"]
 [ext_resource type="PackedScene" uid="uid://jggf4fg82doc" path="res://game/entities/furnitures/collectables/karen_note/karen_note.tscn" id="10_4odck"]
 [ext_resource type="Texture2D" uid="uid://bc3kt4ocv0mng" path="res://assets/sprites/lobby/sofa.PNG" id="11_i4lvc"]
-[ext_resource type="PackedScene" uid="uid://da7edend480ic" path="res://game/entities/npcs/management/management_character.tscn" id="12_sieha"]
+[ext_resource type="PackedScene" uid="uid://bpp63eqj5r0fl" path="res://game/entities/npcs/c/character_c.tscn" id="12_sieha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_non8d"]
 size = Vector2(82, 295.5)
@@ -133,6 +133,6 @@ position = Vector2(135.00002, 528.00006)
 scale = Vector2(0.755, 0.755)
 texture = ExtResource("11_i4lvc")
 
-[node name="ManagementCharacter" parent="." unique_id=271629462 instance=ExtResource("12_sieha")]
-position = Vector2(573, 321)
-scale = Vector2(0.28, 0.28)
+[node name="CharacterC" parent="." unique_id=1536696448 instance=ExtResource("12_sieha")]
+position = Vector2(433.99994, 436)
+scale = Vector2(0.43, 0.43)

@@ -30,7 +30,7 @@ metadata/_edit_horizontal_guides_ = [-530.0, -100.0]
 [node name="CharacterParts" type="Node2D" parent="." unique_id=863579629]
 
 [node name="PointAndClickDialogue" parent="CharacterParts" unique_id=1602951859 instance=ExtResource("2_a64rn")]
-dialogue = "uid://opg33drdeq5j"
+dialogue = "uid://f70kiobj263n"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterParts/PointAndClickDialogue" unique_id=227971475]
 position = Vector2(-6.5, 122.5)
@@ -108,16 +108,16 @@ texture = ExtResource("14_c8lgw")
 offset = Vector2(16.092083, -24.28157)
 
 [node name="RightHand" type="Sprite2D" parent="CharacterParts/Sprites" unique_id=166142972]
-position = Vector2(-36.432205, -237.23976)
+position = Vector2(-36.43219, -237.23978)
 rotation = 2.201286
-scale = Vector2(0.9999994, 0.9999994)
+scale = Vector2(0.99999917, 0.99999917)
 texture = ExtResource("10_ml78a")
 offset = Vector2(10.724579, 86.65253)
 
 [node name="RightForarm" type="Sprite2D" parent="CharacterParts/Sprites" unique_id=287156114]
 position = Vector2(116.7269, -54.51799)
 rotation = 2.5130012
-scale = Vector2(0.9999995, 0.9999995)
+scale = Vector2(0.9999994, 0.9999994)
 texture = ExtResource("11_82pjh")
 offset = Vector2(3.9117584, 118.37393)
 
@@ -201,13 +201,13 @@ bone_angle = 95.63696
 [node name="ForarmR" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmR" unique_id=533657890]
 position = Vector2(30.874556, 255.88231)
 rotation = 2.6307735
-scale = Vector2(0.99999946, 0.99999946)
+scale = Vector2(0.9999994, 0.9999994)
 rest = Transform2D(1, 0, 0, 1, 11, 129)
 
 [node name="HandR" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmR/ForarmR" unique_id=500257434]
 position = Vector2(16.442265, 237.85431)
 rotation = -0.31171513
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.9999998, 0.9999998)
 rest = Transform2D(1, 0, 0, 1, 40, 86)
 auto_calculate_length_and_angle = false
 length = 155.389

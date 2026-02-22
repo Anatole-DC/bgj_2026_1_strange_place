@@ -1,0 +1,33 @@
+jump {GameState.get_current_day()}
+
+# All dialogues for the first day
+label FIRST
+if {GameState.is_task_complete("intro_dialogue")} == false:
+	a: Hey, P! Looks like we’ll need to call a contractor to install the isolating slip-bind on the CHEMICALNAME tanks.
+	a: Could you approve our request before the end of the day?
+	player: Let me check in with C, I’ll get back to you.
+	do GameState.complete_task("intro_dialogue")
+else:
+	<C complains that there’s too many operators working the tanks … the ground floor operators complain that they don’t have enough people working the tanks … I just want to sleep./I wish I could go back and get it right./If I have to pick up another extra shift, I’ll collapse …/Why am I back in my office?>
+[end_timeline]
+
+# All dialogues for second day
+label SECOND
+if {GameState.is_task_complete("talk_with_a_about_repairs")} == false:
+	a: “Hey, I know we are over budget, but I heard that the trade unions have asked for another safety inspection.
+	a: Could you call C and ask if we can get a contractor to repair the scrubbers?
+	a: Or the pressure gauges? Or the flare stack? Or literally anything?”
+	player: “I will try, but I think I know the answer.”
+	a: “This is not great … TOWNNAME is really close.
+	a: If something happens, I don't think the hospitals would know how to treat them … but, well. What can we do.”
+	player: “We could warn the [color=red]Regional Health Office[/color] that CHEMICALNAME is a class one hazardous substance, and what it does to people.”
+	a: “And lose our job? No thank you.” 
+	do GameState.complete_task("talk_with_a_about_repairs")
+else:
+	<Don’t tell S, but I think the trade union was right to call the Factory Inspector. They did the right thing./I wish I could go back and get it right./If I have to pick up another extra shift, I’ll collapse …/Why am I back in my office?>
+[end_timeline]
+
+# All dialogues for the last day
+label LAST
+last day
+[end_timeline]

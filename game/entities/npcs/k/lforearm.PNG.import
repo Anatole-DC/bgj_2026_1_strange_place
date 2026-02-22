@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k4w8ufkhgk8f"
-path="res://.godot/imported/torso.PNG-f168ebb0c6fe289541f45d1ee758c2e5.ctex"
+uid="uid://3dmse4coeyfo"
+path="res://.godot/imported/lforearm.PNG-a35e0c7207e6bfedcf4b7ee7d4b3955d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/entities/npcs/management/torso.PNG"
-dest_files=["res://.godot/imported/torso.PNG-f168ebb0c6fe289541f45d1ee758c2e5.ctex"]
+source_file="res://game/entities/npcs/k/lforearm.PNG"
+dest_files=["res://.godot/imported/lforearm.PNG-a35e0c7207e6bfedcf4b7ee7d4b3955d.ctex"]
 
 [params]
 

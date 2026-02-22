@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcukidskt7hq6"
-path="res://.godot/imported/rfoot.PNG-aca11a7dc64ad68265417bac2dba7253.ctex"
+uid="uid://linhfb2v0cpe"
+path="res://.godot/imported/rarm.PNG-701e0e495396907b1e1ad16238b1b4e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/entities/npcs/management/rfoot.PNG"
-dest_files=["res://.godot/imported/rfoot.PNG-aca11a7dc64ad68265417bac2dba7253.ctex"]
+source_file="res://game/entities/npcs/k/rarm.PNG"
+dest_files=["res://.godot/imported/rarm.PNG-701e0e495396907b1e1ad16238b1b4e7.ctex"]
 
 [params]
 

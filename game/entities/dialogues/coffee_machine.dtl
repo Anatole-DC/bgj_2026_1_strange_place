@@ -1,2 +1,16 @@
-The coffee machine is broken.
+jump {GameState.get_current_day()}
+
+# All dialogues for the first day
+label FIRST
+<The coffee here tastes like ash and funeral incense./Did coffee always taste like this?/I miss real coffee.>
+[end_timeline]
+
+# All dialogues for second day
+label SECOND
+<This does not taste the way I remember coffee to be./This coffee does not make me feel more awake at all …/The last coffee I drank was at 3:45. I don’t remember what happened after.>
+[end_timeline]
+
+# All dialogues for the last day
+label LAST
+last day
 [end_timeline]

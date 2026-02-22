@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6yepstprsyfw"
-path="res://.godot/imported/lfoot.PNG-c83ad0eebc45540594c8543cc0e0e664.ctex"
+uid="uid://en82yopj0yng"
+path="res://.godot/imported/rleg.PNG-7c1dd87f35185a5149ad676c30d2f86c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/entities/npcs/management/lfoot.PNG"
-dest_files=["res://.godot/imported/lfoot.PNG-c83ad0eebc45540594c8543cc0e0e664.ctex"]
+source_file="res://game/entities/npcs/k/rleg.PNG"
+dest_files=["res://.godot/imported/rleg.PNG-7c1dd87f35185a5149ad676c30d2f86c.ctex"]
 
 [params]
 

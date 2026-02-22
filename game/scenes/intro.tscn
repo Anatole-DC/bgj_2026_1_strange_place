@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="2_thm65"]
 [ext_resource type="Texture2D" uid="uid://bvmc5a4cuikqm" path="res://assets/sprites/intro/door.PNG" id="3_d516q"]
 [ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="4_thm65"]
+[ext_resource type="PackedScene" uid="uid://cec3kyw0ylda0" path="res://game/entities/npcs/a/character_a.tscn" id="5_uyaoh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4fd8"]
 size = Vector2(73, 151)
@@ -45,3 +46,7 @@ shape = SubResource("RectangleShape2D_y4fd8")
 [node name="MouseHover" parent="LobbyNavigation" unique_id=1606368339 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("4_thm65")]
 mouse_area = NodePath("..")
 source_sprite = NodePath("../Sprite2D")
+
+[node name="CharacterA" parent="." unique_id=561420370 instance=ExtResource("5_uyaoh")]
+position = Vector2(682, 304)
+scale = Vector2(0.235, 0.235)

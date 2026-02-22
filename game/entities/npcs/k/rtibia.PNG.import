@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://linhfb2v0cpe"
-path="res://.godot/imported/rarm.PNG-e43c5408dbcedd210f7353abd99f8b2d.ctex"
+uid="uid://crfk1g5dl8arx"
+path="res://.godot/imported/rtibia.PNG-5fe94259e2c737db00d3a146d31a4386.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/entities/npcs/management/rarm.PNG"
-dest_files=["res://.godot/imported/rarm.PNG-e43c5408dbcedd210f7353abd99f8b2d.ctex"]
+source_file="res://game/entities/npcs/k/rtibia.PNG"
+dest_files=["res://.godot/imported/rtibia.PNG-5fe94259e2c737db00d3a146d31a4386.ctex"]
 
 [params]
 

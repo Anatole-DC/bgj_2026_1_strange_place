@@ -1,2 +1,16 @@
-The clock is fixed...
+jump {GameState.get_current_day()}
+
+# All dialogues for the first day
+label FIRST
+<It’s still 5:17. It’s always 5:17./Is the clock broken? I swear it’s been 5:17 for an eternity./Still 5:17. I’ll never go home again.>
+[end_timeline]
+
+# All dialogues for second day
+label SECOND
+<It will be 5:17 forever./5:17, 5:17, 5:17 …./Still 5:17, still in the office, still 5:17, still in the office …>
+[end_timeline]
+
+# All dialogues for the last day
+label LAST
+last day
 [end_timeline]

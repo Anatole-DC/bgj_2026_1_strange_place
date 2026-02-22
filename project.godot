@@ -31,24 +31,30 @@ Progress="*uid://bt46540r0qi1m"
 [dialogic]
 
 directories/dch_directory={
+"a": "res://game/entities/npcs/a/a.dch",
 "brian": "res://game/entities/npcs/brian.dch",
+"c": "res://game/entities/npcs/c/c.dch",
 "chief_inspector": "res://game/entities/npcs/chief_inspector.dch",
 "crew_manager": "res://game/entities/npcs/crew_manager.dch",
 "district_magistrate": "res://game/entities/npcs/district_magistrate.dch",
 "environmental_group": "res://game/entities/npcs/environmental_group.dch",
 "health_office": "res://game/entities/npcs/health_office.dch",
+"k": "res://game/entities/npcs/k/k.dch",
 "karen": "res://game/entities/npcs/karen.dch",
 "kathy": "res://game/entities/npcs/kathy.dch",
 "maitainance_supervisor": "res://game/entities/npcs/maitainance_supervisor.dch",
 "management": "res://game/entities/npcs/management.dch",
 "player": "res://game/entities/npcs/player.dch",
+"s": "res://game/entities/npcs/s/s.dch",
 "technical_team_leader": "res://game/entities/npcs/technical_team_leader.dch",
 "wife": "res://game/entities/npcs/wife.dch"
 }
 directories/dtl_directory={
+"a_dialogue": "res://game/entities/npcs/a/a_dialogue.dtl",
 "brian": "res://game/entities/dialogues/brian.dtl",
 "brian_not_there": "res://game/entities/dialogues/brian_not_there.dtl",
 "budget_dialogue": "res://game/entities/furnitures/budget/budget_dialogue.dtl",
+"c_dialogye": "res://game/entities/npcs/c/c_dialogue.dtl",
 "character_phone": "res://game/entities/dialogues/character_phone.dtl",
 "clock_dialogue": "res://game/entities/furnitures/clock/clock_dialogue.dtl",
 "closed_office": "res://game/entities/dialogues/closed_office.dtl",
@@ -58,6 +64,7 @@ directories/dtl_directory={
 "day_2_indications": "res://game/entities/dialogues/day_2_indications.dtl",
 "day_3_indications": "res://game/entities/dialogues/day_3_indications.dtl",
 "document_indications": "res://game/entities/furnitures/collectables/document/document_indications.dtl",
+"k_dialogue": "res://game/entities/npcs/k/k_dialogue.dtl",
 "karen": "res://game/entities/dialogues/karen.dtl",
 "karen_coffee_note": "res://game/entities/furnitures/collectables/karen_note/karen_coffee_note.dtl",
 "kathy": "res://game/entities/dialogues/kathy.dtl",
@@ -66,10 +73,10 @@ directories/dtl_directory={
 "picture_dialogue": "res://game/entities/furnitures/picture/picture_dialogue.dtl",
 "postit_indications": "res://game/entities/furnitures/collectables/post_it/postit_indications.dtl",
 "printer_dialogue": "res://game/entities/furnitures/printer/printer_dialogue.dtl",
+"s_dialogye": "res://game/entities/npcs/s/s_dialogye.dtl",
 "security_instructions": "res://game/entities/furnitures/collectables/security_instructions/security_instructions.dtl",
 "shreder_dialogue": "res://game/entities/furnitures/shreder/shreder_dialogue.dtl",
-"siren_dialogue": "res://game/entities/furnitures/siren/siren_dialogue.dtl",
-"timeline": "res://timeline.dtl"
+"siren_dialogue": "res://game/entities/furnitures/siren/siren_dialogue.dtl"
 }
 layout/style_directory={
 "": "res://game/ui/game_theme.tres",

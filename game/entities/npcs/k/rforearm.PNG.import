@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3dmse4coeyfo"
-path="res://.godot/imported/lforearm.PNG-1aa4a7532287fd72dc5e2ba5e44431eb.ctex"
+uid="uid://fyf2o48d788k"
+path="res://.godot/imported/rforearm.PNG-5bf2cc2fd8fec0d7a120828687175a75.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/entities/npcs/management/lforearm.PNG"
-dest_files=["res://.godot/imported/lforearm.PNG-1aa4a7532287fd72dc5e2ba5e44431eb.ctex"]
+source_file="res://game/entities/npcs/k/rforearm.PNG"
+dest_files=["res://.godot/imported/rforearm.PNG-5bf2cc2fd8fec0d7a120828687175a75.ctex"]
 
 [params]
 

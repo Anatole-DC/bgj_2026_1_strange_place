@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://njc8mweomgah"
-path="res://.godot/imported/rhand.PNG-3a943fa74382e5c27ee38161467b96e7.ctex"
+uid="uid://be1cly80hl4cx"
+path="res://.godot/imported/lhand.PNG-e43450009d85e1267dae51d6140b89de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/entities/npcs/management/rhand.PNG"
-dest_files=["res://.godot/imported/rhand.PNG-3a943fa74382e5c27ee38161467b96e7.ctex"]
+source_file="res://game/entities/npcs/k/lhand.PNG"
+dest_files=["res://.godot/imported/lhand.PNG-e43450009d85e1267dae51d6140b89de.ctex"]
 
 [params]
 
