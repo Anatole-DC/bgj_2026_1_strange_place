@@ -11,8 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://chh6qrvftpj5f" path="res://assets/sprites/pannel_office/office_pannel_layer.PNG" id="8_uow2c"]
 [ext_resource type="PackedScene" uid="uid://cuhvf0u0mwn3t" path="res://game/entities/npcs/s/character_s.tscn" id="9_uow2c"]
 [ext_resource type="Texture2D" uid="uid://ct6paadbh2wtr" path="res://assets/sprites/pannel_office/office_layer.PNG" id="10_dwm72"]
-[ext_resource type="PackedScene" uid="uid://cec3kyw0ylda0" path="res://game/entities/npcs/a/character_a.tscn" id="11_4x8pc"]
 [ext_resource type="Texture2D" uid="uid://dfj34iyj0ecc2" path="res://assets/sprites/pannel_office/siren.PNG" id="11_nfl3m"]
+[ext_resource type="PackedScene" uid="uid://da7edend480ic" path="res://game/entities/npcs/k/k_character.tscn" id="13_4x8pc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_56x7i"]
 size = Vector2(49, 122)
@@ -95,10 +95,6 @@ position = Vector2(824, 581)
 scale = Vector2(0.765, 0.765)
 texture = ExtResource("10_dwm72")
 
-[node name="CharacterA" parent="." unique_id=561420370 instance=ExtResource("11_4x8pc")]
-position = Vector2(230, 493)
-scale = Vector2(0.46, 0.46)
-
 [node name="Siren" parent="." unique_id=1487315818 instance=ExtResource("7_g5wtb")]
 position = Vector2(1057, 7)
 dialogue = "uid://2hqkw7qtb7qf"
@@ -118,3 +114,7 @@ source_sprite = NodePath("../SirenSprite")
 [node name="Clock" parent="." unique_id=823591413 instance=ExtResource("3_uow2c")]
 position = Vector2(605, 216.99998)
 scale = Vector2(0.765, 0.765)
+
+[node name="KCharacter" parent="." unique_id=271629462 instance=ExtResource("13_4x8pc")]
+position = Vector2(318.99997, 461.99997)
+scale = Vector2(0.415, 0.415)

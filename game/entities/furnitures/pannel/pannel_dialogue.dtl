@@ -20,7 +20,12 @@ else:
 
 # All dialogues for the last day
 label LAST
-last day
+if {GameState.is_task_complete("talk_with_a_about_repairs")} == true:
+	Scrubbers and flare stack status: malfunctioning.
+elif {GameState.is_task_complete("talk_with_k_about_pg")} == true:
+	The pressure gauges are fine! Everything is okay!! No need to worry!!!
+else:
+	The pressure gauges are broken, and the refrigeration on the tank is off. Call maintenance.
 [end_timeline]
 
 [end_timeline]

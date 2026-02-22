@@ -29,5 +29,13 @@ else:
 
 # All dialogues for the last day
 label LAST
-last day
+if {GameState.is_task_complete("talk_with_a_about_sirens")} == false:
+	a: “Hey, P. There’s rumors among the workers that C wants to reduce the ground floor operators. Could you call her and ask her for confirmation?”
+	player: “Sure thing. I heard there was a leak yesterday night, and I live in TOWNNAME, but I didn’t hear the siren. Why is that?”
+	a: “Oh, K asked us to decouple the sirens. You know, to not cause alarm.”
+	player: “That doesn’t sound good. Is she sure?”
+	a: “I told her, and she said she’s sure. You can always email management if you are worried.”
+	do GameState.complete_task("talk_with_a_about_sirens")
+else:
+	<I should have had more spine. I should have reconnected the sirens./I wish I could go back and get it right./I need a cigarette. And a coffee. Maybe both …/Why am I back in my office?  Why am I back in my office?>
 [end_timeline]

@@ -3,31 +3,29 @@ jump {GameState.get_current_day()}
 # All dialogues for the first day
 label FIRST
 if {GameState.is_task_complete("talk_with_s_about_sa")} == false:
-	s: “If I get another call from the Regional Health Office, I will go insane.
+	s: “If I get another call from the [color=red]Regional Health Office[/color], I will go insane.
 	s: It’s harassment, that’s what it is!”
 	player: “What do they want?”
-	s: “They asked about CHEMICALNAME, something about health hazards and disaster
-	management, or whatever.”
+	s: “They asked about CHEMICALNAME, something about health hazards and disaster management, or whatever.”
 	player: “Sounds important.”
 	s: “Well, that’s proprietary information, so they can stop calling. Ah! Since you’re here,take this.
-	s: Make sure to shred it, okay?”
+	s: Make sure to [color=red]shred it[/color], okay?”
 	You receive the document [color=green]20xx safety audit findings, recommandations and guidelines[/color].
 	do GameState.complete_task("talk_with_s_about_sa")
 else:
 	<These trade unions, always screaming and crying about nothing …/IWhat am I doing here? I was with my grandmother a moment ago …/Need a lot of coffee to get through all those corporate negligence lawsuits …/What time is it? Still 5:17?>
-
 [end_timeline]
 
 # All dialogues for second day
 label SECOND
 if {GameState.is_task_complete("talk_with_s_about_ddm")} == false:
-	s: “Did the Regional Health Office start calling you, too?”
+	s: “Did the [color=red]Regional Health Office[/color] start calling you, too?”
 	player: “No, I’m here to ask about the District Disaster Management. They want to know about our emergency infrastructure in case of a leak.
 	player: You know, the scrubbers, the flare stack, the sirens …”
 	s: “Meddlers, all of them. Whatever you do, don’t email them. It’s none of their business.
-	And if the Regional Health Office calls you, just hang up.”
+	s: And if the Regional Health Office calls you, just hang up.”
 	player: “Alright.”
-	s: “And make sure to shred this. Good boy.
+	s: “And make sure to [color=red]shred this[/color]. Good boy.
 	You receive the document [color=green]CHEMICALNAME: composition, health hazards and recommendations for storage[/color].
 	do GameState.complete_task("talk_with_s_about_ddm")
 else:
@@ -36,5 +34,14 @@ else:
 
 # All dialogues for the last day
 label LAST
-last day
+if {GameState.is_task_complete("talk_with_s_about_ddm")} == false:
+	s: “Heard about that journalist? I swear, every day we have another problem … Meddlers, all of them …”
+	player: “What did they want?”
+	s: “Wanted to know about the leak last night, something about CHEMICALNAME and
+	health hazard and a bunch of environmental stuff. Anyway. Here’s the document you have to
+	destroy. Don’t let me down today, okay?”
+	You receive the document [color=green]Approval to temporarily store contaminated CHEMICALNAME in tank 409[/color].
+	do GameState.complete_task("talk_with_s_about_ddm")
+else:
+	<When in doubt, deny, deny, deny everything./I thought I was done with this. Why am I still here?/The good thing is, I won’t have to deal with the legal repercussions of this …/What time is it? Still 5:17? Forever 5:17.>
 [end_timeline]

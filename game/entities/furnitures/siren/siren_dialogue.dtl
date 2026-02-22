@@ -12,5 +12,5 @@ label SECOND
 
 # All dialogues for the last day
 label LAST
-last day
+<The siren is working./The company siren is connected to the outside siren. It helps warn TOWNNAME in case of a leak./The two sirens are currently disconnected.>
 [end_timeline]

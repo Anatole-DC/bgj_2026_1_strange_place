@@ -28,5 +28,5 @@ else:
 
 # All dialogues for the last day
 label LAST
-last day
+k: <We are stuck and we are done for and the air is poison but it’s fine, it’s fine, IT’S FINE!/What am I doing here? Bring me back. Bring me back. BRING ME BACK, BRING ME BACK, BRING ME BACK, BRING ME BACK!/How can I create a safe space for you today?/Smile! Everything is working as it should be! Just perfect!>
 [end_timeline]
