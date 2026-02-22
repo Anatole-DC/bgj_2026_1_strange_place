@@ -5,6 +5,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2qr4t"]
 shader = ExtResource("2_llvpa")
+shader_parameter/outline_enabled = false
 shader_parameter/line_thickness = 2.0630000979925
 shader_parameter/line_color = Color(1, 1, 1, 1)
 

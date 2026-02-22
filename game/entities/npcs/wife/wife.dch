@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 &"_translation_id": "",
-&"color": Color(1, 1, 1, 1),
+&"color": Color(0.82325125, 0.078186035, 0.953125, 1),
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
@@ -12,7 +12,7 @@
 },
 &"default_portrait": "default",
 &"description": "",
-&"display_name": "Wife",
+&"display_name": "Sana",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),

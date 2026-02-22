@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="6_48xkd"]
 [ext_resource type="PackedScene" uid="uid://cq6a5qvmd1ntc" path="res://game/entities/furnitures/shreder/shreder.tscn" id="6_81vk8"]
 [ext_resource type="Texture2D" uid="uid://dg7uxyvi8sgn0" path="res://assets/sprites/player_office_final/picture.PNG" id="11_5e6lw"]
+[ext_resource type="PackedScene" uid="uid://dms6otdbfmya0" path="res://game/entities/furnitures/clock/clock.tscn" id="12_ytk47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_81vk8"]
 size = Vector2(93.5, 193.5)
@@ -46,6 +47,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_81vk8")
 metadata/_edit_use_anchors_ = true
+
+[node name="Clock" parent="." unique_id=823591413 instance=ExtResource("12_ytk47")]
+position = Vector2(511, 260)
+scale = Vector2(0.53, 0.53)
 
 [node name="LobbyNavigation" parent="." unique_id=2014885648 instance=ExtResource("3_gdqe8")]
 position = Vector2(965, 429)

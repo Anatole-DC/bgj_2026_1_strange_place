@@ -6,9 +6,19 @@ if {GameState.is_task_complete("complete_d1_mailing")} == true:
 	jump no_mail
 if {GameState.is_task_complete("talk_with_c_about_contractor")} == true:
 	- Deny the request for a contractor
+		player: Hello A,
+		player: I am sorry to inform you that the request has been denied, as we are already over budget for this quarter.
+		player: Have a great day, P
+		a: Hello P, thanks for telling me. See you around, A
 		do Progress.add_progress(1)
 		do GameState.complete_task("complete_d1_mailing")
 	- Email Chief Inspector of factories
+		player: Good morning,
+		player: I'm emailing you because after the 20XX safety audit at COMPANYNAME, recommendations have still not been followed.
+		player: Especially those regarding the safe storage of CHEMICALNAME ("Class Ia – extremely hazardous" substance) and the upkeep of emergency infrastructure.
+		player: Please schedule another inspection to COMPANYNAME as soon as possible.
+		chief_inspector: Hello P, this sounds concerning.
+		chief_inspector: I will schedule another inspection for next week. Best. 
 		do Progress.add_progress(1)
 		do GameState.complete_task("complete_d1_mailing")
 else:
@@ -21,27 +31,64 @@ label SECOND
 if {GameState.is_task_complete("complete_d2_mailing")} == true:
 	jump no_mail
 - Deny A's request for maintenance on the Valves | [if {GameState.is_task_complete("talk_with_c_about_mr")} == true]
+	player: Hello A, I am sorry to inform you that the request for maintenance of the valves near the tanks has been denie.
+	player: We are already over budget for this quarter. Have a great day, P
+	a: Hello P, at least I tried... Have a great day, A
 	do Progress.add_progress(1)
 	do GameState.complete_task("complete_d2_mailing")
 	[end_timeline]
 - Contact District Disaster Management | [if {GameState.is_task_complete("talk_with_s_about_ddm")} == true]
+	player: Hello, this is P, from COMPANYNAME. I heard you wanted information about our emergency systems.
+	player: Our flare tower, as well as our vent scrubbers, have been under maintenance for a while.
+	player: Safety audit recommendations have not been followed, and the refrigeration in CHEMICALNAME tanks is deactivated.
+	player: I remain at your disposal for any additional information.
+	district_disaster_management: Hello P, thank you for informing us. We will planning accordingly, and get in touch with law enforcement asap.
 	do Progress.add_progress(1)
+	do GameState.complete_task("email_ddm")
 	do GameState.complete_task("complete_d2_mailing")
 	[end_timeline]
-You don't have any email to send.
+jump no_mail
 [end_timeline]
 
 # All dialogues for the last day
 label LAST
 if {GameState.is_task_complete("complete_d3_mailing")} == true:
 	jump no_mail
-- Send an email to management about the sirens | [if {GameState.is_task_complete("talk_with_c_about_sirens")} == true]:
+- Send an email to management about the sirens | [if {GameState.is_task_complete("talk_with_a_about_sirens")} == true]:
+	player: Hello, this is P, from the WECARE office.
+	player: I am concerned about the decision to decouple the public siren from the company one, especially after yesterday’s leak.
+	player: Please, could you rethink your decision?
+	management: Hello P! Thank you for contacting Management!!
+	management: We assure you, the safety of our employees and TOWNNAME is our priority!!!
+	management: Now chop chop, back to work!
 	do GameState.complete_task("everybody_warned")
 	do Progress.add_progress(1)
 	do GameState.complete_task("complete_d3_mailing")
-- Send the proofs to the journalist | [if {GameState.is_task_complete("talk_with_s_about_j")} == true and {GameState.is_task_complete("storage_notice_scanned")} == true]
-	do Progress.add_progress(1)
-	do GameState.complete_task("complete_d3_mailing")
+	[end_timeline]
+- Send the proofs to the journalist | [if
+{GameState.is_task_complete("talk_with_s_about_j")} == true and {GameState.is_task_complete("storage_notice_scanned")} == true and
+{GameState.is_task_complete("email_ddm")} == true]:
+player: Hello, this is P, from the WECARE office.
+player: I want to warn the public about some serious corporate negligence that happened at COMPANYNAME.
+player: Attached you’ll find the files about the dangers of CHEMICALNAME, the results of the safety audits that were ignored, and the attempts legal made to bury all evidence.
+player: Please, share this with everyone. 
+journalist: Hello P, thank you for contacting me!
+journalist: You did the right thing, the public needs to know about this. These people cannot go unpunished.
+journalist: Stay safe!
+do Progress.add_progress(1)
+do GameState.complete_task("complete_d3_mailing")
+[end_timeline]
+- Warn District Disaster management | [if {GameState.is_task_complete("email_ddm")} == false and {GameState.is_task_complete("talk_with_s_about_ddm")} == true]
+player: Hello, this is P, from COMPANYNAME. I heard you wanted information about our emergency systems.
+player: Our flare tower, as well as our vent scrubbers, have been under maintenance for a while.
+player: Safety audit recommendations have not been followed, and the refrigeration in CHEMICALNAME tanks is deactivated.
+player: I remain at your disposal for any additional information.
+district_disaster_management: Hello P, thank you for informing us. We will planning accordingly, and get in touch with law enforcement asap.
+do Progress.add_progress(1)
+do GameState.complete_task("email_ddm")
+do GameState.complete_task("complete_d3_mailing")
+[end_timeline]
+jump no_mail
 [end_timeline]
 
 label no_mail

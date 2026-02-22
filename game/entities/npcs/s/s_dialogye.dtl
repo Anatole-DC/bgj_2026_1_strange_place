@@ -39,9 +39,7 @@ label LAST
 if {GameState.is_task_complete("talk_with_s_about_j")} == false:
 	s: Heard about that [color=red]journalist[/color]? I swear, every day we have another problem … Meddlers, all of them …
 	player: What did they want?
-	s: Wanted to know about the leak last night, something about CHEMICALNAME and
-	health hazard and a bunch of environmental stuff. Anyway. Here’s the document you have to
-	destroy. Don’t let me down today, okay?
+	s: Wanted to know about the leak last night, something about CHEMICALNAME and health hazard and a bunch of environmental stuff. Anyway. Here’s the document you have to destroy. Don’t let me down today, okay?
 	You receive the document [color=green]Approval to temporarily store contaminated CHEMICALNAME in tank 409[/color].
 	do Inventory.add_item(InventoryController.storage_notice)
 	do GameState.complete_task("talk_with_s_about_j")

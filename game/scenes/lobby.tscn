@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="8_2yptx"]
 [ext_resource type="Texture2D" uid="uid://7ed25rh23w31" path="res://assets/sprites/lobby/coffee_machine.PNG" id="9_qvd7v"]
 [ext_resource type="Texture2D" uid="uid://bc3kt4ocv0mng" path="res://assets/sprites/lobby/sofa.PNG" id="11_i4lvc"]
+[ext_resource type="PackedScene" uid="uid://dms6otdbfmya0" path="res://game/entities/furnitures/clock/clock.tscn" id="12_gtpxv"]
 [ext_resource type="PackedScene" uid="uid://cec3kyw0ylda0" path="res://game/entities/npcs/a/character_a.tscn" id="12_sieha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_non8d"]
@@ -45,6 +46,10 @@ scale = Vector2(0.755, 0.755)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_sieha")
+
+[node name="Clock" parent="." unique_id=823591413 instance=ExtResource("12_gtpxv")]
+position = Vector2(609, 185)
+scale = Vector2(0.565, 0.565)
 
 [node name="PlayerOffice" parent="." unique_id=826763247 instance=ExtResource("3_gtpxv")]
 position = Vector2(747, 324)

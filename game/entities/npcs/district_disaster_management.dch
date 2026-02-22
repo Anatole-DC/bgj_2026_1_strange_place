@@ -2,7 +2,7 @@
 "@path": "res://addons/dialogic/Resources/character.gd",
 "@subpath": NodePath(""),
 &"_translation_id": "",
-&"color": Color(0.9564209, 1, 0.203125, 1),
+&"color": Color(0.921875, 0.88966227, 0.097229004, 1),
 &"custom_info": {
 "prefix": "",
 "sound_mood_default": "",
@@ -10,22 +10,12 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "default",
+&"default_portrait": "",
 &"description": "",
-&"display_name": "A - Maintenance supervisor",
+&"display_name": "District Disaster Management",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {
-"default": {
-"export_overrides": {
-"image": ""
-},
-"mirror": false,
-"offset": Vector2(0, 100),
-"scale": 0.5,
-"scene": "res://game/entities/npcs/a/character_a.tscn"
-}
-},
+&"portraits": {},
 &"scale": 1.0
 }

@@ -6,14 +6,13 @@ if {GameState.is_task_complete("talk_with_k_about_pg")} == false:
 	k: Hello!!! Is this about the pressure gauges on the tanks? Are you worried?
 	k: Don’t be worried!!!
 	player: What about them?
-	k: The ground floor operators told us they show that pressure levels in CHEMICALNAME tanks are too high, but it’s a mistake! Everything is under control!
+	k: The [color=red]Ground Floor Operators[/color] told us they show that pressure levels in CHEMICALNAME tanks are too high, but it’s a mistake! Everything is under control!
 	player:Are you sure that …
 	k: Here at COMPANYNAME, we make your safety our priority!
 	k: Have a blessed day!
 	do GameState.complete_task("talk_with_k_about_pg")
 else:
 	k: <How can I create a safe space for you today?/What am I doing here? Bring me back. Bring me back. BRING ME BACK, BRING ME BACK, BRING ME BACK, BRING ME BACK!/One smile a day keeps the doctor away!/Did the Regional Health Office call you, too? They need to calm down! They really need to calm down! EVERYTHING IS FINE!>
-	do GameState.complete_task("talk_with_k_one_last_time")
 [end_timeline]
 
 # All dialogues for second day
@@ -30,5 +29,4 @@ else:
 # All dialogues for the last day
 label LAST
 k: <We are stuck and we are done for and the air is poison but it’s fine, it’s fine, IT’S FINE!/What am I doing here? Bring me back. Bring me back. BRING ME BACK, BRING ME BACK, BRING ME BACK, BRING ME BACK!/How can I create a safe space for you today?/Smile! Everything is working as it should be! Just perfect!>
-do GameState.complete_task("talk_with_k_one_last_time")
 [end_timeline]

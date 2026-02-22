@@ -4,37 +4,91 @@ jump {GameState.get_current_day()}
 label FIRST
 if {GameState.is_task_complete("complete_d1_calling")} == true:
 	jump no_phone_call
-if {GameState.is_task_complete("talk_with_s_about_sa")} == true:
-	- Regional Health Office
-		do Progress.add_progress(1)
-		do GameState.complete_task("complete_d1_calling")
-else:
-	jump no_phone_call
+- Warn Regional Health Office | [if {GameState.is_task_complete("talk_with_s_about_sa")} == true]
+	player: Hello,  I am from working at the WECARE office at COMPANYNAME.
+	player: I heard you had some questions regarding CHEMICALNAME?
+	health_office: Since you operate so close to the residential area of TOWNNAME, we wanted to know what type of chemical it is and what health hazards it can cause.
+	player: Sure. CHEMICALNAME is a "Class Ia – extremely hazardous" substance.
+	player: Within minutes of exposure it causes death from respiratory failure, and can have serious delayed and long-term effects.
+	health_office: Thanks. This is crucial information, it will save lives in case of an accident.
+	do Progress.add_progress(1)
+	do GameState.complete_task("warn_rho")
+	do GameState.complete_task("complete_d1_calling")
+	[end_timeline]
+
+- Call ground floor to cut refrigeration | [if {GameState.is_task_complete("talk_with_c_about_contractor")} == true]
+	player: Hello, this the WECARE office.
+	player: C told me that you have to keep the refrigeration in the CHEMICALNAME tanks deactivated for another week.
+	crew_manager: Sure, sure, no problem. Just, does management know that CHEMICALNAME needs to be kept at a constant temperature, or it can become volatile and ...
+	player: They say no refrigeration for another week, or we'll go over budget, and if we go over budget, we will have to make cuts. 
+	player: Do you want us to make cuts ?
+	crew_manager: No, sir. Refrigeration will stay off, sir.
+do Progress.add_progress(1)
+do GameState.complete_task("complete_d1_calling")
+[end_timeline]
+jump no_phone_call
 [end_timeline]
 
 # All dialogues for second day
 label SECOND
 if {GameState.is_task_complete("complete_d2_calling")} == true:
 	jump no_phone_call
-if {GameState.is_task_complete("talk_with_a_about_repairs")} == true:
-	- Warn Regional Health Office
-		do Progress.add_progress(1)
-		do GameState.complete_task("complete_d2_calling")
-else:
-	jump no_phone_call
+
+- Ask C for a contractor | [if {GameState.is_task_complete("talk_with_a_about_repairs")} == true]
+	player: Hello, this is PLAYER, from the WECARE office. A asks if we can call a contractor to repair the scrubbers, or the flare stack, because they are malfunctioning and …
+	c: Was I not clear this morning? We are over budget. OVER BUDGET, P! 
+	player: I understand, but these repairs sound important. For safety reasons.
+	c: More important than you losing your job? I don’t think so. Good day!
+	do Progress.add_progress(1)
+	do GameState.complete_task("complete_d2_calling")
+	[end_timeline]
+- Warn Regional Health Office | [if {GameState.is_task_complete("talk_with_s_about_sa")} == true and {GameState.is_task_complete("warn_rho")} == false]
+	player: Hello,  I am from working at the WECARE office at COMPANYNAME.
+	player: I heard you had some questions regarding CHEMICALNAME?
+	health_office: Since you operate so close to the residential area of TOWNNAME, we wanted to know what type of chemical it is and what health hazards it can cause.
+	player: Sure. CHEMICALNAME is a "Class Ia – extremely hazardous" substance.
+	player: Within minutes of exposure it causes death from respiratory failure, and can have serious delayed and long-term effects.
+	health_office: Thanks. This is crucial information, it will save lives in case of an accident.
+	do Progress.add_progress(1)
+	do GameState.complete_task("warn_rho")
+	do GameState.complete_task("complete_d2_calling")
+- Call environment protection office | [if {GameState.is_task_complete("warn_rho")} == true]
+	player: Hello,  this is PLAYER, from the WECARE office at COMPANYNAME.
+	player: I think our company is at risk of a leak, and CHEMICALNAME can have some serious environmental effects in case of a leak.
+	player: I suspect my superiors have not disclosed this information with you.
+	environmental_group: This is the first we are hearing of this. Can you tell us more?
+	player: CHEMICALNAME is very volatile, flammable, and forms deadly gas clouds.
+	player: It reacts with water to form corrosive and toxic chemicals. The impact on soil, fauna and fauna can be devastating, even long-term.
+	environmental_group: Oh, dear. Thank you for contacting us, we'll get in touch with the Disaster Management Authorities right away.
+	do Progress.add_progress(1)
+	do GameState.complete_task("complete_d2_calling")
+	[end_timeline]
+jump no_phone_call
 [end_timeline]
 
 # All dialogues for the last day
 label LAST
 if {GameState.is_task_complete("complete_d3_calling")} == true:
 	jump no_phone_call
-- Call your wife | [if {GameState.is_task_complete("talk_with_c_about_sirens")} == true]
-	wife: Hi, this is Wife, I'm not available right now but you can leave a message ... now !
-	player: Hi Love, this is PLAYER.
-	player: I think we need some time away together this weekend, so I booked us a room at that SPA you like. Wait for me there, and bring Cat too! He can use a vacation.
-	player: I'll reach you after work. Love you.
+- Confirm reduction of effectif on site | [if {GameState.is_task_complete("talk_with_a_about_sirens")} == false]
+	player: Hello C, I heard that you are planning to reduce the size of the team working near the tanks.
+	player: They are already few, and very overworked. A fears they will make mistakes, and have an accident.
+	player: Could you confirm that to me? 
+	c: Of course I am. There’s too many of them, it’s an unnecessary cost, we need to cut!
+	c: Tell A that what he said might happen, or it might not.
+	c: But if I don’t cut, we will all lose our jobs. Priorities, P! PRIORITIES!
 	do Progress.add_progress(1)
 	do GameState.complete_task("complete_d3_calling")
+	[end_timeline]
+- Call your wife | [if {GameState.is_task_complete("talk_with_a_about_sirens")} == true]
+	wife/wife: Hi, this is Sana, I'm not available right now but you can leave a message ... now !
+	player: Hey love, I think we should get out of TOWNNAME, change air for a bit.
+	player: I booked us a room at that hotel on the coast that you like. Wait for me there, with Pyaari.
+	player: Love you.
+	do Progress.add_progress(1)
+	do GameState.complete_task("complete_d3_calling")
+	[end_timeline]
+jump no_phone_call
 [end_timeline]
 
 label no_phone_call

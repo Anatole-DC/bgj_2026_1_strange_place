@@ -30,8 +30,5 @@ else:
 
 # All dialogues for the last day
 label LAST
-if {GameState.is_task_complete("talk_with_a_about_sirens")} == true and {GameState.is_task_complete("talk_with_c_about_sirens")} == false:
-	do GameState.complete_task("talk_with_c_about_sirens")
-else:
-	c: <Cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts CUTS CUTS CUTS CUTS CUTS CUTS…/I wish I had brought my dog on more walks. I hope he’s okay now./I should get another coffee. The last one./Why are we still here? Why are we still here? Why are we still here? Why are we still here?>
+c: <Cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts cuts CUTS CUTS CUTS CUTS CUTS CUTS…/I wish I had brought my dog on more walks. I hope he’s okay now./I should get another coffee. The last one./Why are we still here? Why are we still here? Why are we still here? Why are we still here?>
 [end_timeline]

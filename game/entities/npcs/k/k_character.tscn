@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://da7edend480ic"]
 
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="1_65ebd"]
+[ext_resource type="Script" uid="uid://v15bvic5fpp3" path="res://game/entities/npcs/k/k_character.gd" id="1_hjidt"]
 [ext_resource type="PackedScene" uid="uid://dp6uiephbqlcy" path="res://game/ui/mouse_hover/character_outline.tscn" id="2_hjidt"]
 [ext_resource type="Texture2D" uid="uid://bcukidskt7hq6" path="res://game/entities/npcs/k/rfoot.PNG" id="3_6ukn0"]
 [ext_resource type="Texture2D" uid="uid://crfk1g5dl8arx" path="res://game/entities/npcs/k/rtibia.PNG" id="4_opkmn"]
@@ -21,6 +22,10 @@
 size = Vector2(334, 1211)
 
 [node name="KCharacter" type="Node2D" unique_id=271629462]
+script = ExtResource("1_hjidt")
+cover_rect = Rect2(-150, -500, 300, 400)
+metadata/_edit_horizontal_guides_ = [-611.0, -498.0]
+metadata/_edit_vertical_guides_ = [-145.0]
 
 [node name="CharacterParts" type="Node2D" parent="." unique_id=22552875]
 
@@ -78,8 +83,8 @@ position = Vector2(-128, 56)
 
 [node name="LeftHand" type="Sprite2D" parent="CharacterParts/Sprites/larm" unique_id=1500763409]
 position = Vector2(49.498924, 2.1097107)
-rotation = -0.0019557201
-scale = Vector2(0.99999946, 0.99999946)
+rotation = -0.0019557648
+scale = Vector2(0.9999994, 0.9999994)
 texture = ExtResource("9_mk20v")
 offset = Vector2(14.70314, 78.04474)
 
@@ -99,16 +104,16 @@ offset = Vector2(-1.8205566, 92.142395)
 [node name="rarm" type="Node2D" parent="CharacterParts/Sprites" unique_id=1678937425]
 
 [node name="RightHand" type="Sprite2D" parent="CharacterParts/Sprites/rarm" unique_id=1362982269]
-position = Vector2(343.26038, -0.55924606)
+position = Vector2(343.26035, -0.5592537)
 rotation = -0.8360427
-scale = Vector2(0.9999995, 0.9999995)
+scale = Vector2(0.99999934, 0.99999934)
 texture = ExtResource("12_se7i6")
 offset = Vector2(18.328217, 60.948547)
 
 [node name="RightForarm" type="Sprite2D" parent="CharacterParts/Sprites/rarm" unique_id=923217552]
 position = Vector2(208.00003, -48.000015)
 rotation = -0.6837511
-scale = Vector2(0.9999997, 0.9999997)
+scale = Vector2(0.9999995, 0.9999995)
 texture = ExtResource("13_8yxs5")
 offset = Vector2(36.151596, 72.360725)
 
@@ -196,14 +201,14 @@ bone_angle = 95.63696
 
 [node name="ForarmR" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmR" unique_id=1548253206]
 position = Vector2(9.4090805, 206.2413)
-rotation = -0.109091535
-scale = Vector2(0.99999964, 0.99999964)
+rotation = -0.10909154
+scale = Vector2(0.9999996, 0.9999996)
 rest = Transform2D(1, 0, 0, 1, 11, 129)
 
 [node name="HandR" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmR/ForarmR" unique_id=1867354584]
 position = Vector2(74.88641, 122.22121)
-rotation = -0.15229158
-scale = Vector2(0.9999998, 0.9999998)
+rotation = -0.15229157
+scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(1, 0, 0, 1, 40, 86)
 auto_calculate_length_and_angle = false
 length = 155.389
@@ -226,13 +231,13 @@ rest = Transform2D(1, 0, 0, 1, -80, -199)
 [node name="ForarmL" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmL" unique_id=1965146066]
 position = Vector2(6.522497, 207.37996)
 rotation = -1.8956681
-scale = Vector2(0.9999997, 0.9999997)
+scale = Vector2(0.99999964, 0.99999964)
 rest = Transform2D(1, 0, 0, 1, 18, 140)
 
 [node name="HandL" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmL/ForarmL" unique_id=1120845288]
 position = Vector2(-79.37801, 118.75661)
 rotation = 1.3482637
-scale = Vector2(0.9999997, 0.9999997)
+scale = Vector2(0.99999964, 0.99999964)
 rest = Transform2D(1, 0, 0, 1, -64, 105)
 auto_calculate_length_and_angle = false
 length = 163.565

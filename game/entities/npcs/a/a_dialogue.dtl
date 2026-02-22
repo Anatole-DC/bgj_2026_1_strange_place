@@ -1,5 +1,6 @@
 jump {GameState.get_current_day()}
 
+
 # All dialogues for the first day
 label FIRST
 if {GameState.is_task_complete("intro_dialogue")} == false:
