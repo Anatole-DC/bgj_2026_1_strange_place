@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c3yg38nb5anv0" path="res://assets/sprites/intro/intro.PNG" id="1_thm65"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="2_thm65"]
 [ext_resource type="Texture2D" uid="uid://bvmc5a4cuikqm" path="res://assets/sprites/intro/door.PNG" id="3_d516q"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="4_thm65"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="4_thm65"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4fd8"]
 size = Vector2(73, 151)

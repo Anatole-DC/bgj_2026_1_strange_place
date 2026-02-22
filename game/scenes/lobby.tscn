@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://1p3lspocqb1t" path="res://assets/sprites/lobby.jpeg" id="2_sieha"]
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_gtpxv"]
 [ext_resource type="Texture2D" uid="uid://cwvpfcwun8ugb" path="res://assets/sprites/lobby/player_door.PNG" id="4_mt53m"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="5_elrfp"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="5_elrfp"]
 [ext_resource type="Texture2D" uid="uid://bdwc7piglns17" path="res://assets/sprites/lobby/office_door_2.PNG" id="6_5igks"]
 [ext_resource type="Texture2D" uid="uid://b7yhyhjyi58s0" path="res://assets/sprites/lobby/office_door.PNG" id="7_r8tg2"]
 [ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="8_2yptx"]
@@ -134,5 +134,5 @@ scale = Vector2(0.755, 0.755)
 texture = ExtResource("11_i4lvc")
 
 [node name="ManagementCharacter" parent="." unique_id=271629462 instance=ExtResource("12_sieha")]
-position = Vector2(630, 409)
-scale = Vector2(0.43, 0.43)
+position = Vector2(573, 321)
+scale = Vector2(0.28, 0.28)

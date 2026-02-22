@@ -26,6 +26,7 @@ MainGameLoopTimer="*uid://bnmlaljff61cs"
 GlobalShaders="*uid://ceshtxk6t8lxn"
 GameState="*uid://ckiksj714gwrv"
 Inventory="*uid://chnnhnodey5si"
+Progress="*uid://bt46540r0qi1m"
 
 [dialogic]
 
@@ -67,7 +68,8 @@ directories/dtl_directory={
 "printer_dialogue": "res://game/entities/furnitures/printer/printer_dialogue.dtl",
 "security_instructions": "res://game/entities/furnitures/collectables/security_instructions/security_instructions.dtl",
 "shreder_dialogue": "res://game/entities/furnitures/shreder/shreder_dialogue.dtl",
-"siren_dialogue": "res://game/entities/furnitures/siren/siren_dialogue.dtl"
+"siren_dialogue": "res://game/entities/furnitures/siren/siren_dialogue.dtl",
+"timeline": "res://timeline.dtl"
 }
 layout/style_directory={
 "": "res://game/ui/game_theme.tres",
@@ -77,7 +79,7 @@ glossary/default_case_sensitive=true
 layout/style_list=["res://game/ui/game_theme.tres"]
 layout/default_style="res://game/ui/game_theme.tres"
 variables={
-"karen_1": false
+"karen_1": "FIRST"
 }
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01

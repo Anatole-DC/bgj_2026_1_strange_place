@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2cyj7c5n3jhm" path="res://common/point_and_click/point_and_click_dialogue.gd" id="1_qkyrv"]
 [ext_resource type="Texture2D" uid="uid://csbs1eo8yvrd4" path="res://assets/sprites/player_office/phone.png" id="2_qkyrv"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_614i2"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="3_614i2"]
 
 [node name="Phone" type="Area2D" unique_id=959870659]
 script = ExtResource("1_qkyrv")

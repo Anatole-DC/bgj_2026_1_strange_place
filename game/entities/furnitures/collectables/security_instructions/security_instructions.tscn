@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cknmfu11rqprk" path="res://game/entities/furnitures/interactable.gd" id="1_n61d0"]
 [ext_resource type="Texture2D" uid="uid://ce3o543xdiutm" path="res://assets/sprites/brian/document.PNG" id="2_n61d0"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_gsitv"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="3_gsitv"]
 [ext_resource type="PackedScene" uid="uid://bifr55cma08al" path="res://game/entities/furnitures/collectables/collectable_item.tscn" id="4_ef15o"]
 [ext_resource type="Texture2D" uid="uid://b1xwl38litlfi" path="res://assets/sprites/player_office/SecurityInstructions.PNG" id="5_n61d0"]
 [ext_resource type="Script" uid="uid://cv4n1sk8n5hmf" path="res://game/entities/furnitures/collectables/collectable.gd" id="6_b4nov"]

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cknmfu11rqprk" path="res://game/entities/furnitures/interactable.gd" id="1_nfl4g"]
 [ext_resource type="Texture2D" uid="uid://d28hyu7y1g2vy" path="res://assets/sprites/itchio-pxl-retro-computer-icons-set-110/separated-items/itchio-pxl-retro-computer-icons-set-110-item38.png" id="2_b6apb"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_hpsq2"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="3_hpsq2"]
 [ext_resource type="PackedScene" uid="uid://bifr55cma08al" path="res://game/entities/furnitures/collectables/collectable_item.tscn" id="4_nf43j"]
 [ext_resource type="Texture2D" uid="uid://dbcsaws5tcwk" path="res://assets/sprites/karen_coffee_machine.PNG" id="5_b6apb"]
 [ext_resource type="Script" uid="uid://cv4n1sk8n5hmf" path="res://game/entities/furnitures/collectables/collectable.gd" id="6_rn18q"]

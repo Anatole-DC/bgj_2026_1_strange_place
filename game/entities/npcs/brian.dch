@@ -23,8 +23,8 @@
 },
 "ignore_char_scale": true,
 "mirror": false,
-"offset": Vector2(-7, 100),
-"scale": 0.94,
+"offset": Vector2(-8, 99),
+"scale": 0.5,
 "scene": "res://game/entities/npcs/s/character_s.tscn"
 }
 },

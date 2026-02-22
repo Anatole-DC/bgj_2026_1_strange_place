@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bt46540r0qi1m"]
+
+[ext_resource type="Script" uid="uid://cer8ken4pr3uy" path="res://game/ui/progress/progress.gd" id="1_rteqc"]
+
+[node name="Progress" type="CanvasLayer" unique_id=2109025597 node_paths=PackedStringArray("progress")]
+script = ExtResource("1_rteqc")
+progress = NodePath("MarginContainer/HBoxContainer/ProgressBar")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=983377474]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 37.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2126345382]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1880249517]
+layout_mode = 2
+text = "Daily progress"
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=1924834401]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 50.0

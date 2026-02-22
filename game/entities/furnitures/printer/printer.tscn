@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b2cw7f2up7uku" path="res://game/entities/furnitures/printer/printer.gd" id="1_1vf75"]
 [ext_resource type="Texture2D" uid="uid://scgcjsm3nc48" path="res://assets/sprites/player_office_final/printer.PNG" id="2_1vf75"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_o6aay"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="3_o6aay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1vf75"]
 size = Vector2(149, 193)

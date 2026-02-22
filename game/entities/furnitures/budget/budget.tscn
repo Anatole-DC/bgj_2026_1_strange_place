@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cpji4to24ircr" path="res://game/entities/furnitures/budget/budget.gd" id="1_l81y1"]
 [ext_resource type="Texture2D" uid="uid://cvk6yejpgksmu" path="res://assets/sprites/brian/Numbers.PNG" id="2_rckcu"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_yu3rc"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="3_yu3rc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rckcu"]
 size = Vector2(192, 143)

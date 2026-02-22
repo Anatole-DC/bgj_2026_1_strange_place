@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dbt0kswhb0kpc" path="res://common/point_and_click/point_and_click_navigation.tscn" id="3_qyhy8"]
 [ext_resource type="PackedScene" uid="uid://dms6otdbfmya0" path="res://game/entities/furnitures/clock/clock.tscn" id="4_c8hl1"]
 [ext_resource type="Texture2D" uid="uid://dbuvs5xwmkn7s" path="res://assets/sprites/office/door.PNG" id="4_qyhy8"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="5_w6ol5"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="5_w6ol5"]
 [ext_resource type="Texture2D" uid="uid://dg3blm0uay3r0" path="res://assets/sprites/office/office_layer.PNG" id="6_v77s5"]
 [ext_resource type="PackedScene" uid="uid://bpp63eqj5r0fl" path="res://game/entities/npcs/c/character_c.tscn" id="7_36dsh"]
 

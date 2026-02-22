@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://h2t15h1chr21" path="res://game/entities/furnitures/shreder/shreder.gd" id="1_lgqrf"]
 [ext_resource type="Texture2D" uid="uid://cj16csdlfsbdv" path="res://assets/sprites/player_office_final/shreder.PNG" id="2_lgqrf"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="3_vbbir"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="3_vbbir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgqrf"]
 size = Vector2(129, 167)

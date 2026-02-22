@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://da7edend480ic"]
 
 [ext_resource type="Texture2D" uid="uid://bcukidskt7hq6" path="res://game/entities/npcs/management/rfoot.PNG" id="1_kvbdq"]
+[ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="1_rmfen"]
 [ext_resource type="Texture2D" uid="uid://crfk1g5dl8arx" path="res://game/entities/npcs/management/rtibia.PNG" id="2_4b0g8"]
+[ext_resource type="PackedScene" uid="uid://dp6uiephbqlcy" path="res://game/ui/mouse_hover/character_outline.tscn" id="2_woqhb"]
 [ext_resource type="Texture2D" uid="uid://en82yopj0yng" path="res://game/entities/npcs/management/rleg.PNG" id="3_rmfen"]
 [ext_resource type="Texture2D" uid="uid://b6yepstprsyfw" path="res://game/entities/npcs/management/lfoot.PNG" id="4_woqhb"]
 [ext_resource type="Texture2D" uid="uid://bksbwme4touof" path="res://game/entities/npcs/management/ltibia.PNG" id="5_c88nd"]
@@ -15,16 +17,31 @@
 [ext_resource type="Texture2D" uid="uid://k4w8ufkhgk8f" path="res://game/entities/npcs/management/torso.PNG" id="13_l2rtc"]
 [ext_resource type="Texture2D" uid="uid://b3gpcw22awa58" path="res://game/entities/npcs/management/head.PNG" id="14_pc1n6"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c88nd"]
+size = Vector2(334, 1211)
+
 [node name="ManagementCharacter" type="Node2D" unique_id=271629462]
 
 [node name="CharacterParts" type="Node2D" parent="." unique_id=22552875]
 
-[node name="Sprites" type="Node2D" parent="CharacterParts" unique_id=166001802]
+[node name="PointAndClickDialogue" parent="CharacterParts" unique_id=1602951859 instance=ExtResource("1_rmfen")]
+dialogue = "uid://opg33drdeq5j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterParts/PointAndClickDialogue" unique_id=873905120]
+position = Vector2(21, 120.5)
+shape = SubResource("RectangleShape2D_c88nd")
+
+[node name="CharacterOutline" parent="CharacterParts" unique_id=50285302 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("2_woqhb")]
+mouse_area = NodePath("../PointAndClickDialogue")
+source_sprite = NodePath("../Sprites")
+
+[node name="Sprites" type="CanvasGroup" parent="CharacterParts" unique_id=635204267]
 
 [node name="rleg" type="Node2D" parent="CharacterParts/Sprites" unique_id=1227963807]
 
 [node name="RightFoot" type="Sprite2D" parent="CharacterParts/Sprites/rleg" unique_id=436978577]
 position = Vector2(72, 611)
+rotation = -0.8683521
 texture = ExtResource("1_kvbdq")
 offset = Vector2(8, 79)
 
@@ -42,6 +59,7 @@ offset = Vector2(5.5, 183.5)
 
 [node name="LeftFoot" type="Sprite2D" parent="CharacterParts/Sprites/lleg" unique_id=1213766124]
 position = Vector2(-35, 653)
+rotation = 0.43629953
 texture = ExtResource("4_woqhb")
 offset = Vector2(7, 55)
 
@@ -59,35 +77,36 @@ offset = Vector2(7, 166)
 position = Vector2(-128, 56)
 
 [node name="LeftHand" type="Sprite2D" parent="CharacterParts/Sprites/larm" unique_id=1500763409]
-position = Vector2(-79, 24.999992)
-rotation = 0.18628941
+position = Vector2(49.498962, 2.1097412)
+rotation = -0.0019557786
 texture = ExtResource("7_bjepd")
 offset = Vector2(14.70314, 78.04474)
 
 [node name="LeftForarm" type="Sprite2D" parent="CharacterParts/Sprites/larm" unique_id=1511215973]
-position = Vector2(21, -77.000015)
-rotation = 0.18628941
+position = Vector2(-49.01303, -101.32811)
+rotation = -1.3502195
 texture = ExtResource("8_gvley")
 offset = Vector2(-36.4339, 62.269096)
 
 [node name="LeftArm" type="Sprite2D" parent="CharacterParts/Sprites/larm" unique_id=1550511990]
 position = Vector2(52.999985, -282)
-rotation = 0.18628941
+rotation = 0.54544866
 texture = ExtResource("9_21w0g")
 offset = Vector2(-1.8205566, 92.142395)
 
 [node name="rarm" type="Node2D" parent="CharacterParts/Sprites" unique_id=1678937425]
 
 [node name="RightHand" type="Sprite2D" parent="CharacterParts/Sprites/rarm" unique_id=1362982269]
-position = Vector2(343.2604, -0.5592308)
+position = Vector2(343.26038, -0.5592346)
 rotation = -0.8360427
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("10_350sk")
 offset = Vector2(18.328217, 60.948547)
 
 [node name="RightForarm" type="Sprite2D" parent="CharacterParts/Sprites/rarm" unique_id=923217552]
 position = Vector2(208.00003, -48.000015)
 rotation = -0.6837511
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("11_iwqm5")
 offset = Vector2(36.151596, 72.360725)
 
@@ -125,10 +144,11 @@ rest = Transform2D(1, 0, 0, 1, -3, 274)
 
 [node name="FootR" type="Bone2D" parent="CharacterParts/Bones/Hip/LegR/TibiaR" unique_id=730274819]
 position = Vector2(15, 240)
+rotation = -0.8683521
 rest = Transform2D(1, 0, 0, 1, 8, 170)
 auto_calculate_length_and_angle = false
 length = 127.272
-bone_angle = 89.34298
+bone_angle = 89.34297
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/LegR/TibiaR/FootR" unique_id=116673400]
 remote_path = NodePath("../../../../../../Sprites/rleg/RightFoot")
@@ -149,10 +169,11 @@ rest = Transform2D(1, 0, 0, 1, 0, 277)
 
 [node name="FootL" type="Bone2D" parent="CharacterParts/Bones/Hip/LegL/TibiaL" unique_id=280516385]
 position = Vector2(-12, 322)
+rotation = 0.43629953
 rest = Transform2D(1, 0, 0, 1, 0, 161)
 auto_calculate_length_and_angle = false
 length = 135.475
-bone_angle = 84.087975
+bone_angle = 84.08797
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/LegL/TibiaL/FootL" unique_id=1177400384]
 remote_path = NodePath("../../../../../../Sprites/lleg/LeftFoot")
@@ -169,17 +190,17 @@ rotation = -0.5746595
 rest = Transform2D(1, 0, 0, 1, 53, -189)
 auto_calculate_length_and_angle = false
 length = 129.468
-bone_angle = 95.63698
+bone_angle = 95.63697
 
 [node name="ForarmR" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmR" unique_id=1548253206]
 position = Vector2(9.4090805, 206.2413)
 rotation = -0.10909152
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 rest = Transform2D(1, 0, 0, 1, 11, 129)
 
 [node name="HandR" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmR/ForarmR" unique_id=1867354584]
 position = Vector2(74.88641, 122.22121)
-rotation = -0.15229164
+rotation = -0.15229163
 scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(1, 0, 0, 1, 40, 86)
 auto_calculate_length_and_angle = false
@@ -197,15 +218,19 @@ remote_path = NodePath("../../../../Sprites/rarm/RightArm")
 
 [node name="ArmL" type="Bone2D" parent="CharacterParts/Bones/Hip" unique_id=891246555]
 position = Vector2(-73.500015, -229)
-rotation = 0.18628941
+rotation = 0.54544866
 rest = Transform2D(1, 0, 0, 1, -80, -199)
 
 [node name="ForarmL" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmL" unique_id=1965146066]
 position = Vector2(6.522497, 207.37996)
+rotation = -1.8956681
+scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(1, 0, 0, 1, 18, 140)
 
 [node name="HandL" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmL/ForarmL" unique_id=1120845288]
 position = Vector2(-79.37801, 118.75661)
+rotation = 1.3482637
+scale = Vector2(0.99999994, 0.99999994)
 rest = Transform2D(1, 0, 0, 1, -64, 105)
 auto_calculate_length_and_angle = false
 length = 163.565

@@ -6,6 +6,8 @@ var current_day: Day = Day.FIRST
 # Task completion is just a set of string keys
 var completed_tasks: Dictionary = {}  # task_id -> true
 
+@export var starting_day: Day = Day.FIRST
+
 @export_group("Office sounds")
 @export var printer_player: AudioStreamPlayer
 @export var shredder_player: AudioStreamPlayer
@@ -23,8 +25,11 @@ var completed_tasks: Dictionary = {}  # task_id -> true
 var daily_indications: String
 
 func _ready() -> void:
-	current_day = Day.FIRST
+	current_day = starting_day
 	daily_indications = d1_indications
+
+func get_current_day() -> String:
+	return Day.keys()[current_day]
 
 func complete_task(task_id: String) -> void:
 	completed_tasks[task_id] = true

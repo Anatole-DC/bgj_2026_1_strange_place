@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cwow3st0i2340" path="res://assets/sprites/player_office_final/phone.PNG" id="5_1u2gc"]
 [ext_resource type="PackedScene" uid="uid://duu7h01g0tok4" path="res://game/entities/furnitures/printer/printer.tscn" id="5_gdqe8"]
 [ext_resource type="Texture2D" uid="uid://dr6npi23hoowf" path="res://assets/sprites/player_office_final/computer.PNG" id="5_kjlkj"]
-[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover.tscn" id="6_48xkd"]
+[ext_resource type="PackedScene" uid="uid://c4tva4y7e6spt" path="res://game/ui/mouse_hover/mouse_hover.tscn" id="6_48xkd"]
 [ext_resource type="PackedScene" uid="uid://cq6a5qvmd1ntc" path="res://game/entities/furnitures/shreder/shreder.tscn" id="6_81vk8"]
 [ext_resource type="Texture2D" uid="uid://dg7uxyvi8sgn0" path="res://assets/sprites/player_office_final/picture.PNG" id="11_5e6lw"]
 

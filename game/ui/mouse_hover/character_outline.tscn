@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dp6uiephbqlcy"]
+
+[ext_resource type="Script" uid="uid://caliioi6dwnkl" path="res://game/ui/mouse_hover/character_outline.gd" id="1_2qr4t"]
+[ext_resource type="Shader" uid="uid://v53cytud6wx" path="res://game/ui/mouse_hover/character_outline.gdshader" id="2_llvpa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2qr4t"]
+shader = ExtResource("2_llvpa")
+shader_parameter/line_thickness = 2.0630000979925
+shader_parameter/line_color = Color(1, 1, 1, 1)
+
+[node name="CharacterOutline" type="Node2D" unique_id=50285302]
+script = ExtResource("1_2qr4t")
+outline_material = SubResource("ShaderMaterial_2qr4t")

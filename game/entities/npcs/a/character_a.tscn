@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cec3kyw0ylda0"]
 
 [ext_resource type="Texture2D" uid="uid://dbvijyexxo8v6" path="res://game/entities/npcs/a/torso.PNG" id="1_2qsgw"]
+[ext_resource type="PackedScene" uid="uid://dajdkmt57yiu0" path="res://common/point_and_click/point_and_click_dialogue.tscn" id="1_fdi4o"]
+[ext_resource type="PackedScene" uid="uid://dp6uiephbqlcy" path="res://game/ui/mouse_hover/character_outline.tscn" id="2_1k370"]
 [ext_resource type="Texture2D" uid="uid://b85wfoihs022n" path="res://game/entities/npcs/a/larm.PNG" id="2_fxvfp"]
 [ext_resource type="Texture2D" uid="uid://ctk682mauthx0" path="res://game/entities/npcs/a/lfoot.PNG" id="3_fdi4o"]
 [ext_resource type="Texture2D" uid="uid://cyx82itpfsa2y" path="res://game/entities/npcs/a/lforearm.PNG" id="4_1k370"]
@@ -15,11 +17,25 @@
 [ext_resource type="Texture2D" uid="uid://dqgmnlmqxc7h4" path="res://game/entities/npcs/a/rforearm.PNG" id="13_xxf0i"]
 [ext_resource type="Texture2D" uid="uid://bdhm8xoe1dh7n" path="res://game/entities/npcs/a/head.PNG" id="14_acqcn"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prj3p"]
+size = Vector2(377, 1265)
+
 [node name="CharacterA" type="Node2D" unique_id=561420370]
 
 [node name="CharacterParts" type="Node2D" parent="." unique_id=1505104625]
 
-[node name="Sprites" type="Node2D" parent="CharacterParts" unique_id=610634943]
+[node name="PointAndClickDialogue" parent="CharacterParts" unique_id=1602951859 instance=ExtResource("1_fdi4o")]
+dialogue = "uid://opg33drdeq5j"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterParts/PointAndClickDialogue" unique_id=762719413]
+position = Vector2(17.5, 174.5)
+shape = SubResource("RectangleShape2D_prj3p")
+
+[node name="CharacterOutline" parent="CharacterParts" unique_id=50285302 node_paths=PackedStringArray("mouse_area", "source_sprite") instance=ExtResource("2_1k370")]
+mouse_area = NodePath("../PointAndClickDialogue")
+source_sprite = NodePath("../Sprites")
+
+[node name="Sprites" type="CanvasGroup" parent="CharacterParts" unique_id=907905231]
 
 [node name="rleg" type="Node2D" parent="CharacterParts/Sprites" unique_id=47071448]
 
@@ -128,7 +144,7 @@ position = Vector2(15, 240)
 rest = Transform2D(1, 0, 0, 1, 8, 170)
 auto_calculate_length_and_angle = false
 length = 127.272
-bone_angle = 89.342995
+bone_angle = 89.34299
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/LegR/TibiaR/FootR" unique_id=1085607131]
 remote_path = NodePath("../../../../../../Sprites/rleg/RightFoot")
@@ -152,7 +168,7 @@ position = Vector2(3, 243)
 rest = Transform2D(1, 0, 0, 1, 0, 161)
 auto_calculate_length_and_angle = false
 length = 135.475
-bone_angle = 84.08799
+bone_angle = 84.08798
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/LegL/TibiaL/FootL" unique_id=2001261130]
 remote_path = NodePath("../../../../../../Sprites/lleg/LeftFoot")
@@ -169,7 +185,7 @@ rotation = 0.90547675
 rest = Transform2D(1, 0, 0, 1, 53, -189)
 auto_calculate_length_and_angle = false
 length = 129.468
-bone_angle = 95.63699
+bone_angle = 95.636986
 
 [node name="ForarmR" type="Bone2D" parent="CharacterParts/Bones/Hip/ArmR" unique_id=1807292107]
 position = Vector2(133.76749, 104.46774)
@@ -208,7 +224,7 @@ position = Vector2(-11.408318, 221.48593)
 rest = Transform2D(1, 0, 0, 1, -64, 105)
 auto_calculate_length_and_angle = false
 length = 141.164
-bone_angle = 75.93299
+bone_angle = 75.93298
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/ArmL/ForarmL/HandL" unique_id=875683098]
 remote_path = NodePath("../../../../../../Sprites/larm/LeftHand")
@@ -226,7 +242,7 @@ scale = Vector2(0.99999976, 0.99999976)
 rest = Transform2D(0.9994771, -0.032330833, 0.032330833, 0.9994771, -8, -277)
 auto_calculate_length_and_angle = false
 length = 104.20173
-bone_angle = -89.342995
+bone_angle = -89.34299
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="CharacterParts/Bones/Hip/Head" unique_id=728021218]
 remote_path = NodePath("../../../../Sprites/Head")
